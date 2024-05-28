@@ -1,0 +1,149 @@
+#navigation {
+
+    padding: 1rem 0rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-content: center;
+    background-color: #FCF3E4;
+    height: 10vh;
+} 
+
+#navigationLaptop {
+    display: none;
+}
+
+.navList li{
+    padding: 3rem;
+}
+
+.navListLaptop li {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navList.active {
+    right: 0;
+    z-index: 1;
+    background-color: #FCF3E4;
+    /* opacity: 0.95; 
+    voir avec Elisa*/
+}
+
+.navList{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding-top: 10rem;
+    font-size: 2.5rem;
+    transition: 0.65s;
+    text-align: center;
+}
+
+.navList li:hover {
+    color: #ecb976;
+}
+
+.menu-icon{
+    position: absolute; 
+    transition: transform 0.5s;
+    top:4rem;
+    left: 86vw ;
+    z-index: 2;
+    background: transparent;
+}
+
+.menu-icon span {
+    position: absolute;
+    top: 50%;
+    left: 1;
+    transform: translateX(-50%) translateY(-50%); 
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 50px;
+    z-index: 1;
+    background-color: #D5BDAF;
+    transition: background 0.5s;
+}
+
+.menu-icon span::before, .menu-icon span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-10px);
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #D5BDAF;
+    transition: transform 0.5s;
+}
+
+.menu-icon span::after {
+    transform: translateY(10px);
+}
+
+.menu-icon.is-opened span { background: transparent; }
+.menu-icon.is-opened span::before { transform: translateY(0) rotate(45deg); }
+.menu-icon.is-opened span::after { transform: translateY(0) rotate(-45deg); }
+.menu-icon.is-opened { transform: rotate(180deg); }
+
+.imageHeader{
+    width: 100%;
+    height: 40vh;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 1025px) {
+    #navigation {
+        display: none;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    #navigationLaptop{
+        position: relative;
+        width: 100vw;
+        height: 12vh;
+        background-color: #FCF3E4;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        font-size: 1.5rem;
+
+        padding: 1rem 0 1rem 2rem;
+    }
+
+    .navListLaptop{
+        display: flex;
+        align-items: center;
+        padding: 2.5rem 30%;
+        border-radius: 15px;
+        margin-left: 9rem;
+    }
+
+    .navListLaptop li {
+        padding: 0 1.5rem;
+    }
+
+    .navListLaptop li:hover {
+        color: #ecb976;
+        border-bottom: #ecb976 2px solid;
+    }
+
+    .navigationLaptop img{
+        position: absolute;
+        padding: 10rem;
+    }
+}

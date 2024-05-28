@@ -1,0 +1,61 @@
+.description{
+    background-color: #f6e3c3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+}
+
+.description h2{
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.mainPhoto{
+    padding: 1.5rem 0;
+    width: 55%;
+    border-radius: 50px 0 50px 0;
+}
+
+.retour {
+    background-color: #ecb976;
+    text-align: center;
+    padding: 1rem 0 0.5rem 0;
+    height: 25vh;
+    position: relative;
+}
+
+#commentGauche{
+    position: absolute;
+    top: 42%;
+    left: 7%;
+    width: 4rem;
+}
+#commentRight{
+    position: absolute;
+    top: 42%;
+    right: 7%;
+    transform: rotate(-180deg);
+    width: 4rem;
+}
+
+.commentaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+
+.commentaire div{
+    width:32vw;
+    background-color: #FCF3E4;
+    padding: 2rem;
+    border-radius: 5px;
+    /* font-style: italic; */
+}
+#name{
+    font-weight: bold;
+}
