@@ -4,6 +4,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import './App.scss';
 
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,11 +14,11 @@ function App() {
 
   return (
       <div>
-        <Header isVisible={isVisible} />
+        <Header isVisible={isVisible} toggleVisibility={toggleVisibility} />
         <Main />
         <Footer />
       </div>
   )
 }
 
-export default App
+export default App;

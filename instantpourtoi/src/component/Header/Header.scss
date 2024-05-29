@@ -1,5 +1,4 @@
 #navigation {
-
     padding: 1rem 0rem;
     height: 4rem;
     position: relative;
@@ -12,7 +11,7 @@
     height: 10vh;
 } 
 
-#navigationLaptop {
+#navigationLaptop,.navigationLaptop img, .navListLaptop {
     display: none;
 }
 
@@ -70,7 +69,6 @@
     border-radius: 50px;
     z-index: 1;
     background-color: #D5BDAF;
-    transition: background 0.5s;
 }
 
 .menu-icon span::before, .menu-icon span::after {
@@ -121,7 +119,6 @@
         justify-content: flex-start;
         align-content: center;
         font-size: 1.5rem;
-
         padding: 1rem 0 1rem 2rem;
     }
 
@@ -143,7 +140,10 @@
     }
 
     .navigationLaptop img{
+        display: block;
         position: absolute;
-        padding: 10rem;
+        left: 5rem;
+        top: 1rem;
+        width: 8%;
     }
 }

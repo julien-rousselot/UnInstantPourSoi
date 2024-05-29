@@ -2,15 +2,16 @@ import './Header.scss';
 import logoLoup from '../../assets/images/loup-removebg-preview.png';
 
 
-function Header ({ isVisible }) {
+function Header ({ isVisible, toggleVisibility }) {
     return(
         <header>
             <nav id="navigation">
                 <img src={logoLoup} alt="logo un instant pour soi" />
-                <div className="menu-icon">
-                    <span></span>
+                <div className={`menu-icon ${isVisible ? 'is-opened' : ''}`}>
+                    <span onClick={toggleVisibility}>
+                    </span>
                 </div>
-                <ul className="navList">
+                <ul className= {`navList ${isVisible ? 'active' : ''}`} >
                     <li>Accueil</li>
                     <li>A propos</li>
                     <li>Prestations</li>
@@ -18,7 +19,7 @@ function Header ({ isVisible }) {
                     <li>Contact</li>
                 </ul>
             </nav>
-            {isVisible && (
+
             <nav className="navigationLaptop">
                 <img src={logoLoup} alt="logo un instant pour soi" />
                 <ul className="navListLaptop">
@@ -29,7 +30,6 @@ function Header ({ isVisible }) {
                     <li>Contact</li>
                 </ul>
             </nav>
-            )}
         </header>
     )
 }
