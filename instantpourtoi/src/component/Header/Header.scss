@@ -1,6 +1,5 @@
 #navigation {
     padding: 1rem 0rem;
-    height: 4rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -8,8 +7,14 @@
     display: flex;
     align-content: center;
     background-color: #FCF3E4;
-    height: 10vh;
+    height: 13vh;
+    color: black;
+
 } 
+
+#navigation img{
+    width: 10rem;
+}
 
 #navigationLaptop,.navigationLaptop img, .navListLaptop {
     display: none;
@@ -17,11 +22,8 @@
 
 .navList li{
     padding: 3rem;
-}
 
-// .logo-container{
-//     position: relative;
-// }
+}
 
 .navListLaptop li {
     font-family: "Alice", serif;
@@ -49,6 +51,10 @@
     text-align: center;
 }
 
+.nav-link{
+    text-decoration: none;
+    color:#212020 ;
+}
 .navList li:hover {
     color: #ecb976;
 }
@@ -56,7 +62,7 @@
 .menu-icon{
     position: absolute; 
     transition: transform 0.5s;
-    top:4rem;
+    top:6rem;
     left: 86vw ;
     z-index: 2;
     background: transparent;
@@ -64,11 +70,10 @@
 
 .menu-icon span {
     position: absolute;
-    top: 50%;
     left: 1;
     transform: translateX(-50%) translateY(-50%); 
     display: block;
-    width: 2.5rem;
+    width: 3.5rem;
     height: 3px;
     border-radius: 50px;
     z-index: 1;
@@ -78,11 +83,11 @@
 .menu-icon span::before, .menu-icon span::after {
     content: '';
     position: absolute;
-    top: 0;
+    // top: 0;
     left: 0;
     transform: translateY(-10px);
     display: block;
-    width: 2.5rem;
+    width: 3.5rem;
     height: 3px;
     border-radius: 50px;
     background-color: #D5BDAF;
@@ -108,30 +113,19 @@
     #navigation {
         display: none;
     }
-
+  
     .menu-icon{
         display: none;
-    }
-
-    #navigationLaptop{
-        position: relative;
-        width: 100vw;
-        height: 12vh;
-        background-color: #FCF3E4;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-content: center;
-        font-size: 1.5rem;
-        padding: 1rem 0 1rem 2rem;
+        width: 4rem;
     }
 
     .navListLaptop{
         display: flex;
         align-items: center;
         padding: 2.5rem 30%;
-        border-radius: 15px;
         margin-left: 9rem;
+        height: 8rem;
+        white-space: nowrap;
     }
 
     .navListLaptop li {
@@ -140,14 +134,24 @@
 
     .navListLaptop li:hover {
         color: #ecb976;
-        border-bottom: #ecb976 2px solid;
+        border-bottom: #212020 solid 2px;
+        bottom: -10px;
+        width: 50%;
+        //ici quon change
+
     }
 
     .navigationLaptop img{
         display: block;
         position: absolute;
-        left: 5rem;
-        top: 1rem;
-        width: 8%;
+        left: 3rem;
+        top: 0.5rem;
+        width: 12rem;
     }
-}
+
+    .nav-link {
+        color: #212020; /* Couleur pour l'état actif */
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+    }
