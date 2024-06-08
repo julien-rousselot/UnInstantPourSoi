@@ -55,6 +55,7 @@
     text-decoration: none;
     color:#212020 ;
 }
+
 .navList li:hover {
     color: #ecb976;
 }
@@ -83,7 +84,6 @@
 .menu-icon span::before, .menu-icon span::after {
     content: '';
     position: absolute;
-    // top: 0;
     left: 0;
     transform: translateY(-10px);
     display: block;
@@ -134,7 +134,7 @@
 
     .navListLaptop li:hover {
         color: #ecb976;
-        border-bottom: #212020 solid 2px;
+        // border-bottom: #212020 solid 2px;
         bottom: -10px;
         width: 50%;
         //ici quon change
@@ -153,5 +153,9 @@
         color: #212020; /* Couleur pour l'état actif */
         text-decoration: none;
         font-size: 1.3rem;
-      }
+    }
+
+    .nav-link.active {
+        border-bottom: #212020 solid 2px;
+    }
     }

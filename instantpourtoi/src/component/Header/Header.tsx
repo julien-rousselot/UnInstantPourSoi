@@ -1,6 +1,6 @@
 import './Header.scss';
 import logo from '../../assets/images/logo.jpg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
 
 interface HeaderProps{
     isVisible:  boolean,
@@ -10,7 +10,7 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
     return(
         <header>
        <nav id="navigation">
-                <NavLink  to="/"><img src={logo} alt="logo un instant pour soi" /></NavLink>
+            <Link to="/"><img className='footerLogo' src={logo} alt="logo un instant pour soi" /></Link>
                 <div className={`menu-icon ${isVisible ? 'is-opened' : ''}`}>
                     <span onClick={toggleVisibility}>
                     </span>
@@ -44,7 +44,8 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
             </nav>
 
             <nav className="navigationLaptop">
-                <img src={logo} alt="logo un instant pour soi" />
+            <Link to="/"><img className='footerLogo' src={logo} alt="logo un instant pour soi" /></Link>
+
                 <ul className="navListLaptop">
                     <li><NavLink className={`nav-link`} to="/">Accueil</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Apropos">À propos</NavLink></li>

@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #ecb976;
+    background-color: #ddb682;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -35,15 +35,28 @@
     flex-direction: row;
     justify-content: center;
 }
-.commentaire div{
+.commentaire section{
     width:32vw;
     background-color: #FCF3E4;
     padding: 3rem 3rem;
     border-radius: 5px;
     min-height: 7rem;
     max-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #name{
     font-weight: bold;
+}
+.commentary{
+    line-height: 1.5rem;
+
+}
+.name{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    // background-color: brown;
 }

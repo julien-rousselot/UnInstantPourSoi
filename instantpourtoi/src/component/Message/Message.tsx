@@ -2,6 +2,10 @@ import { useState } from 'react';
 import './Message.scss';
 import flecheGauche from '../../assets/images/gauche.png';
 import profilComment from '../../Data/profilComment';
+// import React from 'react'
+// import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
+
 
 function Message () {
 
@@ -17,18 +21,16 @@ function Message () {
 
     return(
         <div className="retour">
-            <h3>Vos retours</h3>
+               <h3>Vos retours</h3>
             <div className="commentaire">
-                <div>
-                    <p>{profilComment[currentIndex].description}</p>
-                    <br/>
-                    <br/>
-                    <span id="name">{profilComment[currentIndex].firstName}</span> 
+                <section>
+                    <div className='commentary'><p>{profilComment[currentIndex].description}</p></div>
+                    <div className='name'><span id="name">{profilComment[currentIndex].firstName}</span> </div>
                     <img id="commentGauche" src={flecheGauche} onClick={prevProfile} />
                     <img id="commentRight" src={flecheGauche} onClick={nextProfile} />
-                </div>
+                </section>
             </div>
-        </div> 
+        </div>  
     )
 }
 
