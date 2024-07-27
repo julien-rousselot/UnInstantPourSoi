@@ -20,15 +20,15 @@ function Message () {
 
     return(
       <div className='clientRetour'>
-        <h3>Vos retours</h3>
+        <h2>Vos retours</h2>
         <div className="retour">
             
-            <img id="commentRight" src={fleche} onClick={prevProfile} />
+            <img id="commentRight" alt='fleche commentaire' src={fleche} onClick={prevProfile} />
             <div className="commentaire">
               <div className='commentary'><p>{profilComment[currentIndex].description}</p></div>
               <div className='name'><span id="name">{profilComment[currentIndex].firstName}</span></div>
             </div>
-            <img id="commentLeft" src={fleche} onClick={nextProfile} />
+            <img id="commentLeft" alt='fleche commentaire' src={fleche} onClick={nextProfile} />
 
         </div>  
       </div>
