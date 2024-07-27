@@ -1,0 +1,51 @@
+.bigImageDiv{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.imageHeader{
+    object-fit: cover;
+    width: 95vw;
+}
+
+.description{
+    background-color: #f6e3c3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 3rem 0;
+}
+
+.description h2{
+    font-weight: bold;
+    padding: 0 20px 2rem 20px;
+    font-size: 1.4rem;
+    font-family: "Alice", serif;
+    color: #CA9479;
+
+}
+
+.dosPhoto{
+    width: 60vw;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.descriptionText{
+    padding: 1rem 22px;
+    font-size: 16px;
+}
+
+@media (min-width: 1025px) {
+    .description{
+        display: flex;
+    }
+    
+    .dosPhoto{
+        padding: 2rem 2.5rem;
+        width:25%;
+        border-radius: 100px 0px;
+    }
+}
