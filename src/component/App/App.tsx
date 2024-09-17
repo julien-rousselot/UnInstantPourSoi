@@ -5,7 +5,6 @@ import Footer from '../Footer/Footer';
 import Accueil from '../Accueil/Accueil';
 import Prestations from '../Prestations/Prestations';
 import Contact from '../Contact/Contact';
-import Tarifs from '../Tarifs/Tarifs';
 import Apropos from '../APropos/Apropos';
 
 import './App.scss';
@@ -22,7 +21,6 @@ function App() {
         <Header isVisible={isVisible} toggleVisibility={toggleVisibility} />
         <Routes>
           <Route path="/" element={<Accueil />} />
-          <Route path="/Tarifs" element={<Tarifs />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Apropos" element={<Apropos />} />
           <Route path="/Prestations" element={<Prestations />} />

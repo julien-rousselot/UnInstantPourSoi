@@ -27,9 +27,7 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
                     <li>
                         <NavLink className={'nav-link'}  to="/Prestations" onClick={toggleVisibility}>Prestations</NavLink>
                     </li>
-                    <li>
-                        <NavLink className={'nav-link'} to="/Tarifs" onClick={toggleVisibility}>Tarifs</NavLink>
-                    </li>
+                  
                     <li>
                         <NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>Contact</NavLink>
                     </li>
@@ -43,7 +41,6 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
                     <li><NavLink className={`nav-link`} to="/">Accueil</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Apropos">À propos</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Prestations">Prestations</NavLink></li>
-                    <li><NavLink className={`nav-link`} to="/Tarifs">Tarifs</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Contact">Contact</NavLink></li>
                 </ul>
             </nav>

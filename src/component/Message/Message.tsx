@@ -20,7 +20,6 @@ function Message () {
 
     return(
       <div className='clientRetour'>
-        <h2>Vos retours</h2>
         <div className="retour">
             
             <img id="commentRight" alt='fleche commentaire' src={fleche} onClick={prevProfile} />
