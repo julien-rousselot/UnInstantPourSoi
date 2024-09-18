@@ -1,5 +1,5 @@
 import './Accueil.scss';
-import Message from '../Message/Message';
+// import Message from '../Message/Message';
 import sand from '../../assets/images/Sable image de fond accueil.jpg';
 import accueil from '../../assets/images/accueil.png';
 import owner from '../../assets/images/owner.jpg';
@@ -7,13 +7,19 @@ import soinNeocare from '../../assets/images/soinsNeocare.jpg';
 import soinSurMesure from '../../assets/images/soinSurMesure.png';
 import prestationBeaute from '../../assets/images/prestationsBeauté.jpg';
 import ligne from '../../assets/images/ligne.svg';
-
-
-
-
-
+// import SimpleCarousel from '../Message/Message';
+// import MyCarousel from '../Message/Message';
+import Carousel from '../Message/Message';
 
 function Accueil () {
+    const items = [
+        "Texte 1",
+        "Texte 2",
+        "Texte 3",
+        "Texte 4",
+        "Texte 5",
+      ];
+      
     return(
     <>
         <header>
@@ -55,7 +61,7 @@ function Accueil () {
                 <span></span>
             </section>
             <section>
-                <Message />
+                <Carousel items={items} />
             </section>
         </footer>
     </>

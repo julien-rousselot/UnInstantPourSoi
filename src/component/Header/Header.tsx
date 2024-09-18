@@ -11,7 +11,7 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
     return(
         <header>
        <nav id="navigation">
-            <Link to="/"><img className='footerLogo' src={logo} alt="logo un instant pour soi" /></Link>
+            <Link to="/"><img className='headerLogo' src={logo} alt="logo un instant pour soi" /></Link>
                 <div className={`menu-icon ${isVisible ? 'is-opened' : ''}`}>
                     <span onClick={toggleVisibility}>
                     </span>
