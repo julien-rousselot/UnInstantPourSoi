@@ -12,13 +12,7 @@ import ligne from '../../assets/images/ligne.svg';
 import Carousel from '../Message/Message';
 
 function Accueil () {
-    const items = [
-        "Texte 1",
-        "Texte 2",
-        "Texte 3",
-        "Texte 4",
-        "Texte 5",
-      ];
+
       
     return(
     <>
@@ -61,7 +55,7 @@ function Accueil () {
                 <span></span>
             </section>
             <section>
-                <Carousel items={items} />
+                <Carousel />
             </section>
         </footer>
     </>

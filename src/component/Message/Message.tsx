@@ -131,53 +131,102 @@
 // };
 
 // export default MyCarousel;
-import React, { useState } from 'react';
 import './Message.scss';
 
-const Carousel = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    const lastIndex = items.length - 1;
-    const shouldResetIndex = currentIndex === 0;
-    const newIndex = shouldResetIndex ? lastIndex : currentIndex - 1;
-    setCurrentIndex(newIndex);
+
+
+// const Carousel = () => {
+//   const [index, setIndex] = useState(0);
+
+//   const comments = [
+//     "Commentaire 1",
+//     "Commentaire 2",
+//     "Commentaire 3",
+//     "Commentaire 4",
+//     "Commentaire 5",
+//     "Commentaire 6",
+//   ];
+
+//   const visibleComments = window.innerWidth > 640 ? 3 : 1; // 3 en desktop, 1 en mobile
+
+//   const handleNext = () => {
+//     if (index < comments.length - visibleComments) {
+//       setIndex((prevIndex) => prevIndex + 1);
+//     } else {
+//       setIndex(0); // Retour au début
+//     }
+//   };
+
+//   const handlePrev = () => {
+//     if (index > 0) {
+//       setIndex((prevIndex) => prevIndex - 1);
+//     } else {
+//       setIndex(comments.length - visibleComments); // Retour à la fin
+//     }
+//   };
+
+//   return (
+//     <div className="carousel-container">
+//       <button className="carousel-btn left-btn" onClick={handlePrev}>
+//         &#10094;
+//       </button>
+//       <div className="carousel">
+//         <div
+//           className="carousel-items"
+//           style={{ transform: `translateX(-${index * (100 / visibleComments)}%)` }}
+//         >
+//           {comments.map((comment, idx) => (
+//             <div className="carousel-item" key={idx}>
+//               <p>{comment}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//       <button className="carousel-btn right-btn" onClick={handleNext}>
+//         &#10095;
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Carousel;
+
+
+import { useState } from 'react';
+
+const Carousel = () => {
+  const [index, setIndex] = useState(0);
+
+  const comments = [
+    "Commentaire 1",
+    "Commentaire 2",
+    "Commentaire 3",
+    "Commentaire 4",
+    "Commentaire 5",
+    "Commentaire 6",
+  ];
+
+  const handleNext = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % comments.length); // Retourne au premier commentaire après le dernier
   };
 
-  const nextSlide = () => {
-    const lastIndex = items.length - 1;
-    const shouldResetIndex = currentIndex === lastIndex;
-    const newIndex = shouldResetIndex ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const getVisibleItems = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 600) {
-      return 1; // Mobile - affiche 1 item
-    } else if (screenWidth < 1024) {
-      return 2; // Tablette - affiche 2 items
-    } else {
-      return 3; // Desktop - affiche 3 items
-    }
+  const handlePrev = () => {
+    setIndex((prevIndex) => (prevIndex - 1 + comments.length) % comments.length); // Retourne au dernier commentaire après le premier
   };
 
   return (
-    <div className="carousel">
-      <button className="carousel-arrow left" onClick={prevSlide}>
-        &lt;
+    <div className="carousel-container">
+      <button className="carousel-btn left-btn" onClick={handlePrev}>
+        &#10094;
       </button>
-      <div className="carousel-content">
-        {items
-          .slice(currentIndex, currentIndex + getVisibleItems())
-          .map((item, index) => (
-            <div className="carousel-item" key={index}>
-              {item}
-            </div>
-          ))}
+      <div className="carousel">
+        <div className="carousel-item">
+          <p>{comments[index]}</p>
+        </div>
       </div>
-      <button className="carousel-arrow right" onClick={nextSlide}>
-        &gt;
+      <button className="carousel-btn right-btn" onClick={handleNext}>
+        &#10095;
       </button>
     </div>
   );
