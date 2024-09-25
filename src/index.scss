@@ -1,9 +1,14 @@
+// * {
+//   outline: 1px dashed blue; /* Ajoute un contour bleu pointillé */
+// } 
+// pour voir les elements qui deborde
+
 body {
   background-color: #FCF3E4;
   font-family: Helvetica, Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 100vw;
+  // width: 100%;
   // overflow-x: hidden;
   padding: 0 1.5rem;
   color: #905631;
@@ -12,4 +17,11 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 640px) {
+  body {
+      width: 100%;
+
+  }
 }

@@ -8,15 +8,9 @@
     align-content: center;
     background-color: #FEFEFE;
     color: black;
-    // width: 100vw;
-
 } 
 
-// #navigation img{
-//     width: 10rem;
-// }
-
-#navigationLaptop,.navigationLaptop img, .navListLaptop {
+#navigationLaptop,#navigationLaptop img, .navListLaptop {
     display: none;
 }
 
@@ -111,50 +105,48 @@
     width: 8rem;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 640px) {
     #navigation {
         display: none;
-        height: 13vh;
-
     }
-  
-    .menu-icon{
-        display: none;
-        width: 4rem;
+   
+    #navigationLaptop{
+        display: flex;
+        padding: 0.5rem ;
+        white-space: nowrap;
+        background-color: #FEFEFE;
+        justify-content: space-around;
     }
-
-    .navListLaptop{
+    .navListLaptop, #navigationLaptop img {
         display: flex;
         align-items: center;
-        padding: 2.5rem 30%;
-        margin-left: 3rem;
-        height: 8rem;
-        // width: 100vw;
-        white-space: nowrap;
     }
 
-    .navListLaptop li {
-        padding: 0 1.5rem;
-    }
-
-    .navListLaptop li:hover {
-        color: #ecb976;
-        // border-bottom: #212020 solid 2px;
-        bottom: -10px;
-        width: 50%;
-        //ici quon change
-    }
-
-    .navigationLaptop img{
+    .headerLogoLaptop{
+        width: 7rem;
         display: block;
-        position: absolute;
-        left: 3rem;
-        top: 0.5rem;
-        width: 12rem;
+        // background-color: aqua;
     }
+    .navListLaptop li {
+        padding: 0 1rem;
+    }
+
+    // .navListLaptop li:hover {
+    //     color: #ecb976;
+    //     bottom: -10px;
+    //     width: 50%;
+    // }
+
+    // .navigationLaptop img{
+    //     display: block;
+    //     position: absolute;
+    //     left: 3rem;
+    //     top: 0.5rem;
+    //     width: 12rem;
+    // }
 
     .nav-link {
-        color: #212020; /* Couleur pour l'état actif */
+        color: #212020;
         text-decoration: none;
         font-size: 1.3rem;
     }
@@ -162,4 +154,53 @@
     .nav-link.active {
         border-bottom: #CA9479 solid 2px;
     }
-    }
+}
+
+@media (min-width: 1025px) {
+    // #navigation {
+    //     display: none;
+    //     height: 13vh;
+    // }
+  
+    // .menu-icon{
+    //     display: none;
+    //     width: 4rem;
+    // }
+
+    // .navListLaptop{
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 2.5rem 30%;
+    //     margin-left: 3rem;
+    //     height: 8rem;
+    //     white-space: nowrap;
+    // }
+
+    // .navListLaptop li {
+    //     padding: 0 1.5rem;
+    // }
+
+    // .navListLaptop li:hover {
+    //     color: #ecb976;
+    //     bottom: -10px;
+    //     width: 50%;
+    // }
+
+    // .navigationLaptop img{
+    //     display: block;
+    //     position: absolute;
+    //     left: 3rem;
+    //     top: 0.5rem;
+    //     width: 12rem;
+    // }
+
+    // .nav-link {
+    //     color: #212020;
+    //     text-decoration: none;
+    //     font-size: 1.3rem;
+    // }
+
+    // .nav-link.active {
+    //     border-bottom: #CA9479 solid 2px;
+    // }
+}

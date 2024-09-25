@@ -1,7 +1,6 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  // max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -15,7 +14,6 @@
 .carousel-items {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  // background-color: aqua;
   padding: 0 5rem;
 }
 
@@ -25,28 +23,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;  /* Largeur de chaque commentaire */
-  // // background-color: white; /* Fond blanc pour chaque commentaire */
-  // border: 1px solid #ddd; /* Bordure optionnelle */
-  border-radius: 0 0 50% 50%;
+  width: 100%;
 }
 .carousel-item p {
-  // flex: 0 0 100%; /* Par défaut, 1 item visible sur mobile */
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 301px; /* Hauteur de chaque commentaire */
-  width: 266px;  /* Largeur de chaque commentaire */
-  background-color: white; /* Fond blanc pour chaque commentaire */
-  border: 1px solid #ddd; /* Bordure optionnelle */
+  height: 302px;
+  width: 267px;
+  background-color: white;
+  border: 1px solid #CA9479;
   margin: 2rem;
   border-radius: 0 0 50% 50%;
+  color: #CA9478;
 }
 .carousel {
-  justify-content: center; /* Centre le contenu du carousel */
+  justify-content: center;
 }
 .carousel-btn {
   position: absolute;
@@ -57,7 +52,7 @@
   font-size: 2rem;
   cursor: pointer;
   z-index: 2;
-  color: #a3733d;
+  color: #CA9479;
 }
 .carousel-items > :not(.carousel-item) {
   display: none; /* Cache les autres commentaires */
@@ -70,8 +65,11 @@
   right: -2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 940px) {
   .carousel-item {
-    width: 266px; /* Taille fixe pour desktop */
+    width: 31%; /* Taille fixe pour desktop */
+    margin: auto;
+    // margin: 1rem;
+    // background: rgb(233, 20, 20);
   }
 }

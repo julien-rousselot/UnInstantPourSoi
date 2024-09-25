@@ -65,7 +65,7 @@
     flex-direction: row;
 }
 
-.presentation-owner img{
+.self-picture{
     width: 50%;
     padding: 5rem 0;
     margin-left: 1rem ;
@@ -90,15 +90,17 @@ footer section{
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding-top: 2rem ;
 }
 footer section h3{
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Open Sans';
     padding: 1rem 0 0.5rem 0;
 }
 footer section h4{
     font-style: italic;
     font-family: 'Open Sans';
+    font-size: 1.4rem;
 }
 footer section h5{
     font-family: 'Open Sans';
@@ -127,30 +129,63 @@ footer section button{
     color: white;
     margin: 1rem auto;
 }
+.flower{
+    display: none;
+}
+@media (min-width: 640px) {
+    .background-header-front{
+        width: 43%;
+        left: 3rem;
+        top: 3.5rem;
+    }
+    .header-accueil{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+    }
+    .header-accueil h2{
+        font-size: 2.5rem;
+        padding-top: 3rem;
+    }
+    .text-header-style{
+        margin-left: 6rem;
+        width: 50%;
+        font-size: 1rem;
+    }
+    .text-header-style p{
+        padding: 1rem;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .self-picture{
+        width: 30%;
+        margin-left: 0.5rem;
+    }
+    .flower{
+        display: block;
+        width: 25%;
+        object-fit: cover;
+    }
+    .presentation-text{
+        padding: 2.5rem 2rem;
+    }
+    .prestations{
+        display: flex;
+        flex-direction: row;
+    }
+    .prestations-div{
+        // width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .prestations-div img{
+        width: 100%;
+      
+    }
+    // footer section{
+    //     flex-direction: row;
+    // }
+}
 
 @media (min-width: 1025px) {
-    .description{
-        display: flex;
-    }
-    
-    .dosPhoto{
-        padding: 2rem 2.5rem;
-        width:25%;
-        border-radius: 100px 0px;
-    }
+
 }
