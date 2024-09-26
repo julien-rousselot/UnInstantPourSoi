@@ -58,11 +58,22 @@
   display: none; /* Cache les autres commentaires */
 }
 .left-btn {
-  left: -2rem;
+  left: 1rem;
 }
 
 .right-btn {
-  right: -2rem;
+  right: 1rem;
+}
+
+
+@media (min-width: 640px) {
+  .left-btn {
+    left: 10rem;
+  }
+  
+  .right-btn {
+    right: 10rem;
+  }
 }
 
 @media (min-width: 940px) {

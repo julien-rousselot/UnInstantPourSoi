@@ -20,7 +20,7 @@ function Accueil () {
                 <img className='background-header' src={sand} alt="sable" />
                 <div className='text-header-style'>
                     <img className='background-header-front' src={accueil} alt="accueil du salon" />
-                    <h2>(Re)découvrez <br /> un instant pour soi</h2>
+                    <h2>(Re)découvrez <br /> un instant <br />pour soi</h2>
                     <img className='ligne-header' src={ligne}/><p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                     <button>DECOUVRIR</button>
                 </div>
@@ -47,22 +47,22 @@ function Accueil () {
                             <img src={soinNeocare} alt="Soin Neocare" />
                             <h5>Soins <br />neocare</h5>
                             <button>DECOUVRIR</button>
+                            <span></span>
                         </div>
-                        <span></span>
 
                         <div className='prestations-div'>
                             <img src={soinSurMesure} alt="soin Sur Mesure" />
                             <h5>Soins <br />sur mesure</h5>
                             <button>DECOUVRIR</button>
+                            <span></span>
                         </div>
-                        <span></span>
 
                         <div className='prestations-div'>
                             <img src={prestationBeaute} alt="prestation Beaute" />
                             <h5>Prestations<br /> beauté</h5>
                             <button>DECOUVRIR</button>
+                            <span></span>
                         </div>
-                        <span></span>
                     </div>
                 </section>
             <section>
