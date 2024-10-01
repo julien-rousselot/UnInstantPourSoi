@@ -1,0 +1,46 @@
+.text-header-style{
+ position: relative;  
+ width: 100%; 
+}
+.ligne-header{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+}
+
+
+.container-img-text{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+.container-img-text p{
+    text-align: start;
+    padding: 2rem;
+}
+.container-img-text h4{
+    font-size: 3rem;
+    font-family: 'Open Sans';
+    // font-weight: bold;
+    padding-bottom: 1rem;
+}
+.left{
+    background-color: #F7EBE8;
+   
+}
+
+.text-massage{
+    padding-top: 5rem;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+.container-img-text img{
+    width: 50%;
+}
+.first-pic{
+    max-height: 800px;
+    object-fit: cover;
+}
