@@ -1,4 +1,4 @@
-#navigation {
+#headerPhone {
     padding: 1rem 0rem;
     position: relative;
     display: flex;
@@ -10,13 +10,13 @@
     color: black;
 } 
 
-#navigationLaptop,#navigationLaptop img, .navListLaptop {
-    display: none;
-}
+// #headerLaptop,#headerLaptop img, .navListLaptop {
+//     display: none;
+// }
 
-.navList li{
-    padding: 3rem;
-}
+// .navList li{
+//     padding: 3rem;
+// }
 
 // .navListLaptop li {
 //     font-family: "Alice", serif;
@@ -106,18 +106,18 @@
 }
 
 @media (min-width: 640px) {
-    #navigation {
+    #headerPhone {
         display: none;
     }
    
-    #navigationLaptop{
+    #headerLaptop{
         display: flex;
-        padding: 0.5rem ;
         white-space: nowrap;
-        background-color: #FEFEFE;
-        justify-content: space-around;
+        background-color: #c01919;
+        width: 100%;
     }
-    .navListLaptop, #navigationLaptop img {
+
+    .linkDiv, #headerLaptop img {
         display: flex;
         align-items: center;
     }
@@ -125,29 +125,39 @@
     .headerLogoLaptop{
         width: 7rem;
         display: block;
-        // background-color: aqua;
     }
-    .navListLaptop li {
+
+    .logoDiv{
+        width: 50%;
+        background-color: aqua;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+    }
+
+    .linkDiv{
+        width: 50%;
+        background-color: blueviolet;
+        z-index:5;
+     
+    }
+    .linkDiv ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .linkDiv li {
         padding: 0 1rem;
     }
 
-    // .navListLaptop li:hover {
-    //     color: #ecb976;
-    //     bottom: -10px;
-    //     width: 50%;
-    // }
-
-    // .navigationLaptop img{
-    //     display: block;
-    //     position: absolute;
-    //     left: 3rem;
-    //     top: 0.5rem;
-    //     width: 12rem;
-    // }
+    .linkDiv li:hover {
+        color: #ecb976;
+    }
 
     .nav-link {
         color: #212020;
         text-decoration: none;
+        padding: 10px;
         font-size: 1.3rem;
     }
 
@@ -156,8 +166,10 @@
     }
 }
 
+
+
 @media (min-width: 1025px) {
-    // #navigation {
+    // #headerPhone {
     //     display: none;
     //     height: 13vh;
     // }
@@ -186,7 +198,7 @@
     //     width: 50%;
     // }
 
-    // .navigationLaptop img{
+    // .headerLaptop img{
     //     display: block;
     //     position: absolute;
     //     left: 3rem;
