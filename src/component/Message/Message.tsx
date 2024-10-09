@@ -1,38 +1,73 @@
 import './Message.scss';
-// import Slider from "react-slick";
-import fleche from '/src/assets/images/fleche.svg';
-import profilComment  from '../../Data/profilComment';
-import 'react-alice-carousel/lib/alice-carousel.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
+const Carousel = () => {
+  const [index, setIndex] = useState(0);
+  const [commentsToShow, setCommentsToShow] = useState(1); // Par défaut, on montre 1 commentaire pour mobile
 
-function Message () {
+  const comments = [
+    "Accueil et prestations au top, un vrai moment de détente. Merci Elisa !",
+    "Institut agréable, Elisa est très douce et très professionnelle. Prestations au top. J'y retournerai avec plaisir ! Je conseille vivement.",
+    "Salon magnifique, accueillant et chaleureux. Elisa est une professionnelle attentionnée, délicate et très à l'écoute. Je recommande vivement",
+    "Great place and Elisa is so nice. I'll definitely come back. ",
+  ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const names = [
+    "Amélie",
+    "Karine",
+    "Florence",
+    "Lulencito",
+  ];
 
-    const nextProfile = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % profilComment.length);
+  // Gérer le changement d'écran pour afficher soit 1 commentaire (mobile), soit 3 (desktop)
+  useEffect(() => {
+    const updateCommentsToShow = () => {
+      if (window.innerWidth > 940) {
+        setCommentsToShow(3); // 3 commentaires pour desktop
+      } else {
+        setCommentsToShow(1); // 1 commentaire pour mobile
+      }
     };
-  
-    const prevProfile = () => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + profilComment.length) % profilComment.length);
-    };
 
-    return(
-      <div className='clientRetour'>
-        <h2>Vos retours</h2>
-        <div className="retour">
-            
-            <img id="commentRight" alt='fleche commentaire' src={fleche} onClick={prevProfile} />
-            <div className="commentaire">
-              <div className='commentary'><p>{profilComment[currentIndex].description}</p></div>
-              <div className='name'><span id="name">{profilComment[currentIndex].firstName}</span></div>
-            </div>
-            <img id="commentLeft" alt='fleche commentaire' src={fleche} onClick={nextProfile} />
+    updateCommentsToShow(); // Détecter la taille de l'écran lors du chargement
 
-        </div>  
+    window.addEventListener('resize', updateCommentsToShow); // Ajuster en fonction du redimensionnement
+
+    return () => window.removeEventListener('resize', updateCommentsToShow); // Nettoyage du listener
+  }, []);
+
+  const handleNext = () => {
+    // Faire avancer d'un seul commentaire à la fois
+    setIndex((prevIndex) => (prevIndex + 1) % comments.length);
+  };
+
+  const handlePrev = () => {
+    // Faire reculer d'un seul commentaire à la fois
+    setIndex((prevIndex) => (prevIndex - 1 + comments.length) % comments.length);
+  };
+
+  return (
+    <div className="carousel-container">
+      <button className="carousel-btn left-btn" onClick={handlePrev}>
+        &#10094;
+      </button>
+      <div className="carousel">
+        <div className="carousel-items">
+          {comments
+            .slice(index, index + commentsToShow) // Afficher les commentaires à partir de l'index
+            .concat(comments.slice(0, Math.max(0, index + commentsToShow - comments.length))) // Gérer le retour au début
+            .map((comment, idx) => (
+              <div className="carousel-item" key={idx}>
+                <p>{comment} <br /><br />{names[(index + idx) % names.length]}</p>
+              </div>
+            ))}
+        </div>
       </div>
-    )
-}
+      <button className="carousel-btn right-btn" onClick={handleNext}>
+        &#10095;
+      </button>
+    </div>
+  );
+};
 
-export default Message;
+export default Carousel;

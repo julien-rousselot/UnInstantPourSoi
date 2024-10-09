@@ -2,38 +2,41 @@ import './Footer.scss';
 import logo from '../../assets/images/logo.jpg';
 import facebookLogo from '../../assets/images/facebookLogo.svg';
 import instagramLogo from '../../assets/images/instagramLogo.svg';
+import carteInstitut from '../../assets/images/Plan.jpg';
+
 
 import { Link } from 'react-router-dom';
 
 function Footer () {
     return(
-            <footer className='footerInfos'>
+        <section>
+            
+            <div className='footerNav'>
+                <img src={carteInstitut} alt="emplacement institut" />
+                <div className='footer-noimage'>
 
-                <div className='menuLien'>
-                    <h2>MENU</h2>
-                    <h3><Link className='menuLink' to="/">Accueil</Link></h3>
-                    <h3><Link className='menuLink' to="/Apropos">A propos</Link></h3>
-                    <h3><Link className='menuLink' to="/Prestations">Prestations</Link></h3>
-                    <h3><Link className='menuLink' to="/Tarifs">Tarifs</Link></h3>
-                </div>
-                <div>
-                    <Link  to="/"><img className='footerLogo menu' src={logo} alt="logo un instant pour soi" /></Link>
-                </div>
-                <div className='menu'>
-                    <h2>CONTACT</h2>
-                    <h3>06 25 99 26 62</h3>
-                </div>
+                    <div className='left-footer'>
+                        <img className='footerLogo' src={logo} alt="logo" />
+                    </div>
 
-                <div className='menu'>
-                    <h2>RETROUVEZ MOI SUR :</h2>
-                    <a href="https://www.instagram.com/_uninstantpoursoi/?hl=fr-ca"><img className='logoReseaux' src={instagramLogo} alt="Instagram" /></a>
-                    <a href="https://www.facebook.com/profile.php?id=100083218066222&locale=fr_FR"><img className='logoReseaux' src={facebookLogo} alt="facebook" /></a>
+                    <div className='right-footer'>
+                        <div className='page-network'>
+                            <h6><Link className='link-text' to="/">ACCUEIL</Link></h6>
+                            <h6><Link className='link-text' to="/APROPOS">A PROPOS</Link></h6>
+                            <h6><Link className='link-text' to="/PRESTATIONS">PRESTATIONS</Link></h6>
+                            <h6><Link className='link-text' to="/CONTACT">CONTACT</Link></h6>
+                        </div>
+                        <div className='page-network'>    
+                            <h6><Link className='link-text' to="https://www.instagram.com/_uninstantpoursoi/?hl=fr-ca">INSTAGRAM </Link><img className='reseaux' src={instagramLogo} alt="Instagram" /></h6>
+                            <h6><Link className='link-text' to="https://www.facebook.com/profile.php?id=100083218066222&locale=fr_FR">FACEBOOK  </Link><img className='reseaux' src={facebookLogo} alt="Facebook" /></h6>
+                            <h6><Link className='link-text' to="/MENTIONS LEGALES">MENTIONS LEGALES</Link></h6>
+                            <h6><Link className='link-text' to="/CGV">CGV</Link></h6>
+                        </div>
+                    </div>
+
                 </div>
-                
-            <div className='mention'>
-                <p className='copyrightFooter'>© 2024 - Mentions légales - CGV</p>
             </div>
-        </footer>
+        </section>
         )
 }
 

@@ -1,22 +1,25 @@
 import './Header.scss';
 import logo from '../../assets/images/logo.jpg';
-import { NavLink, Link} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
-interface HeaderProps{
-    isVisible:  boolean,
-    toggleVisibility: () => void,
+interface HeaderProps {
+    isVisible: boolean;
+    toggleVisibility: () => void;
 }
 
-function Header ({ isVisible, toggleVisibility }:HeaderProps) {
-    return(
+function Header({ isVisible, toggleVisibility }: HeaderProps) {
+
+
+    return (
         <header>
-       <nav id="navigation">
-            <Link to="/"><img className='footerLogo' src={logo} alt="logo un instant pour soi" /></Link>
+            <nav id="headerPhone">
+                <Link to="/">
+                    <img className='headerLogo' src={logo} alt="logo un instant pour soi" />
+                </Link>
                 <div className={`menu-icon ${isVisible ? 'is-opened' : ''}`}>
-                    <span onClick={toggleVisibility}>
-                    </span>
+                    <span onClick={toggleVisibility}></span>
                 </div>
-                
+
                 <ul className={`navList ${isVisible ? 'active' : ''}`}>
                     <li>
                         <NavLink className={'nav-link'} to="/" onClick={toggleVisibility}>Accueil</NavLink>
@@ -25,30 +28,35 @@ function Header ({ isVisible, toggleVisibility }:HeaderProps) {
                         <NavLink className={'nav-link'} to="/Apropos" onClick={toggleVisibility}>A propos</NavLink>
                     </li>
                     <li>
-                        <NavLink className={'nav-link'}  to="/Prestations" onClick={toggleVisibility}>Prestations</NavLink>
-                    </li>
                     <li>
-                        <NavLink className={'nav-link'} to="/Tarifs" onClick={toggleVisibility}>Tarifs</NavLink>
+                        <NavLink className={`nav-link`} to="/Apropos">Prestations</NavLink></li>
                     </li>
                     <li>
                         <NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>Contact</NavLink>
                     </li>
                 </ul>
             </nav>
-
-            <nav className="navigationLaptop">
-            <Link to="/"><img className='footerLogo' src={logo} alt="logo un instant pour soi" /></Link>
-
-                <ul className="navListLaptop">
+            
+            {/* Partie laptop */}
+            <nav id="headerLaptop">
+                <div className='logoDiv'>
+                <Link to="/">
+                    <img className='headerLogoLaptop' src={logo} alt="logo un instant pour soi" />
+                </Link>
+                </div>
+                <div className="linkDiv">
+                <ul>
                     <li><NavLink className={`nav-link`} to="/">Accueil</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Apropos">À propos</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Prestations">Prestations</NavLink></li>
-                    <li><NavLink className={`nav-link`} to="/Tarifs">Tarifs</NavLink></li>
                     <li><NavLink className={`nav-link`} to="/Contact">Contact</NavLink></li>
                 </ul>
+                </div>
             </nav>
+
+
         </header>
-    )
+    );
 }
 
 export default Header;

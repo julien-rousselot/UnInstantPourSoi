@@ -1,52 +1,195 @@
-.bigImageDiv{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
 
-.imageHeader{
-    object-fit: cover;
-    width: 95vw;
-}
-
-.description{
-    background-color: #f6e3c3;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    padding: 3rem 0;
-    line-height: 1.5rem;
-}
-
-.description h2{
-    font-weight: bold;
-    padding: 0 20px 2rem 20px;
-    font-size: 1.9rem;
-    font-family: "Alice", serif;
-    color: #CA9479;
-
-}
-
-.dosPhoto{
-    width: 60vw;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
+// pour les photos
+// .imageHeader{
+//     object-fit: cover;
+//     width: 95vw;
+// }
 
 .descriptionText{
     padding: 1rem 22px;
     font-size: 16px;
 }
 
-@media (min-width: 1025px) {
-    .description{
+.header-accueil{
+    background-color: #F7EBE8;
+    position: relative;
+    padding: 0 0 3rem 0;
+}
+
+.header-accueil h2{
+    font-size: 3rem;
+    color: #9F694E;
+    font-family: 'Open Sans';
+    text-align: center;
+    line-height: 4rem;
+}
+.header-accueil p{
+    text-align: center;
+    padding: 1rem 4.5rem;
+    color: rgb(24, 23, 23);
+}
+.header-accueil button{
+    display: block;
+    text-align: center;
+    background-color: #CA9479;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    color: white;
+    margin: 0 6.5rem;
+    // text-align: start;
+}
+.background-header{
+    width: 18rem;
+    height: 40vh;
+}
+
+.background-header-front{
+    border: 1px solid #CA9479;
+    border-radius: 50% 50% 0 0;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+}
+
+.ligne-header{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+}
+
+.presentation-owner{
+    background-color: #FEFEFE;
+    display: flex;
+    flex-direction: row;
+}
+
+.self-picture{
+    width: 50%;
+    padding: 5rem 0;
+    margin-left: 1rem ;
+}
+.presentation-text{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.8rem;
+    font-family: 'Open Sans';
+}
+
+.presentation-text h3{
+    font-size: 2rem;
+    font-family: 'Open Sans';
+    padding: 0 0 1rem 0;
+}
+.presentation-text p{
+    padding: 0.5rem 0;
+}
+
+footer section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem ;
+}
+footer section h3{
+    font-size: 3rem;
+    font-family: 'Open Sans';
+    padding: 1rem 0 0.5rem 0;
+}
+footer section h4{
+    font-style: italic;
+    font-family: 'Open Sans';
+    font-size: 1.4rem;
+}
+footer section h5{
+    font-family: 'Open Sans';
+    font-size: 1.7rem;
+}
+footer section span{
+    border-bottom: solid 1px black ;
+    width: 60%;
+    text-align: center;
+    margin: 1rem auto;
+}
+footer section img{
+    border: 1px solid #CA9479;
+    border-radius: 50% 50% 0 0;
+    width: 265px;
+    height: 300px;
+    object-fit: cover; 
+    display: block;
+    margin: 1rem auto;
+}
+footer section button{
+    text-align: center;
+    background-color: #CA9479;
+    border: none;
+    padding: 1rem 2rem;
+    color: white;
+    margin: 1rem auto;
+}
+.flower{
+    display: none;
+}
+@media (min-width: 640px) {
+    .background-header-front{
+        width: 370px;
+        left: 6rem;
+        top: 3.5rem;
+    }
+    .header-accueil{
         display: flex;
+        flex-direction: row;
+        padding: 0 ;
     }
-    
-    .dosPhoto{
-        padding: 2rem 2.5rem;
-        width:25%;
-        border-radius: 100px 0px;
+    .header-accueil h2{
+        padding-top: 3rem;
     }
+    .text-header-style{
+        margin-left: 6rem;
+        width: 50%;
+        font-size: 1rem;
+    }
+    .text-header-style p{
+        padding: 1rem;
+        padding-left: 25%;
+        text-align: start;
+    }
+
+    .self-picture{
+        width: 30%;
+        margin-left: 0.5rem;
+    }
+    .flower{
+        display: block;
+        width: 25%;
+        object-fit: cover;
+    }
+    .presentation-text{
+        padding: 2.5rem 2rem;
+    }
+    .prestations{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .prestations-div{
+        // width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation-text p{
+        font-size: 1.2rem;
+    }
+    .header-accueil h2{
+        text-align: start;
+        display: flex;
+        padding-left: 25%;
+    }
+}
+
+@media (min-width: 920px) {
+
 }

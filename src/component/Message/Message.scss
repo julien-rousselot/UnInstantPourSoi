@@ -1,61 +1,86 @@
-.clientRetour h2{
-    font-weight: bold;
-    margin: 1rem 0;
-    text-align: center;
-    font-family: "Alice", serif;
-    color: #CA9479;
-    font-size: 1.5rem;
-    width: 100vw;
-}
-.retour {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: #ddb682;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0rem 0 0.5rem 0;
-    height: 30vh;
-    width: 100vw;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-#commentLeft{
-    width: 4rem;
-    background-color: #fff;
-    border-radius: 50%;
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-#commentRight{
-    width: 4rem;
-    background-color: #fff;
-    transform: rotate(-180deg);
-    border-radius: 50%;
+.carousel-items {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding: 0 5rem;
 }
 
-.commentaire{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.5rem;
-    background-color: #ffffff;
-    width:40vw;
-    height: 18vh;
-    padding: 2rem 3rem;
-    border-radius: 5px;
+.carousel-item {
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.carousel-item p {
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 302px;
+  width: 267px;
+  background-color: white;
+  border: 1px solid #CA9479;
+  margin: 2rem;
+  border-radius: 0 0 50% 50%;
+  color: #CA9478;
+}
+.carousel {
+  justify-content: center;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  color: #CA9479;
+}
+.carousel-items > :not(.carousel-item) {
+  display: none; /* Cache les autres commentaires */
+}
+.left-btn {
+  left: 1rem;
 }
 
-#name{
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-    color: #CA9479;
+.right-btn {
+  right: 1rem;
 }
 
-@media (min-width: 1025px) {
-    #commentLeft:hover, #commentRight:hover{
-        background-color: #eee4d2;
-        width: 4.5rem;
-        transition: 0.2s;
-    }
+
+@media (min-width: 640px) {
+  .left-btn {
+    left: 10rem;
+  }
+  
+  .right-btn {
+    right: 10rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .carousel-item {
+    width: 31%; /* Taille fixe pour desktop */
+    margin: auto;
+    // margin: 1rem;
+    // background: rgb(233, 20, 20);
+  }
 }
