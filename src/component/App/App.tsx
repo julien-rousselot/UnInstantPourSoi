@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Accueil from '../Accueil/Accueil';
-import Prestations from '../Prestations/Prestations';
+import PrestationsCil from '../Prestations/PrestationsCil';
 import Contact from '../Contact/Contact';
 import Apropos from '../APropos/Apropos';
 
@@ -24,7 +24,10 @@ function App() {
           <Route path="/" element={<Accueil />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Apropos" element={<Apropos />} />
-          <Route path="/Prestations" element={<Prestations />} />
+          <Route path="/PrestationsCil" element={<PrestationsCil />} />
+          {/* <Route path="/PrestationsMaquillage" element={<Prestations />} />
+          <Route path="/PrestationsSoin" element={<Prestations />} /> */}
+
         </Routes>
         <Footer />
       </div>

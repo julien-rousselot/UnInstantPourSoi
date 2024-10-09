@@ -1,4 +1,4 @@
-import './Prestations.scss';
+import './PrestationsCil.scss';
 import hanche from '../../assets/images/hanche.jpg';
 import courbe from '../../assets/images/courbes.svg';
 import visageMassage from '../../assets/images/visageMassage.jpg';
@@ -9,7 +9,7 @@ import epauleMassage from '../../assets/images/epauleMassage.png';
 import carteCadeau from '../../assets/images/carteCadeau.png';
 
 
-function Prestations () {
+function PrestationsCil () {
 
     return(
         <>
@@ -79,4 +79,4 @@ function Prestations () {
         )
 }
 
-export default Prestations;
+export default PrestationsCil;
