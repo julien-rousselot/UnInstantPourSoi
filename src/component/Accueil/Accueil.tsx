@@ -8,6 +8,7 @@ import prestationBeaute from '../../assets/images/prestationsBeauté.jpg';
 import ligne from '../../assets/images/ligne.svg';
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
+import { NavLink } from 'react-router-dom';
 
 
 function Accueil () {
@@ -17,9 +18,10 @@ function Accueil () {
     <>
         <header>
             <section className='header-accueil'>
+            <img className='background-header-front' src={accueil} alt="accueil du salon" />
+
                 <img className='background-header' src={sand} alt="sable" />
                 <div className='text-header-style'>
-                    <img className='background-header-front' src={accueil} alt="accueil du salon" />
                     <h2>(Re)découvrez <br /> un instant <br />pour soi</h2>
                     <img className='ligne-header' src={ligne}/><p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                     <button>DECOUVRIR</button>
@@ -45,22 +47,22 @@ function Accueil () {
                     <div className='prestations'>
                         <div className='prestations-div'>
                             <img src={soinNeocare} alt="Soin Neocare" />
-                            <h5>Soins <br />neocare</h5>
-                            <button>DECOUVRIR</button>
+                            <h5> Soins <br />neocare</h5>
+                            <button><NavLink className="buttonDecouvrir" to="/soinsNeocare" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={soinSurMesure} alt="soin Sur Mesure" />
                             <h5>Soins <br />sur mesure</h5>
-                            <button>DECOUVRIR</button>
+                            <button><NavLink className="buttonDecouvrir" to="/SoinsSurMesure" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={prestationBeaute} alt="prestation Beaute" />
                             <h5>Prestations<br /> beauté</h5>
-                            <button>DECOUVRIR</button>
+                            <button><NavLink className="buttonDecouvrir" to="/PrestationsBeaute" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
                     </div>

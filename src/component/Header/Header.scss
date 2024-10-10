@@ -105,6 +105,12 @@
     width: 8rem;
 }
 
+.headerLogoLaptop{
+    display: none;
+}
+.linkDiv{
+    display: none;
+}
 @media (min-width: 640px) {
     #headerPhone {
         display: none;

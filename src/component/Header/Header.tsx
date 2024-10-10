@@ -27,7 +27,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                 <ul className={`navList ${isVisible ? 'active' : ''}`}>
                     <li><NavLink className={'nav-link'} to="/" onClick={toggleVisibility}>Accueil</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/Apropos" onClick={toggleVisibility}>À propos</NavLink></li>
-                    <li><NavLink className={'nav-link'} to="/Prestations">Prestations</NavLink></li>
+                    <li>Prestations</li>
                     <li><NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>Contact</NavLink></li>
                 </ul>
             </nav>
@@ -54,9 +54,9 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                             Prestations
                             {isDropdownOpen && (
                                 <ul className="dropdown-content">
-                                    <li><NavLink className="linkPrestaDetails" to="/Prestations">Cils</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/prestation2">Maquillage Semi Permanent</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/prestation3">Soins visage︱Blanchiment Dentaire</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/SoinsNeocare">Soins neocare</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/SoinsSurMesure">Soins sur mesure</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/PrestationsBeaute">Prestations beauté</NavLink></li>
                                 </ul>
                             )}
                         </li>
