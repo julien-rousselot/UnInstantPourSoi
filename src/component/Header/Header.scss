@@ -105,6 +105,12 @@
     width: 8rem;
 }
 
+.headerLogoLaptop{
+    display: none;
+}
+.linkDiv{
+    display: none;
+}
 @media (min-width: 640px) {
     #headerPhone {
         display: none;
@@ -129,7 +135,7 @@
 
     .logoDiv{
         width: 50%;
-        background-color: aqua;
+        background-color: #FEFEFE;
         display: inline-block;
         display: flex;
         justify-content: center;
@@ -137,7 +143,7 @@
 
     .linkDiv{
         width: 50%;
-        background-color: blueviolet;
+        background-color: #FEFEFE;
         z-index:5;
      
     }
@@ -164,6 +170,33 @@
     .nav-link.active {
         border-bottom: #CA9479 solid 2px;
     }
+
+    .dropdown-content{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        justify-content: start;
+        text-align: start;
+        // width: 100%;
+    }
+    .dropdown-content li {
+        padding: 0.8rem;
+        width: 100%;
+
+    }
+    .dropdown-content li:hover {
+        color: #ecb976;
+        background-color: #CA9479;
+    }
+    .linkPrestaDetails{
+        text-decoration: none;
+        color: #212020;
+    }
+
+    // .linkPrestaDetails:hover{
+    //     color: #ecb976;
+    // }
 }
 
 
