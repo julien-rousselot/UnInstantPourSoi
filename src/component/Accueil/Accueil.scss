@@ -13,20 +13,23 @@
 .header-accueil{
     background-color: #F7EBE8;
     position: relative;
-    padding: 0 0 3rem 0;
+    // padding: 0 0 3rem 0;
+    padding-bottom: 11rem;
 }
 
 .header-accueil h2{
-    font-size: 3rem;
+    font-size: 4rem;
     color: #9F694E;
     font-family: 'Open Sans';
     text-align: center;
     line-height: 4rem;
+    padding: 1rem 0;
 }
 .header-accueil p{
     text-align: center;
     padding: 1rem 4.5rem;
-    color: rgb(24, 23, 23);
+    font-size: 1.5rem;
+    font-style: italic;
 }
 .header-accueil button{
     display: block;
@@ -35,13 +38,13 @@
     border: none;
     padding: 0.7rem 1.8rem;
     color: white;
-    margin: 0 6.5rem;
-}
-.background-header{
-    width: 18rem;
-    height: 40vh;
+    margin: 2rem auto;
 }
 
+.background-header{
+    width: 60%;
+    height: 40vh;
+}
 .background-header-front{
     border: 1px solid #CA9479;
     border-radius: 50% 50% 0 0;
@@ -49,6 +52,7 @@
     position: absolute;
     right: 0;
     top: 1.5rem;
+    background-color: aqua;
 }
 
 .ligne-header{
@@ -57,9 +61,10 @@
     bottom: 0;
     right: 0;
     width: 200px;
-
 }
-
+.ligne-header-laptop{
+    display: none;
+}
 .presentation-owner{
     background-color: #FEFEFE;
     display: flex;
@@ -145,6 +150,17 @@ footer section button{
         left: 6rem;
         top: 3.5rem;
     }
+    .ligne-header{
+        display: none;
+    }
+    .ligne-header-laptop{
+        position: absolute;
+        display: block;
+        width: 300px;
+        // background-color: aqua;
+        bottom: 0;
+        right: 0;
+    }
     .header-accueil{
         display: flex;
         flex-direction: row;
@@ -162,19 +178,34 @@ footer section button{
         padding: 1rem;
         padding-left: 25%;
         text-align: start;
+        font-style: italic;
     }
 
-    .self-picture{
-        width: 30%;
-        margin-left: 0.5rem;
-    }
+ 
     .flower{
         display: block;
         width: 25%;
         object-fit: cover;
     }
+
+    .background-header{
+        width: 18rem;
+        height: 40vh;
+    }
+    .self-picture{
+        width: 25%;
+        // margin-left: 2rem;
+    }
     .presentation-text{
-        padding: 2.5rem 2rem;
+        padding: 1rem 1rem;
+    }
+    .presentation-text h3{
+        font-size: 3rem;
+        font-family: 'Open Sans';
+        padding: 0 0 1rem 0;
+    }
+    .presentation-text p{
+        font-size: 1.3rem;
     }
     .prestations{
         display: flex;
@@ -186,16 +217,53 @@ footer section button{
         display: flex;
         flex-direction: column;
     }
+    .header-accueil h2{
+        text-align: start;
+        display: flex;
+        padding-left: 20%;
+    }
+}
+
+@media (min-width: 920px) {
+    .self-picture{
+        width: 25%;
+        margin-left: 2rem;
+    }
+    .presentation-text h3{
+        font-size: 4rem;
+        font-family: 'Open Sans';
+        padding: 0 0 1rem 0;
+    }
     .presentation-text p{
-        font-size: 1.2rem;
+        font-size: 2rem;
+    }
+    .presentation-text{
+        padding: 3rem 3rem;
     }
     .header-accueil h2{
         text-align: start;
         display: flex;
         padding-left: 25%;
     }
+    .ligne-header-laptop{
+        position: absolute;
+        display: block;
+        width: 420px;
+        bottom: 0;
+        right: 0;
+    }
+    .header-accueil button{
+        display: block;
+        text-align: center;
+        background-color: #CA9479;
+        border: none;
+        padding: 0.7rem 1.8rem;
+        color: white;
+        margin: 2rem auto;
+    }
 }
-
-@media (min-width: 920px) {
-
+@media (min-width: 1700px) {
+    .ligne-header-laptop{
+        width: 700px;
+    }
 }

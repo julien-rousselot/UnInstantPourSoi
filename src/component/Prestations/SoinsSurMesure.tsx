@@ -17,7 +17,7 @@ function SoinsSurMesure () {
                     <img className='background-header' src={PhotoPrestationBeaute} alt="sable" />
                     <div className='text-header-style'>
                         <h2>Les prestations</h2>
-                        <p>Beauté</p>
+                        <p>Les soins sur mesure</p>
                     </div>
                     {/* <img className='ligne-prestations' src={courbe}/> */}
 

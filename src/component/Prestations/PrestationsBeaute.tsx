@@ -4,7 +4,7 @@ import PhotoPrestationEpilation from '../../assets/images/PhotoPrestationEpilati
 import PhotoPrestationOngles from '../../assets/images/PhotoPrestationOngles.jpg';
 import PhotoPrestationRegard from '../../assets/images/PhotoPrestationRegard.jpg';
 import PhotoMaquillage from '../../assets/images/PhotoMaquillage.jpg';
-// import courbe from '../../assets/images/courbes.svg';
+import courbe from '../../assets/images/courbes.svg';
 
 
 function PrestationsBeaute () {
@@ -18,7 +18,7 @@ function PrestationsBeaute () {
                         <h2>Les prestations</h2>
                         <p>Beauté</p>
                     </div>
-                    {/* <img className='ligne-prestations' src={courbe}/> */}
+                    <img className='courbe-prestations' src={courbe}/>
 
                 </section>
             </header>
@@ -28,8 +28,8 @@ function PrestationsBeaute () {
                     <div className='text-massage'><h4>Les épilations à la cire
                     </h4>
                     <p>Les épilations à la cire
-                        Une épilation durable, une peau lisse et douce, les épilations se réalise avec une cire chaude traditionnelle.
-                        Sourcils : 7€
+                        Une épilation durable, une peau lisse et douce, les épilations se réalise avec une cire chaude traditionnelle. <br />
+                        <br />Sourcils : 7€
                         Lèvres : 7€
                         Menton : 7€
                         Aisselles : 12€

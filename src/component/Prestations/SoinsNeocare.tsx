@@ -6,7 +6,7 @@ import jambeMassage from '../../assets/images/jambeMassage.png';
 import cuisseMassage from '../../assets/images/cuisseMassage.png';
 import epauleMassage from '../../assets/images/epauleMassage.png';
 import carteCadeau from '../../assets/images/carteCadeau.png';
-// import courbe from '../../assets/images/courbes.svg';
+import courbe from '../../assets/images/courbes.svg';
 
 
 function SoinsNeocare () {
@@ -18,15 +18,15 @@ function SoinsNeocare () {
                     <img className='background-header' src={hanche} alt="sable" />
                     <div className='text-header-style'>
                         <h2>Les prestations</h2>
-                        <p>personnalisées et sur mesure</p>
+                        <p>Soins Neocare</p>
                     </div>
-                    {/* <img className='ligne-prestations' src={courbe}/> */}
+                    <img className='ligne-prestations' src={courbe}/>
 
                 </section>
             </header>
             <main>
                 <section className='container-img-text right'>
-                    <img className='first-pic' src={visageMassage} alt="visage Massage" />
+                    <img className='first-pic soins-picture' src={visageMassage} alt="visage Massage" />
                     <div className='text-massage'><h4>Soin visage sur mesure </h4>
                     <p>Les soins du visage destinés de l'enfant, à l'adolescent et à l'adulte prennent soin de votre peau tout en douceur et avec respect.
                     Après un diagnostic sur vos ressentis, votre routine beauté et ce dont votre peau a réellement besoin, les cosmétiques seront choisis.
@@ -37,7 +37,7 @@ function SoinsNeocare () {
                     </p></div>
                 </section>
                 <section className='container-img-text left'>
-                <img src={dosMassage} alt="dos Massage" />
+                <img  src={dosMassage} alt="dos Massage" />
 
                     <div className='text-massage'><h4>Massage sur mesure </h4>
                     <p>Massages de l'enfant à l'adulte, permettant d'apaiser l'esprit, le corps et soulager les tensions.

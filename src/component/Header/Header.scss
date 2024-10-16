@@ -134,7 +134,7 @@
     }
 
     .logoDiv{
-        width: 50%;
+        width: 20%;
         background-color: #FEFEFE;
         display: inline-block;
         display: flex;
@@ -142,10 +142,10 @@
     }
 
     .linkDiv{
-        width: 50%;
+        width: 80%;
+
         background-color: #FEFEFE;
         z-index:5;
-     
     }
     .linkDiv ul {
         display: flex;
@@ -201,7 +201,19 @@
 
 
 
-@media (min-width: 1025px) {
+@media (min-width: 920px) {
+    .linkDiv{
+        width: 50%;
+        background-color: #FEFEFE;
+        z-index:5;
+    }
+    .logoDiv{
+        width: 50%;
+        background-color: #FEFEFE;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+    }
     // #headerPhone {
     //     display: none;
     //     height: 13vh;

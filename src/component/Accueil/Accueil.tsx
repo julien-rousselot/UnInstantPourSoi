@@ -6,6 +6,8 @@ import soinNeocare from '../../assets/images/soinsNeocare.jpg';
 import soinSurMesure from '../../assets/images/soinSurMesure.png';
 import prestationBeaute from '../../assets/images/prestationsBeauté.jpg';
 import ligne from '../../assets/images/ligne.svg';
+import lignelaptop from '../../assets/images/lignelaptop.svg';
+
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
@@ -23,9 +25,13 @@ function Accueil () {
                 <img className='background-header' src={sand} alt="sable" />
                 <div className='text-header-style'>
                     <h2>(Re)découvrez <br /> un instant <br />pour soi</h2>
-                    <img className='ligne-header' src={ligne}/><p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
+                    <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                     <button>DECOUVRIR</button>
                 </div>
+                <img className='ligne-header' src={ligne}/>
+                <img className='ligne-header-laptop' src={lignelaptop}/>
+
+
             </section>
        </header>
         <main>
