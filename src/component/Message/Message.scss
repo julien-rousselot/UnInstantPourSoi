@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Opensans'; /* Nom que vous donnez à la police */
+  src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
@@ -39,6 +46,7 @@
   margin: 2rem;
   border-radius: 0 0 50% 50%;
   color: #CA9478;
+  font-family: 'Opensans'; /* Nom que vous donnez à la police */
 }
 .carousel {
   justify-content: center;

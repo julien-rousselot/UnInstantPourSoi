@@ -1,6 +1,30 @@
-.text-header-style{
+@font-face {
+    font-family: 'OpensansItalic'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Opensans'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+    .text-header-style{
     position: relative;  
     width: 100%; 
+   }
+   .text-header-style p{
+    position: relative;  
+    width: 100%; 
+    font-family: 'OpensansItalic';
+    
    }
    
    .container-img-text{
@@ -10,17 +34,17 @@
        text-align: center;
    }
    .container-img-text p{
-       text-align: start;
-       padding: 2rem;
+        text-align: start;
+        padding: 2rem;
+        font-family: 'Opensans'; /* Nom que vous donnez à la police */
    }
    .container-img-text h4{
        font-size: 2.5rem;
-       font-family: 'Open Sans';
+       font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
        padding-bottom: 1rem;
    }
     .container-img-text img{
         height: 400px;
-
     }
    
    .text-massage{
@@ -56,12 +80,11 @@
         padding: 2rem;
     }
     .container-img-text h4{
-        font-family: 'Open Sans';
         padding-bottom: 0;
     }
-    .container-img-text img{
-        height: 530px;
-    }
+    // .container-img-text img{
+    //     height: 530px;
+    // }
     .left{
         background-color: #F7EBE8;
         flex-direction: row-reverse;
@@ -75,7 +98,9 @@
     }
 
     .container-img-text img{
-        width: 50%;
+        min-width: 50%;
+        object-fit: cover;
+        height: 560px;
     }
     .first-pic{
         max-height: 600px;
@@ -89,7 +114,11 @@
 @media (min-width: 920px) {
     .container-img-text h4{
         font-size: 3rem;
-        font-family: 'Open Sans';
         padding-bottom: 1rem;
+    }
+    .container-img-text img{
+        min-width: 50%;
+        object-fit: cover;
+        height: 600px;
     }
 }

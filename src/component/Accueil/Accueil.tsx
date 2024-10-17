@@ -24,7 +24,7 @@ function Accueil () {
 
                 <img className='background-header' src={sand} alt="sable" />
                 <div className='text-header-style'>
-                    <h2>(Re)découvrez <br /> un instant <br />pour soi</h2>
+                    <h2>Decouvrez <br /> un instant <br />pour soi</h2>
                     <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                     <button>DECOUVRIR</button>
                 </div>
