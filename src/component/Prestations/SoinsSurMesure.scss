@@ -1,88 +1,124 @@
-// .text-header-style{
-//     position: relative;  
-//     width: 100%; 
-//    }
-//    .container-img-text{
-//        display: flex;
-//        flex-direction: column;
-//        width: 100%;
-//        text-align: center;
-//    }
-//    .container-img-text p{
-//        text-align: start;
-//        padding: 2rem;
-//    }
-// //    .container-img-text h4{
-// //        font-size: 2.5rem;
-// //        font-family: 'Open Sans';
-// //        padding-bottom: 1rem;
-// //    }
-
-   
-//    .text-massage{
-//        padding-top: 5rem;
-//     //    width: 50%;
-//        font-size: 1.5rem;
-//    }
-   
-//    .ligne-prestations{
-//     position: absolute;
-//     bottom: 0;
-//    }
-// //    .container-img-text img{
-// //        width: 100%;
-// //        height: 450px;
-// //        object-fit: cover;
-
-// //    }
-//    .first-pic{
-//        max-height: 600px;
-//        object-fit: cover;
-//    }
-
-
-// @media (min-width: 640px) {
-
-
-// .text-header-style{
-//  position: relative;  
-//  width: 100%; 
-// }
-
-
-// .container-img-text{        
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     text-align: center;
-// }
-// .container-img-text p{
-//     text-align: start;
-//     padding: 2rem;
-// }
-// // .container-img-text h4{
-// //     font-size: 3rem;
-// //     font-family: 'Open Sans';
-// //     // font-weight: bold;
-// //     padding-bottom: 1rem;
-// // }
-// .left{
-//     background-color: #F7EBE8;
-//     flex-direction: row-reverse;
+@font-face {
+    font-family: 'OpensansItalic'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Opensans'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+    .text-header-style{
+    position: relative;  
+    width: 100%; 
+   }
+   .text-header-style p{
+    position: relative;  
+    width: 100%; 
+    font-family: 'OpensansItalic';
     
-// }
+   }
+   
+   .container-img-text{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       text-align: center;
+   }
+   .container-img-text p{
+        text-align: start;
+        padding: 2rem;
+        font-family: 'Opensans'; /* Nom que vous donnez à la police */
+   }
+   .container-img-text h4{
+       font-size: 2.5rem;
+       font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+       padding-bottom: 1rem;
+   }
+    .container-img-text img{
+        height: 400px;
+    }
+   
+   .text-massage{
+        padding: 5rem 0;
+       font-size: 1.5rem;
+   }
+   
+   .ligne-prestations{
+    position: absolute;
+    bottom: 0;
+   }
 
-// .text-massage{
-//     padding-top: 5rem;
-//     width: 50%;
-//     font-size: 1.5rem;
-// }
+   .first-pic{
+       max-height: 600px;
+       object-fit: cover;
+   }
+   
 
-// .container-img-text img{
-//     width: 50%;
-// }
-// .first-pic{
-//     max-height: 600px;
-//     object-fit: cover;
-// }
-// }
+@media (min-width: 640px) {
+    .text-header-style{
+    position: relative;  
+    width: 100%; 
+    }
+
+    .container-img-text{        
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        text-align: center;
+    }
+    .container-img-text p{
+        text-align: start;
+        padding: 2rem;
+    }
+    .container-img-text h4{
+        padding-bottom: 0;
+    }
+    // .container-img-text img{
+    //     height: 530px;
+    // }
+    .left{
+        background-color: #F7EBE8;
+        flex-direction: row-reverse;
+    }
+    .text-massage{
+        padding: 0;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-img-text img{
+        min-width: 50%;
+        object-fit: cover;
+        height: 560px;
+    }
+    .first-pic{
+        max-height: 600px;
+        object-fit: cover;
+    }
+    .ligne-prestations{
+        width: 50%;
+        right: 0;
+    }
+    }
+@media (min-width: 920px) {
+    .container-img-text h4{
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+    .container-img-text img{
+        min-width: 50%;
+        object-fit: cover;
+        height: 600px;
+    }
+}

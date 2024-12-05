@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'OpensansItalic'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Opensans'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+   
+.contact{
+    background-color: #FEFEFE;
+    padding: 3rem 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.contact h3{
+    font-size: 2rem;
+    font-family: MyCustomFont;
+}
+.contact-ouverture {
+    font-size: 1.2rem;
+    font-family: Opensans;
+    line-height: 2rem;
+}
+.contact-disponibilite{
+    text-align: start;
+    font-family: OpensansItalic;
+}
+.contact-italique{
+    font-family: Opensans;
+    line-height: 2rem;
+}
+
+@media (min-width: 920px) {
+    .text-header-style{
+        padding-top: 3rem;
+    }
+    .contact{
+        background-color: #FEFEFE;
+        padding: 5rem 3rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+    .contact h3{
+        font-size: 2.5rem;
+        font-family: MyCustomFont;
+    }
+    .contact-ouverture {
+        font-size: 1.3rem;
+
+        font-family: Opensans;
+        line-height: 2rem;
+    }
+    .contact-disponibilite{
+        text-align: start;
+        font-family: OpensansItalic;
+    }
+    .contact-italique{
+        font-family: Opensans;
+        line-height: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    .background-header-contact{
+        height: 40vh;
+        width: 30%;
+    }
+}
