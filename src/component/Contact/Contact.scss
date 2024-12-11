@@ -61,7 +61,6 @@
     }
     .contact-ouverture {
         font-size: 1.3rem;
-
         font-family: Opensans;
         line-height: 2rem;
     }
@@ -72,6 +71,17 @@
     .contact-italique{
         font-family: Opensans;
         line-height: 2rem;
+    }
+    .contact-header{
+        // max-height: 20%;
+        width: 100%;
+    }
+    .facade-header{
+        height: 70vh;
+        width: 45%;
+    }
+    .text-header-style{
+        width: 55%;
     }
 }
 @media (min-width: 1200px) {

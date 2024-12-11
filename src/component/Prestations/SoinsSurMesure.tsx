@@ -38,8 +38,7 @@ function SoinsSurMesure () {
                     </p></div>
                 </section>
                 <section className='container-img-text left'>
-                <img  src={dosMassage} alt="dos Massage" />
-
+                    <img  src={dosMassage} alt="dos Massage" />
                     <div className='text-massage'><h4>Massage sur mesure </h4>
                     <p>Massages de l'enfant à l'adulte, permettant d'apaiser l'esprit, le corps et soulager les tensions.
                     Les soins sur mesure sont élaborés ensemble afin de considérer vos attentes pour y répondre au mieux.

@@ -1,4 +1,21 @@
-
+@font-face {
+    font-family: 'OpensansItalic'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Opensans'; /* Nom que vous donnez à la police */
+src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+font-weight: normal;
+font-style: normal;
+}
 
 .text-soin-visage h4{
     font-size: 2.5rem;
@@ -7,4 +24,85 @@
 }
 .text-soin-visage{
     padding: 2rem;
+    text-align: center;
+}
+
+.neocare-profil{
+    width: 100%;
+    height: auto;
+}
+
+.p-soinNeocare{
+    font-family: "Opensans";
+    text-align: start;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.ventre-picture{
+    height: 100%;
+}
+.bold-devis{
+    font-weight: bold;
+}
+.couture-metre{
+    width: 12rem;
+}
+.p-italique{
+    font-family: "OpensansItalic";
+}
+.text-massage{
+    text-align: center;
+}
+.face-neocare-position-right{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+   
+    .header-all{
+        width: 100%;
+    }
+    .neocare-profil{
+        width: 40%;
+        height: auto;
+    }
+    .prestation-titre{
+        // background-color: aqua;
+        width: 50%;
+    }
+    .face-neocare-position-left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .face-neocare-position-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .face-neocare-position-left img{
+        width: 50%;
+    }
+    .face-neocare-position-right img{
+        width: 50%;
+    }
+    .text-massage{
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+   
+
+    .neocare-profil{
+        width: 30%;
+        height: auto;
+    }
+
 }

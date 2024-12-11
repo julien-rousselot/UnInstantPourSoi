@@ -27,7 +27,9 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                 <ul className={`navList ${isVisible ? 'active' : ''}`}>
                     <li><NavLink className={'nav-link'} to="/" onClick={toggleVisibility}>ACCUEIL</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/Apropos" onClick={toggleVisibility}>A PROPOS</NavLink></li>
-                    <li className='prestlink'>PRESTATIONS</li>
+                    <li><NavLink className={'nav-link'} to="/SoinsNeocare" onClick={toggleVisibility}>SOINS NEOCARE</NavLink></li>
+                    <li><NavLink className={'nav-link'} to="/SoinsSurMesure" onClick={toggleVisibility}>SOINS SUR MESURE</NavLink></li>
+                    <li><NavLink className={'nav-link'} to="/PrestationsBeaute" onClick={toggleVisibility}>PRESTATIONS BEAUTE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>CONTACT</NavLink></li>
                 </ul>
             </nav>
@@ -45,12 +47,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                         <li><NavLink className={`nav-link`} to="/Apropos">A PROPOS</NavLink></li>
 
                         {/* Dropdown for Prestations */}
-                        <li
-                            // className="dropdown"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave} 
-                            className={`nav-link dropdown`}
-                        >
+                        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`nav-link dropdown`}>
                             PRESTATIONS
                             {isDropdownOpen && (
                                 <ul className="dropdown-content">
