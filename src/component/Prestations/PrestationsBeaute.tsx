@@ -16,7 +16,7 @@ function PrestationsBeaute () {
                     <img className='background-header' src={PhotoPrestationBeaute} alt="sable" />
                     <div className='text-header-style'>
                         <h2>Les prestations</h2>
-                        <p>Les soins sur mesure</p>
+                        <p>Beauté</p>
                     </div>
                     <img className='ligne-prestations' src={courbe}/>
 
@@ -53,7 +53,8 @@ function PrestationsBeaute () {
 
                     <div className='text-massage'>
                         <h4>Les ongles</h4>
-                    <p>Prendre soin de ses mains et de ses pieds, créer une forme d'ongle, repousser les cuticules, grâce à la manucure et/ou la beauté des pieds express. Exfolier en douceur et recevoir un massage grâce à la manucure et/ou la beauté des pieds complète. Colorer ses ongles par du vernis semi permanent ou classique. <br /> <br />
+                    <p>Prendre soin de ses mains et de ses pieds, créer une forme d'ongle, repousser les cuticules, grâce à la manucure et/ou la beauté des pieds express. <br />
+                        Exfolier en douceur et recevoir un massage grâce à la manucure et/ou la beauté des pieds complète. <br /> Colorer ses ongles par du vernis semi permanent ou classique. <br /> <br />
                         Manucure express : 30€<br />
                         Manucure complète : 45€<br />
                         Beauté des pieds express : 30€<br />
@@ -68,7 +69,7 @@ function PrestationsBeaute () {
                 <section className='container-img-text right'>
                     <img src={PhotoPrestationRegard} alt="jambe Massage" />
                     <div className='text-massage'><h4>Le regard</h4>
-                    <p>Teindre ses sourcils et/ou ses cils pour mieux les distinguer. Recourber ses cils naturellement pour une durée entre 6 à 12 semaines, grâce au rehaussement de cils qui est une technique permettant de rehausser et courber la frange de cils sans ajout de bouquet comme les extensions de cils. Cette prestation respecte vos cils sans les abîmer. <br /> <br />
+                    <p>Teindre ses sourcils et/ou ses cils pour mieux les distinguer. <br /> Recourber ses cils naturellement pour une durée entre 6 à 12 semaines, grâce au rehaussement de cils qui est une technique permettant de rehausser et courber la frange de cils sans ajout de bouquet comme les extensions de cils.  <br /> Cette prestation respecte vos cils sans les abîmer. <br /> <br />
 
                         Teinture des sourcils : 15€ <br />
                         Teinture des cils : 15€ <br />
@@ -79,9 +80,9 @@ function PrestationsBeaute () {
                 <img src={PhotoMaquillage} alt="jambe Massage" />
                     <div className='text-massage'>
                         <h4>Le maquillage</h4>
-                    <p>Mettre en valeur son visage, son teint, ses yeux et ses lèvres. Estomper ses imperfections, faire ressortir l’iris de vos yeux, porter des couleurs qui vous sublime, grâce aux maquillages jour. Une mise en beauté pour l’un de votre plus beau jour de votre vie, votre mariage.
+                    <p>Mettre en valeur son visage, son teint, ses yeux et ses lèvres. Estomper ses imperfections, faire ressortir l’iris de vos yeux, porter des couleurs qui vous sublime, grâce aux maquillages jour. <br /> Une mise en beauté pour l’un de votre plus beau jour de votre vie, votre mariage. <br />
 
-                        Un essai est recommandé pour réaliser ensemble votre maquillage selon votre désir, vos habitudes et vos inspirations. Pour votre jour J, je vous propose mon déplacement à votre domicile, ou sur le lieu de réception (domaine, château). <br /> <br />
+                        Un essai est recommandé pour réaliser ensemble votre maquillage selon votre désir, vos habitudes et vos inspirations. <br /> Pour votre jour J, je vous propose mon déplacement à votre domicile, ou sur le lieu de réception (domaine, château). <br /> <br />
 
                         Maquillage jour : 40€ <br />
                         Essai et maquillage mariée à l’institut : 80€ <br />

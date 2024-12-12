@@ -36,9 +36,8 @@ font-style: normal;
     font-family: "Opensans";
     text-align: start;
     font-size: 1.5rem;
-    padding: 1rem 1rem;
+    padding: 3rem 3rem;
     line-height: 1.8rem;
-    text-align: center;
 }
 
 .ventre-picture{
@@ -60,6 +59,9 @@ font-style: normal;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
+}
+.face-neocare-position-left{
+background-color: #FEFEFE ;
 }
 
 @media (min-width: 640px) {
