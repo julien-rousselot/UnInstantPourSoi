@@ -22,7 +22,11 @@
 //     object-fit: cover;
 //     width: 95vw;
 // }
-
+.background-accueil{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
 .descriptionText{
     padding: 1rem 22px;
     font-size: 16px;
@@ -180,7 +184,11 @@ footer section button{
 .text-header-style{
     padding-top: 2rem;
 }
+.sand{
+    width: 50%;
+}
 @media (min-width: 640px) {
+    
     .background-header-front{
         width: 370px;
         left: 6rem;
@@ -263,14 +271,30 @@ footer section button{
         display: flex;
         padding-left: 25%;
     }
+    .sand{
+        width: 30%;
+        height: 20%;
+    }
+    .header-accueil soins{
+
+        padding-bottom: 0 ;
+    }
 }
 @media (min-width: 820px) {
+
+    .sand{
+        width: 20%;
+    }
     .header-accueil{
         display: flex;
         flex-direction: row;
         padding: 0 ;
         padding-bottom: 13rem;
     }
+    .accueil-header{
+        padding-bottom: 0rem;
+    }
+
 }
 @media (min-width: 920px) {
     .self-picture{
@@ -317,20 +341,33 @@ footer section button{
         width: 20rem;
         height: 40vh;
     }
+    .sand{
+        width: 25%;
+        height: 20%;
+    }
 }
 @media (min-width: 1200px) {
     .background-header{
         width: 25rem;
         // height: 65vh;
     }
-    
+    .accueil-header{
+        padding-bottom: 0rem;
+    }
+    .sand{
+        width: 15%;
+        height: 20%;
+    }
 }
 @media (min-width: 1700px) {
     .background-header{
-        width: 15%;
+        width: 18%;
         height: 15%;
     }
     .background-header-front{
         width: 25%;
+    }
+    .accueil-header{
+        padding-bottom: 0rem;
     }
 }

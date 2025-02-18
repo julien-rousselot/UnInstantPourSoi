@@ -16,10 +16,10 @@ function Accueil () {
     return(
     <>
         <header>
-            <section className='header-accueil soins'>
+            <section className='header-accueil accueil-header'>
             <img className='background-header-front' src={accueil} alt="accueil du salon" />
 
-                <img className='background-header' src={sand} alt="sable" />
+                <img className='sand' src={sand} alt="sable" />
                 <div className='text-header-style'>
                     <h2>Decouvrez <br /> un instant <br />pour soi</h2>
                     <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>

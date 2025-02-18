@@ -6,9 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 function Contact () {
-    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-    console.log("API Key:", process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
-    console.log("Toutes les variables d'env :", process.env);
+    const apiKey = 'AIzaSyDfIlLrjqE2mQ5a3Q2jkoD1EwcfAo2ImLA';
 
     const [isVisible, setIsVisible] = useState(window.innerWidth > 768); // 768px est un exemple, modifie selon tes besoins
 
@@ -55,7 +53,6 @@ function Contact () {
                         <div style={{ width: "94vw"}}>
                             <iframe title="Google Map" width="100%"
                                 height="450"
-                                // style={{ border: "0" }}
                                 loading="lazy"
                                 allowFullScreen
                                 src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaxwouaIeAUgRBIhtv27de4o&key=${apiKey}`}
