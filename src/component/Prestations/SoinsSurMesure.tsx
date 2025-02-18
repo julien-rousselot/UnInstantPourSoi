@@ -15,8 +15,8 @@ function SoinsSurMesure () {
     return(
         <>
             <header>
-                <section className='header-accueil'>
-                    <img className='background-header' src={hanche} alt="sable" />
+                <section className='header-accueil place-courbe'>
+                    <img className='background-header' id='hanche' src={hanche} alt="sable" />
                     <div className='text-header-style'>
                         <h2>Les prestations</h2>
                         <p>Soins sur mesure</p>
@@ -27,7 +27,7 @@ function SoinsSurMesure () {
             </header>
             <main>
                 <section className='container-img-text right'>
-                    <img className='first-pic soins-picture' src={visageMassage} alt="visage Massage" />
+                    <img className=' soins-picture picturewoman' src={visageMassage} alt="visage Massage" />
                     <div className='text-massage'><h4>Soin visage sur mesure </h4>
                     <p>Les soins du visage destinés de l'enfant, à l'adolescent et à l'adulte prennent soin de votre peau tout en douceur et avec respect. <br /> <br />
                     Après un diagnostic sur vos ressentis, votre routine beauté et ce dont votre peau a réellement besoin, les cosmétiques seront choisi. <br /> <br />

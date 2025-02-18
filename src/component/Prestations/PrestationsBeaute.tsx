@@ -12,8 +12,8 @@ function PrestationsBeaute () {
     return(
         <>
             <header>
-                <section className='header-accueil'>
-                    <img className='background-header' src={PhotoPrestationBeaute} alt="sable" />
+                <section className='header-accueil place-courbe'>
+                    <img className='background-header facewoman' src={PhotoPrestationBeaute} alt="sable" />
                     <div className='text-header-style'>
                         <h2>Les prestations</h2>
                         <p>Beauté</p>

@@ -31,7 +31,7 @@
 .header-accueil{
     background-color: #F7EBE8;
     position: relative;
-    padding-bottom: 13rem;
+    padding-bottom: 6rem;
 }
 
 .header-accueil h2{
@@ -84,7 +84,7 @@
     z-index: 0;
     bottom: 0;
     right: 0;
-    width: 200px;
+    width: 300px;
 }
 .ligne-header-laptop{
     display: none;
@@ -92,9 +92,12 @@
 .presentation-owner{
     background-color: #FEFEFE;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
-
+.presentation-text h3 {
+text-align: center;
+}
 .self-picture{
     width: 50%;
     padding: 5rem 0;
@@ -174,12 +177,21 @@ footer section button{
 .flower{
     display: none;
 }
+.text-header-style{
+    padding-top: 2rem;
+}
 @media (min-width: 640px) {
     .background-header-front{
         width: 370px;
         left: 6rem;
         top: 3.5rem;
     }
+    .presentation-owner{
+        flex-direction: row;
+    }
+    .presentation-text h3 {
+        text-align: start;
+        }
     .ligne-header{
         display: none;
     }
@@ -191,10 +203,11 @@ footer section button{
         bottom: 0;
         right: 0;
     }
-    .header-accueil{
+    .header-accueil me{
         display: flex;
         flex-direction: row;
         padding: 0 ;
+        padding-bottom: 13rem;
     }
     .header-accueil h2{
         padding-top: 3rem;
@@ -248,10 +261,17 @@ footer section button{
     .header-accueil h2{
         text-align: start;
         display: flex;
-        padding-left: 15%;
+        padding-left: 25%;
     }
 }
-
+@media (min-width: 820px) {
+    .header-accueil{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+        padding-bottom: 13rem;
+    }
+}
 @media (min-width: 920px) {
     .self-picture{
         width: 25%;
@@ -279,6 +299,11 @@ footer section button{
         bottom: 0;
         right: 0;
     }
+    .header-accueil{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+    }
     .header-accueil button{
         display: block;
         text-align: center;
@@ -296,8 +321,9 @@ footer section button{
 @media (min-width: 1200px) {
     .background-header{
         width: 25rem;
-        height: 65vh;
+        // height: 65vh;
     }
+    
 }
 @media (min-width: 1700px) {
     .background-header{

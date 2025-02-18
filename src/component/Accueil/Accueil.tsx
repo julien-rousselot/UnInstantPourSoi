@@ -6,20 +6,17 @@ import soinNeocare from '../../assets/images/soinsNeocare.jpg';
 import soinSurMesure from '../../assets/images/soinSurMesure.png';
 import prestationBeaute from '../../assets/images/prestationsBeauté.jpg';
 import ligne from '../../assets/images/ligne.svg';
-import lignelaptop from '../../assets/images/lignelaptop.svg';
-
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
 
 
 function Accueil () {
-
       
     return(
     <>
         <header>
-            <section className='header-accueil'>
+            <section className='header-accueil soins'>
             <img className='background-header-front' src={accueil} alt="accueil du salon" />
 
                 <img className='background-header' src={sand} alt="sable" />
@@ -29,9 +26,6 @@ function Accueil () {
                     <button>DECOUVRIR</button>
                 </div>
                 <img className='ligne-header' src={ligne}/>
-                <img className='ligne-header-laptop' src={lignelaptop}/>
-
-
             </section>
        </header>
         <main>

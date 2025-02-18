@@ -41,12 +41,8 @@
    .container-img-text h4{
        font-size: 2.1rem;
        font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
-       padding-bottom: 1rem;
+       padding: 1rem 1rem 1rem 1rem;
    }
-    // .container-img-text img{
-    //     height: 400px;
-    // }
-   
    .text-massage{
         padding: 5rem 0;
        font-size: 1.5rem;
@@ -55,6 +51,9 @@
    .ligne-prestations{
     position: absolute;
     bottom: 0;
+   }
+   .place-courbe{
+    padding-bottom: 13rem;
    }
 
    .first-pic{
@@ -68,7 +67,18 @@
         position: relative;  
         width: 100%; 
     }
-
+    .place-courbe{
+        padding-bottom: 0rem;
+    }
+    #hanche{
+        height: 80%;
+    }
+    .header-accueil soins{
+        width: 50%;        
+    }
+    .background-header{
+        width: 30%;
+    }
     .container-img-text{        
         display: flex;
         flex-direction: row;
@@ -78,14 +88,10 @@
     }
     .container-img-text p{
         text-align: start;
-        padding: 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
     .container-img-text img{
         width: 50%;
-    }
-    .container-img-text h4{
-        padding-bottom: 0;
-        margin-top: rem;
     }
 
     .left{
@@ -103,8 +109,8 @@
 
     .container-img-text img{
         min-width: 50%;
-        object-fit: cover;
-        height: 560px;
+        // object-fit: cover;
+        // height: 560px;
     }
     .first-pic{
         max-height: 600px;
@@ -123,6 +129,12 @@
     .container-img-text img{
         min-width: 50%;
         object-fit: cover;
-        height: 600px;
+        // height: 600px;
     }
 }
+// @media (min-width: 1200px) {
+//     .picturewoman{
+//         width: 20%;
+//         // height: 50%;
+//     }
+// }

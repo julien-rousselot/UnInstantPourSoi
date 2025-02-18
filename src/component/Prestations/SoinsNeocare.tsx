@@ -12,7 +12,7 @@ function SoinsNeocare () {
     return(
         <>
             <header>
-                <section className='header-accueil header-all'>
+                <section className='header-accueil header-all courbe-place'>
                     <img className='background-header neocare-profil' src={soinsNeocare} alt="sable" />
                     <div className='prestation-titre'>
                         <h2>Les prestations</h2>
@@ -23,9 +23,9 @@ function SoinsNeocare () {
             </header>
             <main>
                 <section>
-                    <img className='soins-picture' src={neocareMachine} alt="visage Massage" />
+                    
                     <div className='text-soin-visage'>
-                        <h4>Decouvrez Neocare de Bloomea. </h4>
+                        <h4>Decouvrez Neocare de Bloomea. </h4><img className='soins-picture' src={neocareMachine} alt="visage Massage" />
                         <p className='p-soinNeocare'>
                             Neocare est une technologie moderne permettant de travailler le visage et le corps. En effet, cet appareil révèle des soins révolutionnaires pour lutter contre le vieillissement cutané, les signes de fatigue, la cellulite et les graisses localisées. <br /><br />
                             C’est un soin chaleureux et agréable, Neocare produit une chaleur grâce à la stimulation cellulaire. <br /><br />

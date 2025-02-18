@@ -35,15 +35,21 @@
     line-height: 2rem;
 }
 .contact-disponibilite{
-    text-align: start;
+    text-align: center;
     font-family: OpensansItalic;
+    padding: 0 2rem;
 }
 .contact-italique{
     font-family: Opensans;
     line-height: 2rem;
+    padding-bottom: 2rem;
+}
+.map{
+    width: 100%;
+   background-color: aqua;
 }
 
-@media (min-width: 920px) {
+@media (min-width: 820px) {
     .text-header-style{
         padding-top: 3rem;
     }
@@ -65,7 +71,7 @@
         line-height: 2rem;
     }
     .contact-disponibilite{
-        text-align: start;
+        text-align: center;
         font-family: OpensansItalic;
     }
     .contact-italique{
@@ -74,19 +80,49 @@
     }
     .contact-header{
         // max-height: 20%;
+        display: flex;
+        flex-direction: row;
         width: 100%;
     }
     .facade-header{
-        height: 70vh;
-        width: 45%;
+        height: 40vh;
+        width: 40%;
     }
     .text-header-style{
         width: 55%;
+    }
+    .ligne-header-laptop{
+        position: absolute;
+        display: block;
+        width: 600px;
+        // background-color: aqua;
+        bottom: 0;
+        right: 0;
     }
 }
 @media (min-width: 1200px) {
     .background-header-contact{
         height: 40vh;
         width: 30%;
+    }
+    .facade-header{
+        height: 60vh;
+        width: 30%;
+    }
+    .ligne-header-laptop{
+        width: 850px;
+    }
+}
+@media (min-width: 1590px) {
+    .background-header-contact{
+        height: 40vh;
+        width: 30%;
+    }
+    .facade-header{
+        height: 70vh;
+        width: 30%;
+    }
+    .ligne-header-laptop{
+        width: 1000px;
     }
 }

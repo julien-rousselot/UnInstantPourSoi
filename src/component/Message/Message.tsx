@@ -6,17 +6,19 @@ const Carousel = () => {
   const [commentsToShow, setCommentsToShow] = useState(1); // Par défaut, on montre 1 commentaire pour mobile
 
   const comments = [
-    "Accueil et prestations au top, un vrai moment de détente. Merci Elisa !",
+    "Un super moment rien que pour moi 🥰 Je n'ai rien à redire, tout était vraiment parfait ! Douceur, sympathie et professionnalisme .. c'est vraiment agréable. J'y retournerai avec plaisir ☺️",
     "Institut agréable, Elisa est très douce et très professionnelle. Prestations au top. J'y retournerai avec plaisir ! Je conseille vivement.",
     "Salon magnifique, accueillant et chaleureux. Elisa est une professionnelle attentionnée, délicate et très à l'écoute. Je recommande vivement",
-    "Great place and Elisa is so nice. I'll definitely come back. ",
+    "C'est toujours très agréable de passer un moment avec Elisa qui fait preuve d'un professionnalisme hors pair. Toujours souriante et de bons conseils...C'est finalement l'endroit parfait pour s'accorder du temps.",
+    "Un salon qui comme son nom l'indique, nous laisse prendre un instant pour profitez de nous. Elisa est très douce, à l'écoute et très agréable ! Un rehaussement de cils digne d'une pose d'extensions de cils tout en gardant les cils au naturels. Je recommande vivement !",
   ];
 
   const names = [
-    "Amélie",
+    "Océane",
     "Karine",
     "Florence",
-    "Lulencito",
+    "Amélie",
+    "Manon",
   ];
 
   // Gérer le changement d'écran pour afficher soit 1 commentaire (mobile), soit 3 (desktop)

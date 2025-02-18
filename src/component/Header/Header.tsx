@@ -26,7 +26,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                 </div>
                 <ul className={`navList ${isVisible ? 'active' : ''}`}>
                     <li><NavLink className={'nav-link'} to="/" onClick={toggleVisibility}>ACCUEIL</NavLink></li>
-                    <li><NavLink className={'nav-link'} to="/Apropos" onClick={toggleVisibility}>A PROPOS</NavLink></li>
+                    {/* <li><NavLink className={'nav-link'} to="/Apropos" onClick={toggleVisibility}>A PROPOS</NavLink></li> */}
                     <li><NavLink className={'nav-link'} to="/SoinsNeocare" onClick={toggleVisibility}>SOINS NEOCARE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/SoinsSurMesure" onClick={toggleVisibility}>SOINS SUR MESURE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/PrestationsBeaute" onClick={toggleVisibility}>PRESTATIONS BEAUTE</NavLink></li>
@@ -44,7 +44,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                 <div className="linkDiv">
                     <ul>
                         <li><NavLink className={`nav-link`} to="/">ACCUEIL</NavLink></li>
-                        <li><NavLink className={`nav-link`} to="/Apropos">A PROPOS</NavLink></li>
+                        {/* <li><NavLink className={`nav-link`} to="/Apropos">A PROPOS</NavLink></li> */}
 
                         {/* Dropdown for Prestations */}
                         <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`nav-link dropdown`}>

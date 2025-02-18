@@ -8,22 +8,13 @@ import instagramLogo from '../../assets/images/instagramLogo.svg';
 import { Link } from 'react-router-dom';
 
 function Footer () {
-    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
     return(
         <section>
             
             <div className='footerNav'>
                 {/* <img src={carteInstitut} alt="emplacement institut" /> */}
-                <div style={{ width: "100vw", height: "100%"}}>
-                    <iframe title="Google Map" width="100%"
-                        height="450"
-                        style={{ border: "0" }}
-                        loading="lazy"
-                        allowFullScreen
-                        src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaxwouaIeAUgRBIhtv27de4o&key=AIzaSyDfIlLrjqE2mQ5a3Q2jkoD1EwcfAo2ImLA`}
-                    ></iframe>
-                </div>
+
                 <div className='footer-noimage'>
 
                     <div className='left-footer'>

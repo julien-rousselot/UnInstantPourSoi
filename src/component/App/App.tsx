@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import Accueil from '../Accueil/Accueil';
 import SoinsNeocare from '../Prestations/SoinsNeocare';
 import Contact from '../Contact/Contact';
-import Apropos from '../APropos/Apropos';
+// import Apropos from '../APropos/Apropos';
 
 
 import './App.scss';
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Apropos" element={<Apropos />} />
+          {/* <Route path="/Apropos" element={<Apropos />} /> */}
           <Route path="/SoinsNeocare" element={<SoinsNeocare />} />
           <Route path="/SoinsSurMesure" element={<SoinsSurMesure />} />
           <Route path="/PrestationsBeaute" element={<PrestationsBeaute />} />
