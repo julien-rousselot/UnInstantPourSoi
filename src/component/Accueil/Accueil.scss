@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Opensans'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'OpensansItalic'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
 
 // pour les photos
 // .imageHeader{
@@ -5,6 +23,11 @@
 //     width: 95vw;
 // }
 
+.background-accueil{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
 .descriptionText{
     padding: 1rem 22px;
     font-size: 16px;
@@ -13,20 +36,46 @@
 .header-accueil{
     background-color: #F7EBE8;
     position: relative;
-    padding: 0 0 3rem 0;
+    padding-bottom: 13rem;
+}
+.header-home{
+    background-color: #F7EBE8;
+    position: relative;
+    padding-bottom: 13rem;
 }
 
 .header-accueil h2{
-    font-size: 3rem;
+    font-size: 4rem;
     color: #9F694E;
-    font-family: 'Open Sans';
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
     text-align: center;
-    line-height: 4rem;
+    padding-top: 1rem;
+}
+.header-home h2{
+    font-size: 4rem;
+    color: #9F694E;
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+    text-align: center;
+    padding-top: 1rem;
+}
+.header-home p{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.header-home button{
+    display: block;
+    text-align: center;
+    background-color: #CA9479;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    color: white;
+    margin: 2rem auto;
 }
 .header-accueil p{
     text-align: center;
-    padding: 1rem 4.5rem;
-    color: rgb(24, 23, 23);
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 .header-accueil button{
     display: block;
@@ -35,37 +84,49 @@
     border: none;
     padding: 0.7rem 1.8rem;
     color: white;
-    margin: 0 6.5rem;
-}
-.background-header{
-    width: 18rem;
-    height: 40vh;
+    margin: 2rem auto;
 }
 
+//A changer selon les gouts
+.background-header{
+    width: 100%;
+}
 .background-header-front{
     border: 1px solid #CA9479;
     border-radius: 50% 50% 0 0;
     width: 70%;
     position: absolute;
     right: 0;
-    top: 1.5rem;
+    // top: 1.5rem;
+    background-color: aqua;
 }
-
+.text-header-style button{
+    background-color: rgb(167, 123, 98);
+    border-radius: 3px;
+}
+.text-header-style button:hover{
+    background-color: rgb(167, 123, 98);
+    color: #ffffff;
+}
 .ligne-header{
     position: absolute;
     z-index: 0;
     bottom: 0;
     right: 0;
-    width: 200px;
-
+    width: 300px;
 }
-
+.ligne-header-laptop{
+    display: none;
+}
 .presentation-owner{
     background-color: #FEFEFE;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
-
+.presentation-text h3 {
+text-align: center;
+}
 .self-picture{
     width: 50%;
     padding: 5rem 0;
@@ -75,16 +136,25 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 0.8rem;
-    font-family: 'Open Sans';
+    font-family: 'Opensans';
 }
 
 .presentation-text h3{
     font-size: 2rem;
-    font-family: 'Open Sans';
+    font-family: 'MyCustomFont', sans-serif;
     padding: 0 0 1rem 0;
 }
 .presentation-text p{
     padding: 0.5rem 0;
+    font-family: 'Opensans';
+}
+.prestations-div h5{
+    font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+
+}
+.buttonDecouvrir{
+    text-decoration: none;
+    color: #FEFEFE;
 }
 
 footer section{
@@ -95,7 +165,7 @@ footer section{
 }
 footer section h3{
     font-size: 3rem;
-    font-family: 'Open Sans';
+    font-family: 'MyCustomFont', sans-serif;
     padding: 1rem 0 0.5rem 0;
 }
 footer section h4{
@@ -130,51 +200,90 @@ footer section button{
     color: white;
     margin: 1rem auto;
     text-decoration: none;
-    border-radius: 1px;
+    border-radius: 4px;
 }
-.buttonDecouvrir{
-    text-decoration: none;
-    color: rgb(243, 235, 235);
-}
+
 .flower{
     display: none;
 }
+.text-header-style{
+    padding-top: 2rem;
+}
+.sand{
+    width: 50%;
+}
+.background-header{
+    width: 100%; /* Ou une taille fixe comme 300px */
+    height: 500px; /* Ajuste selon tes besoins */
+    object-fit: cover; /* Assure que l'image remplit bien la zone sans déformation */
+}
 @media (min-width: 640px) {
+
     .background-header-front{
         width: 370px;
         left: 6rem;
         top: 3.5rem;
     }
-    .header-accueil{
+    .presentation-owner{
+        flex-direction: row;
+    }
+    .presentation-text h3 {
+        text-align: start;
+        }
+    .ligne-header{
+        display: none;
+    }
+    .ligne-header-laptop{
+        position: absolute;
+        display: block;
+        width: 300px;
+        bottom: 0;
+        right: 0;
+    }
+    .header-home{
         display: flex;
         flex-direction: row;
         padding: 0 ;
     }
-    .header-accueil h2{
-        padding-top: 3rem;
+    .header-accueil me{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+        padding-bottom: 13rem;
     }
+    .header-home h2{
+        padding-top: 2rem;
+    }
+
     .text-header-style{
         margin-left: 6rem;
         width: 50%;
         font-size: 1rem;
+        padding-top: 0;
     }
     .text-header-style p{
         padding: 1rem;
-        padding-left: 25%;
+        padding-left: 32%;
         text-align: start;
-    }
-
-    .self-picture{
-        width: 30%;
-        margin-left: 0.5rem;
     }
     .flower{
         display: block;
         width: 25%;
         object-fit: cover;
+    }  
+    .self-picture{
+        width: 25%;
+        // margin-left: 2rem;
     }
     .presentation-text{
-        padding: 2.5rem 2rem;
+        padding: 1rem 1rem;
+    }
+    .presentation-text h3{
+        font-size: 3rem;
+        padding: 0 0 1rem 0;
+    }
+    .presentation-text p{
+        font-size: 1.3rem;
     }
     .prestations{
         display: flex;
@@ -186,16 +295,176 @@ footer section button{
         display: flex;
         flex-direction: column;
     }
+    .header-home h2{
+        text-align: start;
+        display: flex;
+        padding-left: 9rem;
+        padding-top: 2rem;
+    }
+    .header-accueil h2{
+        text-align: start;
+        display: flex;
+        padding-left: 1rem;
+        padding-top: 2rem;
+    }
+    .sand{
+        width: 30%;
+        height: 20%;
+    }
+    .header-accueil soins{
+
+        padding-bottom: 0 ;
+    }
+    .header-accueil{
+        padding-bottom: 0rem;
+        display: flex;
+        width: 100%;
+    }
+    .background-header{
+            width: 45%; /* Ou une taille fixe comme 300px */
+            height: 400px; /* Ajuste selon tes besoins */
+            object-fit: cover; /* Assure que l'image remplit bien la zone sans déformation */
+    }
+    .header-accueil p{
+        text-align: start;
+        padding: 1rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 820px) {
+
+    .sand{
+        width: 30%;
+    }
+    .header-accueil{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+        // padding-bottom: 13rem;
+    }
+    .header-home{
+        display: flex;
+        flex-direction: row;
+        padding: 0 ;
+        // padding-bottom: 13rem;
+    }
+    .accueil-header{
+        padding-bottom: 0rem;
+    }
+    .text-header-style{
+
+        padding-top: 0;
+    }
+
+}
+@media (min-width: 920px) {
+    .self-picture{
+        width: 25%;
+        margin-left: 2rem;
+    }
+    .presentation-text h3{
+        font-size: 4rem;
+        padding: 0 0 1rem 0;
+    }
     .presentation-text p{
-        font-size: 1.2rem;
+        font-size: 2rem;
+    }
+    .presentation-text{
+        padding: 3rem 3rem;
     }
     .header-accueil h2{
         text-align: start;
         display: flex;
         padding-left: 25%;
+        padding-top: 15%;
+        font-size: 6rem;
+    }
+    .header-home h2{
+        text-align: start;
+        display: flex;
+        padding-left: 25%;
+        padding-top: 10%;
+        font-size: 6rem;
+    }
+    .header-home p{
+        padding-left: 25%;
+    }
+    .header-accueil p{
+        padding-left: 25%;
+    }
+    .ligne-header-laptop{
+        position: absolute;
+        display: block;
+        width: 420px;
+        bottom: 0;
+        right: 0;
+    }
+    .header-accueil{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .header-home {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .header-accueil button{
+        display: block;
+        text-align: center;
+        background-color: #CA9479;
+        border: none;
+        padding: 0.7rem 1.8rem;
+        color: white;
+        margin: 2rem auto;
+    }
+    .header-home button{
+        display: block;
+        text-align: center;
+        background-color: #CA9479;
+        border: none;
+        padding: 0.7rem 1.8rem;
+        color: white;
+        margin: 2rem auto;
+    }
+    .background-header {
+        width: 50%; /* Ou une taille fixe comme 300px */
+        height: 600px; /* Ajuste selon tes besoins */
+        object-fit: cover; /* Assure que l'image remplit bien la zone sans déformation */
+    }
+    .sand{
+        width: 28%;
+        height: 20%;
     }
 }
-
-@media (min-width: 920px) {
-
+@media (min-width: 1200px) {
+    .background-header{
+        width: 30%;
+        height: 600px;
+    }
+    .accueil-header{
+        padding-bottom: 0rem;
+    }
+    .sand{
+        width: 22%;
+        height: 20%;
+    }
+}
+@media (min-width: 1700px) {
+    .background-header{
+        // width: 45%; /* Ou une taille fixe comme 300px */
+        height: 700px; /* Ajuste selon tes besoins */
+        // object-fit: none; /* Assure que l'image remplit bien la zone sans déformation */
+}
+    .background-header-front{
+        width: 25%;
+    }
+    .accueil-header{
+        padding-bottom: 0rem;
+    }
+    .sand{
+        width: 15%;
+        height: 20%;
+    }
 }

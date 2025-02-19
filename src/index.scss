@@ -1,8 +1,14 @@
-// * {
-//   outline: 1px dashed blue; /* Ajoute un contour bleu pointillé */
-// } 
-// pour voir les elements qui deborde
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+@font-face {
+  font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
+  src: url('../../assets/font/Fontspring-DEMO-theseasons-bd.otf'); /* Charger le fichier OTF */
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #FCF3E4;
   font-family: Helvetica, Arial,sans-serif;
@@ -14,10 +20,10 @@ body {
   color: #905631;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
 
 @media (max-width: 640px) {
   body {

@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'OpensansItalic';
+    src: url('../../assets/font/OpenSans-Italic-VariableFont_wdth\,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/font/Montserrat-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
 #headerPhone {
     padding: 1rem 0rem;
     position: relative;
@@ -10,47 +23,34 @@
     color: black;
 } 
 
-// #headerLaptop,#headerLaptop img, .navListLaptop {
-//     display: none;
-// }
-
-// .navList li{
-//     padding: 3rem;
-// }
-
-// .navListLaptop li {
-//     font-family: "Alice", serif;
-//     font-weight: 400;
-//     font-style: normal;
-// } A voir si on garde
-
 .navList.active {
     right: 0;
     z-index: 1;
     background-color: #FCF3E4;
-    width: 110vw;
-    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7rem 0;
+    
 }
 
 .navList{
-    // width: 100vw;
+
     height: 100vh;
     position: fixed;
     top: 0;
     right: -100%;
-    padding-top: 10rem;
     font-size: 2.5rem;
     transition: 0.65s;
     text-align: center;
 }
 
-.nav-link{
+.nav-link,.prestlink{
     text-decoration: none;
     color:#CA9479 ;
-}
-
-.navList li:hover {
-    color: #ecb976;
+    font-family: 'Montserrat';
+    font-size: 1.9rem;
 }
 
 .menu-icon{
@@ -119,8 +119,9 @@
     #headerLaptop{
         display: flex;
         white-space: nowrap;
-        background-color: #c01919;
         width: 100%;
+        background-color: #FEFEFE;
+
     }
 
     .linkDiv, #headerLaptop img {
@@ -129,23 +130,20 @@
     }
 
     .headerLogoLaptop{
-        width: 7rem;
+        width: 8rem;
         display: block;
     }
 
     .logoDiv{
-        width: 50%;
-        background-color: #FEFEFE;
+        width: 20%;
         display: inline-block;
         display: flex;
         justify-content: center;
     }
 
     .linkDiv{
-        width: 50%;
-        background-color: #FEFEFE;
+        width: 80%;
         z-index:5;
-     
     }
     .linkDiv ul {
         display: flex;
@@ -157,14 +155,14 @@
     }
 
     .linkDiv li:hover {
-        color: #ecb976;
+        color: #d68d51;
     }
 
     .nav-link {
         color: #212020;
         text-decoration: none;
         padding: 10px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .nav-link.active {
@@ -178,74 +176,44 @@
         background-color: #ffffff;
         justify-content: start;
         text-align: start;
-        // width: 100%;
     }
     .dropdown-content li {
         padding: 0.8rem;
         width: 100%;
+        transition: background-color 0.5s ease, color 5s ease, opacity 0.5s ease;
 
     }
     .dropdown-content li:hover {
-        color: #ecb976;
-        background-color: #CA9479;
+        opacity: 0.9;
+        background-color: #c78e59;
+        color: #FEFEFE;
     }
     .linkPrestaDetails{
         text-decoration: none;
         color: #212020;
     }
-
-    // .linkPrestaDetails:hover{
-    //     color: #ecb976;
-    // }
+    .linkPrestaDetails:hover{
+        color: #FEFEFE; 
+    }
 }
 
+@media (min-width: 920px) {
+    .linkDiv{
+        background-color: #FEFEFE;
+        z-index:5;
+    }
+    .logoDiv{
+        width: 30%;
+        background-color: #FEFEFE;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+    }
+}
 
-
-@media (min-width: 1025px) {
-    // #headerPhone {
-    //     display: none;
-    //     height: 13vh;
-    // }
-  
-    // .menu-icon{
-    //     display: none;
-    //     width: 4rem;
-    // }
-
-    // .navListLaptop{
-    //     display: flex;
-    //     align-items: center;
-    //     padding: 2.5rem 30%;
-    //     margin-left: 3rem;
-    //     height: 8rem;
-    //     white-space: nowrap;
-    // }
-
-    // .navListLaptop li {
-    //     padding: 0 1.5rem;
-    // }
-
-    // .navListLaptop li:hover {
-    //     color: #ecb976;
-    //     bottom: -10px;
-    //     width: 50%;
-    // }
-
-    // .headerLaptop img{
-    //     display: block;
-    //     position: absolute;
-    //     left: 3rem;
-    //     top: 0.5rem;
-    //     width: 12rem;
-    // }
-
-    // .nav-link {
-    //     color: #212020;
-    //     text-decoration: none;
-    //     font-size: 1.3rem;
-    // }
-
-    // .nav-link.active {
-    //     border-bottom: #CA9479 solid 2px;
-    // }
+@media (min-width:1200px) {
+    .logoDiv{
+        width: 50%;
+    
+    }
 }

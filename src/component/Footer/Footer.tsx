@@ -2,17 +2,19 @@ import './Footer.scss';
 import logo from '../../assets/images/logo.jpg';
 import facebookLogo from '../../assets/images/facebookLogo.svg';
 import instagramLogo from '../../assets/images/instagramLogo.svg';
-import carteInstitut from '../../assets/images/Plan.jpg';
+// import carteInstitut from '../../assets/images/Plan.jpg';
 
 
 import { Link } from 'react-router-dom';
 
 function Footer () {
+
     return(
         <section>
             
             <div className='footerNav'>
-                <img src={carteInstitut} alt="emplacement institut" />
+                {/* <img src={carteInstitut} alt="emplacement institut" /> */}
+
                 <div className='footer-noimage'>
 
                     <div className='left-footer'>
@@ -22,8 +24,6 @@ function Footer () {
                     <div className='right-footer'>
                         <div className='page-network'>
                             <h6><Link className='link-text' to="/">ACCUEIL</Link></h6>
-                            <h6><Link className='link-text' to="/APROPOS">A PROPOS</Link></h6>
-                            <h6><Link className='link-text' to="/PRESTATIONS">PRESTATIONS</Link></h6>
                             <h6><Link className='link-text' to="/CONTACT">CONTACT</Link></h6>
                         </div>
                         <div className='page-network'>    

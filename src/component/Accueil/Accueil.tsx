@@ -9,23 +9,26 @@ import ligne from '../../assets/images/ligne.svg';
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 function Accueil () {
-
-      
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
     <>
         <header>
-            <section className='header-accueil'>
+            <section className='header-home accueil-header'>
             <img className='background-header-front' src={accueil} alt="accueil du salon" />
 
-                <img className='background-header' src={sand} alt="sable" />
+                <img className='sand' src={sand} alt="sable" />
                 <div className='text-header-style'>
-                    <h2>(Re)découvrez <br /> un instant <br />pour soi</h2>
-                    <img className='ligne-header' src={ligne}/><p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
+                    <h2>Decouvrez <br /> un instant <br />pour soi</h2>
+                    <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                     <button>DECOUVRIR</button>
                 </div>
+                <img className='ligne-header' src={ligne}/>
             </section>
        </header>
         <main>

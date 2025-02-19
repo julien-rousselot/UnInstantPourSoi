@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Montserrat'; /* Nom que vous donnez à la police */
+    src: url('../../assets/font/Montserrat-VariableFont_wght.ttf'); /* Charger le fichier OTF */
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .footerNav {
     background-color: #F5ECE5 ;
@@ -39,6 +45,8 @@
 .link-text{
     color: #905631;
     text-decoration: none;
+    font-family: 'Montserrat'; /* Nom que vous donnez à la police */
+
 }
 .footer-noimage{
     display: flex;
