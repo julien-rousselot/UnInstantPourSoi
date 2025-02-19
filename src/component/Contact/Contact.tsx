@@ -34,7 +34,7 @@ function Contact () {
                                     <li><strong className='font-bold'>Vendredi :</strong> 9h - 18h30</li>
                                     <li><strong className='font-bold'>Samedi :</strong> 9h - 12h</li>
                                 </ul>
-                                <p className="">*<span className="italique-texte">en fonction de la haute saison, la plage horaire peut être élargie.</span></p>
+                                <p className="italique-centrer">*<span className="italique-texte">en fonction de la haute saison, la plage horaire peut être élargie.</span></p>
                             </div>
 
                             <div className="divContactPadding interligne">

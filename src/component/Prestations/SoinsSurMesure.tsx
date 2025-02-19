@@ -7,11 +7,14 @@ import cuisseMassage from '../../assets/images/cuisseMassage.png';
 import epauleMassage from '../../assets/images/epauleMassage.png';
 import carteCadeau from '../../assets/images/carteCadeau.png';
 import HeaderAccueil from './HeaderAccueil';
+import { useEffect } from 'react';
 
 
 
 function SoinsSurMesure () {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <header>

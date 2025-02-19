@@ -9,10 +9,13 @@ import ligne from '../../assets/images/ligne.svg';
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 function Accueil () {
-      
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
     <>
         <header>

@@ -5,10 +5,13 @@ import PhotoPrestationOngles from '../../assets/images/PhotoPrestationOngles.jpg
 import PhotoPrestationRegard from '../../assets/images/PhotoPrestationRegard.jpg';
 import PhotoMaquillage from '../../assets/images/PhotoMaquillage.jpg';
 import HeaderAccueil from './HeaderAccueil';
+import { useEffect } from 'react';
 
 
 function PrestationsBeaute () {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <header>

@@ -5,10 +5,13 @@ import ventre from '../../assets/images/ventrePageNeocare.jpg';
 import neocareMachine from '../../assets/images/Neocare.jpg';
 import metre from '../../assets/images/couture.jpg';
 import HeaderAccueil from './HeaderAccueil';
+import { useEffect } from 'react';
 
 
 function SoinsNeocare () {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <header>
