@@ -1,55 +1,49 @@
 import './Contact.scss';
-// Achanger pour l'exterieur du salon
-import facade from '../../assets/images/facade.jpg'; 
-import courbe from '../../assets/images/courbes.svg';
-import { useEffect, useState } from 'react';
-
+import contactPicture from '../../assets/images/contactPicture.png'; 
+import HeaderAccueil from '../Prestations/HeaderAccueil';
+import Phone from '../../assets/images/phone.png';
+import Calendar from '../../assets/images/calendar.png';
+import Localisattion from '../../assets/images/localisation.png';
 
 function Contact () {
     const apiKey = 'AIzaSyDfIlLrjqE2mQ5a3Q2jkoD1EwcfAo2ImLA';
 
-    const [isVisible, setIsVisible] = useState(window.innerWidth > 768); // 768px est un exemple, modifie selon tes besoins
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsVisible(window.innerWidth > 820);
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return(
         <>
             <header>
-                
-            {isVisible ? (
-                <section className='header-accueil contact-header'>
-                    <img className='facade-header' src={facade} alt="sable" />
-                    <h2>Contact</h2>
-                    <img className='ligne-header-laptop' src={courbe}/>   
-                </section>
-            ) : (
-                <img className='facade-header' src={facade} alt="sable" />
-            )}
+                <HeaderAccueil imageSrc={contactPicture} title="Contact" subtitle="" altTexte='contact'/>
             </header>
             <main>
                 <section className='contact'>
-                    <div>
-                        <h3>Horaires</h3>
-                        <br />
-                        <div >
-                            <p className='contact-ouverture'>Lundi: Fermé</p>
-                            <p className='contact-ouverture'>Mercredi et Samedi <br /> 9h - 12h</p>
-                            <p className='contact-ouverture'>Mardi, Jeudi et Vendredi <br /> 9h - 12h <br /> 14h30 - 18h30</p>
-                        </div><br /><br />
-                        <div>
-                            <p className='contact-disponibilite'>Les horaires peuvent varier en fonction de la haute et de la basse saison. </p>
-                            <p className='contact-disponibilite'>La possibilité de vous recevoir entre 12h et 14h30 sur demande.</p>
-                        </div><br /><br />
-                        <p className='contact-italique'>Adresse : 2 rue Corderie, 17350 Port d'Envaux </p>
-                        <p className='contact-italique'>Numéro : 09.51.91.19.20</p>
-            
+                    <div className='container'>
+                        <div className='divContact'>
+                            <div className="divContactPadding interligne">
+                                <img className='image-contact' src={Phone} alt="" />
+                                <p>L'institut vous accueille sur rendez-vous au <span className="font-bold">09 51 91 19 20</span>.</p>
+                                <p>N’hésitez pas à contacter ce numéro pour tous renseignements et ou prises de rendez-vous.</p>
+                            </div>
+
+                            <div className="divContactPadding">
+                                <img className='image-contact' src={Calendar} alt="" />
+                                <p>L'institut vous accueille du<strong className='font-bold'> mardi au samedi :</strong></p>
+                                <ul className=" interligne">
+                                    <li><strong className='font-bold'>Lundi :</strong> Fermé</li>
+                                    <li><strong className='font-bold'>Mardi :</strong> 9h - 18h30</li>
+                                    <li><strong className='font-bold'>Mercredi :</strong> 9h - 12h</li>
+                                    <li><strong className='font-bold'>Jeudi :</strong> 9h - 18h30</li>
+                                    <li><strong className='font-bold'>Vendredi :</strong> 9h - 18h30</li>
+                                    <li><strong className='font-bold'>Samedi :</strong> 9h - 12h</li>
+                                </ul>
+                                <p className="">*<span className="italique-texte">en fonction de la haute saison, la plage horaire peut être élargie.</span></p>
+                            </div>
+
+                            <div className="divContactPadding interligne">
+                                <img className='image-contact' src={Localisattion} alt="" />
+                                <p><strong className='font-bold'>2 F rue de la corderie 17350 Port d'Envaux</strong></p>
+                                <p>(en face de la pizzeria des halles et de la place de la mairie)</p>
+                                <p>Possibilité de stationner gratuitement au parking St Alexis.</p>
+                            </div>
+                        </div>
                         <div style={{ width: "94vw"}}>
                             <iframe title="Google Map" width="100%"
                                 height="450"

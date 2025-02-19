@@ -17,10 +17,19 @@
     font-style: normal;
   }
 
-   
+.font-bold{
+    font-weight: bold;
+}  
+.divContact{
+    font-family: Opensans;
+    padding: 1rem 2rem;
+}
+.divContactPadding{
+    padding: 2rem 0;
+}
 .contact{
-    background-color: #FEFEFE;
-    padding: 3rem 3rem;
+    background-color: #FFFFFF;
+    color: #242424;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -29,24 +38,23 @@
     font-size: 2rem;
     font-family: MyCustomFont;
 }
-.contact-ouverture {
-    font-size: 1.2rem;
-    font-family: Opensans;
-    line-height: 2rem;
+
+.interligne{
+    line-height: 1.5rem;
 }
-.contact-disponibilite{
-    text-align: center;
+.image-contact{
+    width: 15%;
+    padding-bottom: 0.5rem;
+}
+.italique-texte{
+    font-style: italic;
     font-family: OpensansItalic;
-    padding: 0 2rem;
 }
-.contact-italique{
-    font-family: Opensans;
-    line-height: 2rem;
-    padding-bottom: 2rem;
-}
-.map{
-    width: 100%;
-   background-color: aqua;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media (min-width: 820px) {
@@ -55,7 +63,6 @@
     }
     .contact{
         background-color: #FEFEFE;
-        padding: 5rem 3rem;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -65,29 +72,6 @@
         font-size: 2.5rem;
         font-family: MyCustomFont;
     }
-    .contact-ouverture {
-        font-size: 1.3rem;
-        font-family: Opensans;
-        line-height: 2rem;
-    }
-    .contact-disponibilite{
-        text-align: center;
-        font-family: OpensansItalic;
-    }
-    .contact-italique{
-        font-family: Opensans;
-        line-height: 2rem;
-    }
-    .contact-header{
-        // max-height: 20%;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .facade-header{
-        height: 40vh;
-        width: 40%;
-    }
     .text-header-style{
         width: 55%;
     }
@@ -95,34 +79,13 @@
         position: absolute;
         display: block;
         width: 600px;
-        // background-color: aqua;
         bottom: 0;
         right: 0;
     }
 }
 @media (min-width: 1200px) {
-    .background-header-contact{
-        height: 40vh;
-        width: 30%;
-    }
-    .facade-header{
-        height: 60vh;
-        width: 30%;
-    }
-    .ligne-header-laptop{
-        width: 850px;
-    }
+
 }
 @media (min-width: 1590px) {
-    .background-header-contact{
-        height: 40vh;
-        width: 30%;
-    }
-    .facade-header{
-        height: 70vh;
-        width: 30%;
-    }
-    .ligne-header-laptop{
-        width: 1000px;
-    }
+
 }

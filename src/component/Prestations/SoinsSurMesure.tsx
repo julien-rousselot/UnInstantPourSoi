@@ -1,12 +1,12 @@
 import './SoinsSurMesure.scss';
 import hanche from '../../assets/images/hanche.jpg';
-import visageMassage from '../../assets/images/visageMassage.jpg';
+import visageMassage from '../../assets/images/soinsvisage.png';
 import dosMassage from '../../assets/images/dosMassage.png';
 import jambeMassage from '../../assets/images/jambeMassage.png';
 import cuisseMassage from '../../assets/images/cuisseMassage.png';
 import epauleMassage from '../../assets/images/epauleMassage.png';
 import carteCadeau from '../../assets/images/carteCadeau.png';
-import courbe from '../../assets/images/courbes.svg';
+import HeaderAccueil from './HeaderAccueil';
 
 
 
@@ -15,19 +15,11 @@ function SoinsSurMesure () {
     return(
         <>
             <header>
-                <section className='header-accueil place-courbe'>
-                    <img className='background-header' id='hanche' src={hanche} alt="sable" />
-                    <div className='text-header-style'>
-                        <h2>Les prestations</h2>
-                        <p>Soins sur mesure</p>
-                    </div>
-                    <img className='ligne-prestations' src={courbe}/>
-
-                </section>
+                <HeaderAccueil imageSrc={hanche} title="Les prestations" subtitle="Soins sur mesure" altTexte="soins sur mesures" />
             </header>
             <main>
                 <section className='container-img-text right'>
-                    <img className=' soins-picture picturewoman' src={visageMassage} alt="visage Massage" />
+                    <img className='' src={visageMassage} alt="visage Massage" />
                     <div className='text-massage'><h4>Soin visage sur mesure </h4>
                     <p>Les soins du visage destinés de l'enfant, à l'adolescent et à l'adulte prennent soin de votre peau tout en douceur et avec respect. <br /> <br />
                     Après un diagnostic sur vos ressentis, votre routine beauté et ce dont votre peau a réellement besoin, les cosmétiques seront choisi. <br /> <br />

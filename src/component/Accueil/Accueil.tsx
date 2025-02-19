@@ -16,7 +16,7 @@ function Accueil () {
     return(
     <>
         <header>
-            <section className='header-accueil accueil-header'>
+            <section className='header-home accueil-header'>
             <img className='background-header-front' src={accueil} alt="accueil du salon" />
 
                 <img className='sand' src={sand} alt="sable" />

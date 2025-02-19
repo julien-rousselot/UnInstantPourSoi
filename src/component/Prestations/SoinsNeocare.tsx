@@ -4,7 +4,7 @@ import visage from '../../assets/images/visagePageNeocare.jpg';
 import ventre from '../../assets/images/ventrePageNeocare.jpg';
 import neocareMachine from '../../assets/images/Neocare.jpg';
 import metre from '../../assets/images/couture.jpg';
-import courbe from '../../assets/images/courbes.svg';
+import HeaderAccueil from './HeaderAccueil';
 
 
 function SoinsNeocare () {
@@ -12,14 +12,7 @@ function SoinsNeocare () {
     return(
         <>
             <header>
-                <section className='header-accueil header-all courbe-place'>
-                    <img className='background-header neocare-profil' src={soinsNeocare} alt="sable" />
-                    <div className='prestation-titre'>
-                        <h2>Les prestations</h2>
-                        <p>Neocare</p>
-                    </div>
-                    <img className='ligne-prestations' src={courbe}/>
-                </section>
+                <HeaderAccueil imageSrc={soinsNeocare} title="Les prestations" subtitle="Neocare" altTexte="Neocare"/>
             </header>
             <main>
                 <section>

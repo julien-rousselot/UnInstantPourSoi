@@ -24,7 +24,6 @@ function Footer () {
                     <div className='right-footer'>
                         <div className='page-network'>
                             <h6><Link className='link-text' to="/">ACCUEIL</Link></h6>
-                            <h6><Link className='link-text' to="/APROPOS">A PROPOS</Link></h6>
                             <h6><Link className='link-text' to="/CONTACT">CONTACT</Link></h6>
                         </div>
                         <div className='page-network'>    

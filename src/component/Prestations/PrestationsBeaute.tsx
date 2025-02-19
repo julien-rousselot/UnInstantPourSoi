@@ -4,7 +4,7 @@ import PhotoPrestationEpilation from '../../assets/images/PhotoPrestationEpilati
 import PhotoPrestationOngles from '../../assets/images/PhotoPrestationOngles.jpg';
 import PhotoPrestationRegard from '../../assets/images/PhotoPrestationRegard.jpg';
 import PhotoMaquillage from '../../assets/images/PhotoMaquillage.jpg';
-import courbe from '../../assets/images/courbes.svg';
+import HeaderAccueil from './HeaderAccueil';
 
 
 function PrestationsBeaute () {
@@ -12,15 +12,7 @@ function PrestationsBeaute () {
     return(
         <>
             <header>
-                <section className='header-accueil place-courbe'>
-                    <img className='background-header facewoman' src={PhotoPrestationBeaute} alt="sable" />
-                    <div className='text-header-style'>
-                        <h2>Les prestations</h2>
-                        <p>Beauté</p>
-                    </div>
-                    <img className='ligne-prestations' src={courbe}/>
-
-                </section>
+                <HeaderAccueil imageSrc={PhotoPrestationBeaute} title="Les prestations" subtitle="Beauté" altTexte="Beauté"/>
             </header>
             <main>
                 <section className='container-img-text right'>
