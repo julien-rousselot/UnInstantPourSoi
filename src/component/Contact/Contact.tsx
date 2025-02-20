@@ -4,10 +4,13 @@ import HeaderAccueil from '../Prestations/HeaderAccueil';
 import Phone from '../../assets/images/phone.png';
 import Calendar from '../../assets/images/calendar.png';
 import Localisattion from '../../assets/images/localisation.png';
+import { useEffect } from 'react';
 
 function Contact () {
     const apiKey = 'AIzaSyDfIlLrjqE2mQ5a3Q2jkoD1EwcfAo2ImLA';
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <header>
