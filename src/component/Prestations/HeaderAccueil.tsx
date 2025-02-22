@@ -15,7 +15,7 @@ const HeaderAccueil = ({ imageSrc, title, subtitle, altTexte }: HeaderAccueilPro
                 <h1>{title}</h1>
                 <p>{subtitle}</p>
             </div>
-            <img className='ligne-prestations' src={courbe} />
+            <img className='ligne-prestations' src={courbe} alt='ligne design'/>
         </section>
     );
 };

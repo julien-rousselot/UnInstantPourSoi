@@ -18,13 +18,13 @@ function Footer () {
                     </div>
                     <div className='right-footer'>
                         <div className='page-network'>
-                            <h3><Link className='link-text' to="/">ACCUEIL</Link></h3>
-                            <h3><Link className='link-text' to="/CONTACT">CONTACT</Link></h3>
+                            <h3><Link className='link-text' to="/" aria-label="Redirige vers la page ACCUEIL">ACCUEIL</Link></h3>
+                            <h3><Link className='link-text' to="/CONTACT" aria-label="Redirige vers la page CONTACT">CONTACT</Link></h3>
                         </div>
                         <div className='page-network'>    
-                            <h3><Link className='link-text' to="https://www.instagram.com/_uninstantpoursoi/?hl=fr-ca">INSTAGRAM </Link><img className='reseaux' src={instagramLogo} alt="Instagram" /></h3>
-                            <h3><Link className='link-text' to="https://www.facebook.com/profile.php?id=100083218066222">FACEBOOK  </Link><img className='reseaux' src={facebookLogo} alt="Facebook" /></h3>
-                            <h3><Link className='link-text' to="/MENTIONS LEGALES">MENTIONS LEGALES</Link></h3> 
+                            <h3><Link className='link-text' to="https://www.instagram.com/_uninstantpoursoi/?hl=fr-ca" aria-label="Redirige vers la page INSTAGRAM">INSTAGRAM </Link><img className='reseaux' src={instagramLogo} alt="Instagram" /></h3>
+                            <h3><Link className='link-text' to="https://www.facebook.com/profile.php?id=100083218066222" aria-label="Redirige vers la page FACEBOOK">FACEBOOK  </Link><img className='reseaux' src={facebookLogo} alt="Facebook" /></h3>
+                            <h3><Link className='link-text' to="/MENTIONS LEGALES" aria-label="Redirige vers la page MENTIONS LEGALES">MENTIONS LEGALES</Link></h3> 
                         </div>
                         <p className='madeBy'>Site réalisé par Julien Rousselot</p>
                     </div>    

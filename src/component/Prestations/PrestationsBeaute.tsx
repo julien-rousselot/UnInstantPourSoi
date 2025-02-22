@@ -27,7 +27,7 @@ function PrestationsBeaute () {
                 <section className='container-img-text right' aria-labelledby="epilation">
                     <img className='first-pic' src={PhotoPrestationEpilation} alt="visage Massage" />
                     <div className='text-massage' id="epilation">
-                        <h2>Les épilations à la cire</h2>
+                        <h2>Les epilations a la cire</h2>
                         <p>Une épilation durable, une peau lisse et douce, les épilations se réalisent avec une cire chaude traditionnelle. <br /><br />
                         Sourcils : 7€ <br />
                         Lèvres : 7€ <br />
