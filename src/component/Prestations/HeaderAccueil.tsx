@@ -9,10 +9,10 @@ interface HeaderAccueilProps {
 
 const HeaderAccueil = ({ imageSrc, title, subtitle, altTexte }: HeaderAccueilProps) => {
     return (
-        <section className='header-accueil'>
+        <section className='header-accueil' aria-labelledby={subtitle}>
             <img className='background-header' src={imageSrc} alt={altTexte} />
             <div>
-                <h2>{title}</h2>
+                <h1>{title}</h1>
                 <p>{subtitle}</p>
             </div>
             <img className='ligne-prestations' src={courbe} />

@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 11px;
+    // position: relative;
 }
 .left-footer{
     background-color: #FEFEFE;
@@ -23,11 +24,10 @@
     width: 100%;
 }
 .right-footer{
-    // background-color: #F5ECE5;
-    // width: 100%;
     line-height: 25px;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 .footerLogo {
     width: 9rem;
@@ -40,6 +40,7 @@
 
 .page-network{
     padding: 1rem 1.5rem;
+
 }
 
 .link-text{
@@ -54,6 +55,12 @@
 }
 img{
     width: 100%;
+}
+.madeBy{
+    position: absolute;
+    bottom: 0.5rem;
+    left: 23%;
+    color: #b99983;
 }
 
 @media (min-width: 640px) {

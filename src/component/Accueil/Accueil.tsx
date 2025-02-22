@@ -10,6 +10,7 @@ import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 
 function Accueil () {
@@ -18,15 +19,20 @@ function Accueil () {
     }, []);
     return(
     <>
+        <Helmet>
+            <title>Accueil - Institut de Beauté</title>
+            <meta name="description" content="Découvrez un havre de paix dédié au bien-être et à la beauté à Port d'Envaux." />
+            <meta name="keywords" content="bien-être, beauté, soins, institut, esthétique, relaxation" />
+            <meta name="author" content="Elisa - Esthéticienne" />
+        </Helmet>
         <header>
             <section className='header-home accueil-header'>
             <img className='background-header-front' src={accueil} alt="accueil du salon" />
 
                 <img className='sand' src={sand} alt="sable" />
                 <div className='text-header-style'>
-                    <h2>Decouvrez <br /> un instant <br />pour soi</h2>
+                    <h1>Decouvrez <br /> un instant <br />pour soi</h1>
                     <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
-                    <button>DECOUVRIR</button>
                 </div>
                 <img className='ligne-header' src={ligne}/>
             </section>
@@ -35,7 +41,7 @@ function Accueil () {
             <section className='presentation-owner' >
                 <img src={owner} alt="Elisa Esthéticienne" className='self-picture' />
                 <div className='presentation-text'>                 
-                    <h3>Bonjour, <br />je suis Elisa</h3>
+                    <h2>Bonjour, <br />je suis Elisa</h2>
                     <p>Passionnée par l'univers du bien-être, c'est dans ce milieu que j'ai choisi d'exercer mon métier. </p>
                     <p>Originaire de Charente, c'est après avoir réalisé 7 ans d'étude dans l'esthétique et obtenu des expériences professionnelles par le biais de l'alternance, que j'ai décidé de créer mon institut de beauté à Port d'Envaux.</p> 
                     <p>Grâce à mon expérience professionnelle variée, je sais m'adapter au mieux à vos besoins. Je vous propose de découvrir mes diverses prestations de bien-être et de beauté.</p>
@@ -45,26 +51,26 @@ function Accueil () {
         </main>
         <footer> 
                 <section>
-                    <h3>Les prestations</h3>
-                    <h4>personnalisées et sur mesure</h4>
+                    <h2 >Les prestations</h2>
+                    <h3>personnalisées et sur mesure</h3>
                     <div className='prestations'>
                         <div className='prestations-div'>
                             <img src={soinNeocare} alt="Soin Neocare" />
-                            <h5> Soins <br />neocare</h5>
+                            <h4> Soins <br />neocare</h4>
                             <button><NavLink className="buttonDecouvrir" to="/soinsNeocare" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={soinSurMesure} alt="soin Sur Mesure" />
-                            <h5>Soins <br />sur mesure</h5>
+                            <h4>Soins <br />sur mesure</h4>
                             <button><NavLink className="buttonDecouvrir" to="/SoinsSurMesure" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={prestationBeaute} alt="prestation Beaute" />
-                            <h5>Prestations<br /> beauté</h5>
+                            <h4>Prestations<br /> beauté</h4>
                             <button><NavLink className="buttonDecouvrir" to="/PrestationsBeaute" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>

@@ -49,7 +49,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
+    <section className="carousel-container" aria-labelledby='Témoignages'>
       <button className="carousel-btn left-btn" onClick={handlePrev}>
         &#10094;
       </button>
@@ -68,7 +68,7 @@ const Carousel = () => {
       <button className="carousel-btn right-btn" onClick={handleNext}>
         &#10095;
       </button>
-    </div>
+    </section>
   );
 };
 
