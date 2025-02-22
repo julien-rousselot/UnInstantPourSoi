@@ -26,7 +26,20 @@
     font-family: 'OpensansItalic';
     
    }
-   
+   .nostarifs{
+    background-color: #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 3rem;
+   }
+   .tarifsh2{
+    font-size: 2.1rem;
+    font-family: 'MyCustomFont';
+
+    padding-bottom: 1rem;
+   }
    .container-img-text{
        display: flex;
        flex-direction: column;
@@ -38,22 +51,26 @@
         padding: 2rem;
         font-family: 'Opensans'; /* Nom que vous donnez à la police */
    }
-   .container-img-text h4{
+   .container-img-text h2{
        font-size: 2.1rem;
        font-family: 'MyCustomFont'; /* Nom que vous donnez à la police */
        padding: 1rem 1rem 1rem 1rem;
    }
+   .tarifsp{
+       font-family: 'Opensans'; /* Nom que vous donnez à la police */
+       color: #905631;
+   }
    .text-massage{
         padding: 5rem 0;
-       font-size: 1.5rem;
+        font-size: 1.5rem;
    }
    
    .ligne-prestations{
-    position: absolute;
-    bottom: 0;
+        position: absolute;
+        bottom: 0;
    }
    .place-courbe{
-    padding-bottom: 13rem;
+        padding-bottom: 13rem;
    }
 
    .first-pic{
@@ -120,7 +137,7 @@
     }
     }
 @media (min-width: 920px) {
-    .container-img-text h4{
+    .container-img-text h2{
         font-size: 3rem;
         padding-bottom: 1rem;
     }
