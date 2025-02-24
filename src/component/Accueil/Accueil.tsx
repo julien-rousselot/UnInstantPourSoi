@@ -1,6 +1,6 @@
 import './Accueil.scss';
-import sand from '../../assets/images/Sable image de fond accueil.jpg';
-import accueil from '../../assets/images/accueil.png';
+import sand from '../../assets/images/Sable-image-de-fond-accueil.webp';
+import accueil from '../../assets/images/accueil.webp';
 import owner from '../../assets/images/owner.jpg';
 import soinNeocare from '../../assets/images/soinsNeocare.jpg';
 import soinSurMesure from '../../assets/images/soinSurMesure.png';
@@ -34,7 +34,7 @@ function Accueil () {
                     <h1>Decouvrez <br /> un instant <br />pour soi</h1>
                     <p>Un véritable  havre de paix, dans un lieu calme et authentique, vous invitant au lacher prise.</p>
                 </div>
-                <img className='ligne-header' src={ligne}/>
+                <img className='ligne-header' src={ligne} alt='ligne design'/>
             </section>
        </header>
         <main>
@@ -57,21 +57,21 @@ function Accueil () {
                         <div className='prestations-div'>
                             <img src={soinNeocare} alt="Soin Neocare" />
                             <h4> Soins <br />neocare</h4>
-                            <button><NavLink className="buttonDecouvrir" to="/soinsNeocare" >DECOUVRIR</NavLink></button>
+                            <button><NavLink className="buttonDecouvrir" to="/soinsNeocare" aria-label="Redirige vers la page soins neocare" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={soinSurMesure} alt="soin Sur Mesure" />
                             <h4>Soins <br />sur mesure</h4>
-                            <button><NavLink className="buttonDecouvrir" to="/SoinsSurMesure" >DECOUVRIR</NavLink></button>
+                            <button><NavLink className="buttonDecouvrir" to="/SoinsSurMesure" aria-label="Redirige vers la page soins sur mesure" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
 
                         <div className='prestations-div'>
                             <img src={prestationBeaute} alt="prestation Beaute" />
-                            <h4>Prestations<br /> beauté</h4>
-                            <button><NavLink className="buttonDecouvrir" to="/PrestationsBeaute" >DECOUVRIR</NavLink></button>
+                            <h4>Prestations<br /> beaute</h4>
+                            <button><NavLink className="buttonDecouvrir" to="/PrestationsBeaute" aria-label="Redirige vers la page prestations beauté" >DECOUVRIR</NavLink></button>
                             <span></span>
                         </div>
                     </div>

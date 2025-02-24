@@ -27,7 +27,7 @@ function PrestationsBeaute () {
                 <section className='container-img-text right' aria-labelledby="epilation">
                     <img className='first-pic' src={PhotoPrestationEpilation} alt="visage Massage" />
                     <div className='text-massage' id="epilation">
-                        <h2>Les épilations à la cire</h2>
+                        <h2>Les epilations a la cire</h2>
                         <p>Une épilation durable, une peau lisse et douce, les épilations se réalisent avec une cire chaude traditionnelle. <br /><br />
                         Sourcils : 7€ <br />
                         Lèvres : 7€ <br />
@@ -43,7 +43,7 @@ function PrestationsBeaute () {
                         Jambes entières : 26€ <br />
                         Épaules et cou : 10€ <br />
                         1/2 torse : 15€ <br />
-                        Torse : 20€ <br />
+                        Torse : 25€ <br />
                         1/2 dos : 15€ <br />
                         Dos : 25€ <br />
                         </p>
@@ -70,7 +70,9 @@ function PrestationsBeaute () {
                     <img src={PhotoPrestationRegard} alt="jambe Massage" />
                     <div className='text-massage' id="regard">
                         <h2>Le regard</h2>
-                        <p>Teindre ses sourcils et/ou ses cils pour mieux les distinguer. <br /> Recourber ses cils naturellement pour une durée entre 6 à 12 semaines, grâce au rehaussement de cils qui est une technique permettant de rehausser et courber la frange de cils sans ajout de bouquet comme les extensions de cils.  <br /> Cette prestation respecte vos cils sans les abîmer. <br /> <br />
+                        <p>Teindre ses sourcils et/ou ses cils pour mieux les distinguer. <br /> Recourber ses cils naturellement pour une durée entre 6 à 12 semaines, grâce au rehaussement de cils qui est une technique permettant de donner une courbure élégante sans ajout de bouquet comme les extensions de cils. <br />
+                        Cette prestation respecte vos cils sans les abîmer<br />
+                        Produit made in France, sans paraben ni formaldéhyde. <br /> <br />
                         Teinture des sourcils : 15€ <br />
                         Teinture des cils : 15€ <br />
                         Rehaussement de cils : 70€ <br />

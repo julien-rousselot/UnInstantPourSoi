@@ -1,7 +1,7 @@
 import './Header.scss';
 import logo from '../../assets/images/logo.jpg';
 import { NavLink, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface HeaderProps {
     isVisible: boolean;
@@ -43,7 +43,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                 </div>
                 <div className="linkDiv">
                     <ul>
-                        <li><NavLink className={`nav-link`} to="/">ACCUEIL</NavLink></li>
+                        <li><NavLink className={`nav-link`} to="/" aria-label="Redirige vers la page d'accueil">ACCUEIL</NavLink></li>
                         {/* <li><NavLink className={`nav-link`} to="/Apropos">A PROPOS</NavLink></li> */}
 
                         {/* Dropdown for Prestations */}
@@ -51,9 +51,9 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                             PRESTATIONS
                             {isDropdownOpen && (
                                 <ul className="dropdown-content">
-                                    <li><NavLink className="linkPrestaDetails" to="/SoinsNeocare">Soins neocare</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/SoinsSurMesure">Soins sur mesure</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/PrestationsBeaute">Prestations beauté</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/SoinsNeocare" aria-label="Redirige vers page Soins neocare">Soins neocare</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/SoinsSurMesure" aria-label="Redirige vers page Soins sur mesure">Soins sur mesure</NavLink></li>
+                                    <li><NavLink className="linkPrestaDetails" to="/PrestationsBeaute" aria-label="Redirige vers page Prestations beauté">Prestations beauté</NavLink></li>
                                 </ul>
                             )}
                         </li>

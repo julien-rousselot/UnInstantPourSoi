@@ -7,10 +7,9 @@ import Localisattion from '../../assets/images/localisation.png';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
-
 function Contact () {
-    const apiKey = 'AIzaSyDfIlLrjqE2mQ5a3Q2jkoD1EwcfAo2ImLA';
-    
+    const apiKey = import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY;
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -69,7 +68,7 @@ function Contact () {
                 </section>
             </main>
        </>
-        )
+    )
 }
 
 export default Contact;

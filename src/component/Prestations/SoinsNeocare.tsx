@@ -39,7 +39,7 @@ function SoinsNeocare () {
             <main>
                 <section aria-label="Introduction aux soins Neocare pour le visage et le corps">
                     <div className='text-soin-visage'>
-                        <h2>Découvrez Neocare de Bloomea</h2>
+                        <h2>Decouvrez Neocare de Bloomea</h2>
                         <img 
                             className='soins-picture' 
                             src={neocareMachine} 

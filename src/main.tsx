@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom/client'
-import App from './component/App/App.tsx'
+import * as ReactDOM from 'react-dom/client';
+import App from './component/App/App'
 import './reset.scss'
 import './index.scss'
 
