@@ -25,7 +25,7 @@
 
 .navList.active {
     right: 0;
-    z-index: 1;
+    z-index: 10;
     background-color: #FCF3E4;
     width: 100vw;
     display: flex;
@@ -58,7 +58,7 @@
     transition: transform 0.5s;
     top:6rem;
     left: 86vw ;
-    z-index: 2;
+    z-index: 15;
 }
 
 .menu-icon span {
