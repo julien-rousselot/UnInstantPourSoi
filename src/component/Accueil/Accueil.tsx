@@ -20,7 +20,7 @@ function Accueil () {
     return(
     <>
         <Helmet>
-            <title>Accueil - Institut de Beauté</title>
+            <title>Un Instant Pour Soi - Institut de Beauté à Port-d'Envaux</title>
             <meta name="description" content="Découvrez un havre de paix dédié au bien-être et à la beauté à Port d'Envaux." />
             <meta name="keywords" content="bien-être, beauté, soins, institut, esthétique, relaxation" />
             <meta name="author" content="Elisa - Esthéticienne" />

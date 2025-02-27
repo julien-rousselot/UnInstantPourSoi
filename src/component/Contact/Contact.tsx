@@ -17,7 +17,7 @@ function Contact () {
     return(
         <>
             <Helmet>
-                <title>Contact - Institut de Beauté</title>
+                <title>Contact - Institut de Beauté à Port-d'Envaux</title>
                 <meta name="description" content="Contactez l'Institut de Beauté à Port d'Envaux pour prendre rendez-vous ou obtenir des informations." />
                 <meta name="keywords" content="contact, institut, beauté, soins, rendez-vous, Port d'Envaux" />
                 <meta name="author" content="Elisa - Esthéticienne" />

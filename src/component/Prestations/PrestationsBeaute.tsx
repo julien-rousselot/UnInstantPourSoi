@@ -15,8 +15,8 @@ function PrestationsBeaute () {
     return(
         <>
             <Helmet>
-                <title>Prestations Beauté - Institut de Beauté</title>
-                <meta name="description" content="Découvrez les prestations beauté : épilation, soins des ongles, maquillage et mise en valeur du regard à l'Institut de Beauté." />
+                <title>Prestations Beauté - Soins & Bien-être | Un Instant Pour Soi</title>
+                <meta name="description" content="Découvrez nos prestations beauté dans notre institut de beauté à Port-d'Envaux : épilation, soins des ongles, maquillage et mise en valeur du regard. Réservez votre séance !" />
                 <meta name="keywords" content="épilation, ongles, maquillage, rehaussement de cils, institut de beauté" />
                 <meta name="author" content="Elisa - Esthéticienne" />
             </Helmet>

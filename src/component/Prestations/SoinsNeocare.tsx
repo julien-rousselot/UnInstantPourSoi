@@ -15,8 +15,8 @@ function SoinsNeocare () {
     return(
         <>
             <Helmet>
-                <title>Soins Neocare - Minceur & Anti-âge</title>
-                <meta name="description" content="Découvrez les soins Neocare de Bloomea pour le visage et le corps. Réduction des signes de vieillissement, cellulite et graisses localisées." />
+                <title>SSoins Neocare - Minceur & Anti-Âge | Institut Un Instant Pour Soi à Port-d'Envaux</title>
+                <meta name="description" content="Découvrez les soins Neocare de Bloomea dans notre institut de beauté à Port-d'Envaux. Atténuez rides, cellulite et graisses localisées pour une peau plus lisse et tonifiée." />
                 <meta name="keywords" content="Neocare, soin visage, soin corps, minceur, anti-âge, Bloomea" />
                 {/* Open Graph Meta Tags */}
                 <meta property="og:title" content="Soins Neocare - Minceur & Anti-âge" />

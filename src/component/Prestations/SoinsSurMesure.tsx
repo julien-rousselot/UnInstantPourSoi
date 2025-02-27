@@ -17,8 +17,8 @@ function SoinsSurMesure () {
     return(
         <>
             <Helmet>
-                <title>Soins sur mesure : massages, soins du visage & bien-être</title>
-                <meta name="description" content="Profitez d'un moment de détente avec nos soins personnalisés : massages, drainage lymphatique, gommages et soins du visage adaptés à vos besoins." />
+                <title>Soins sur Mesure - Bien-être & Relaxation | Un Instant Pour Soi</title>
+                <meta name="description" content="Profitez d’un moment de détente dans notre institut de beauté à Port-d'Envaux. Massages, drainage lymphatique, gommages et soins du visage adaptés à vos besoins." />
                 {/* <meta property="og:image" content="URL_IMAGE" />
                 <meta property="og:url" content="URL_DE_LA_PAGE" />
                 <meta property="og:type" content="website" /> */}
