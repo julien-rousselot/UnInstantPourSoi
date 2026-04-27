@@ -99,10 +99,7 @@ function PrestationsBeaute () {
                             Maquillage jour : 40€ <br />
                             Maquillage invité mariage : 50€ <br />
                             Maquillage mariée à l’institut avec essai: 100€ <br />
-                            Maquillage mariée sur le lieu de réception avec essai : à partir de 100€ + frais de déplacement <br />
-                            Essai et maquillage mariée à l’institut : 80€ <br />
-                            Essai et maquillage mariée sur le lieu de réception à partir de :
-                            90€ <br />
+                            Maquillage mariée sur le lieu de réception avec essai : à partir de 100€ + frais de déplacement
                         </p>
                     </div>
                 </section>
