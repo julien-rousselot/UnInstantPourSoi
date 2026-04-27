@@ -17,20 +17,13 @@ function SoinsSurMesure() {
   return (
     <>
       <Helmet>
-        <title>
-          Soins sur Mesure - Bien-être & Relaxation | Un Instant Pour Soi
-        </title>
-        <meta
-          name="description"
-          content="Profitez d’un moment de détente dans notre institut de beauté à Port-d'Envaux. Massages, drainage lymphatique, gommages et soins du visage adaptés à vos besoins."
-        />
-        {/* <meta property="og:image" content="URL_IMAGE" />
-                <meta property="og:url" content="URL_DE_LA_PAGE" />
-                <meta property="og:type" content="website" /> */}
-        <meta
-          name="keywords"
-          content="massage, soins du visage, bien-être, drainage lymphatique, détente, relaxation"
-        />
+        <title>Soins sur Mesure - Massage, Drainage, Gommage | Un Instant Pour Soi</title>
+        <meta name="description" content="Soins du visage sur mesure, massages relaxants et tonifiants, drainage lymphatique, massage amincissant, gommage corps et cartes cadeau. Institut à Port-d’Envaux." />
+        <meta name="keywords" content="massage sur mesure, soin visage, drainage lymphatique, massage amincissant, gommage corps, carte cadeau, bien-être, Port-d’Envaux" />
+        <meta property="og:title" content="Soins sur Mesure | Un Instant Pour Soi - Port-d’Envaux" />
+        <meta property="og:description" content="Massages relaxants, soins visage personnalisés, drainage lymphatique, gommage et cartes cadeau. Institut de beauté à Port-d’Envaux." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://un-instantpoursoi.fr/SoinsSurMesure" />
       </Helmet>
 
       <header>

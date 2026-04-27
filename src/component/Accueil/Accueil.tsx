@@ -20,10 +20,13 @@ function Accueil () {
     return(
     <>
         <Helmet>
-            <title>Accueil - Institut de Beauté</title>
-            <meta name="description" content="Découvrez un havre de paix dédié au bien-être et à la beauté à Port d'Envaux." />
-            <meta name="keywords" content="bien-être, beauté, soins, institut, esthétique, relaxation" />
-            <meta name="author" content="Elisa - Esthéticienne" />
+            <title>Un Instant Pour Soi - Institut de Beauté à Port-d'Envaux</title>
+            <meta name="description" content="Découvrez Un Instant Pour Soi, votre havre de paix à Port-d'Envaux. Soins Neocare, massages sur mesure, épilation, ongles et maquillage. Sur rendez-vous au 09 51 91 19 20." />
+            <meta name="keywords" content="institut de beauté, Port-d'Envaux, soins visage, massages, bien-être, relaxation, esthétique" />
+            <meta property="og:title" content="Un Instant Pour Soi - Institut de Beauté à Port-d'Envaux" />
+            <meta property="og:description" content="Votre havre de paix à Port-d'Envaux. Soins Neocare, massages sur mesure, épilation, ongles, maquillage. Rendez-vous au 09 51 91 19 20." />
+            <meta property="og:type" content="website" />
+            <link rel="canonical" href="https://un-instantpoursoi.fr/" />
         </Helmet>
         <header>
             <section className='header-home accueil-header'>

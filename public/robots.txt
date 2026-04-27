@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://un-instantpoursoi.fr/sitemap.xml

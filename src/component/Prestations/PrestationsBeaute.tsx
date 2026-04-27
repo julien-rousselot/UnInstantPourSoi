@@ -15,10 +15,13 @@ function PrestationsBeaute () {
     return(
         <>
             <Helmet>
-                <title>Prestations Beauté - Soins & Bien-être | Un Instant Pour Soi</title>
-                <meta name="description" content="Découvrez nos prestations beauté dans notre institut de beauté à Port-d'Envaux : épilation, soins des ongles, maquillage et mise en valeur du regard. Réservez votre séance !" />
-                <meta name="keywords" content="épilation, ongles, maquillage, rehaussement de cils, institut de beauté" />
-                <meta name="author" content="Elisa - Esthéticienne" />
+                <title>Prestations Beauté - Épilation, Ongles, Regard, Maquillage | Un Instant Pour Soi</title>
+                <meta name="description" content="Épilation à la cire, manucure, beauté des pieds, pose de vernis semi-permanent, rehaussement de cils, teinture, maquillage jour et mariée. Institut à Port-d'Envaux." />
+                <meta name="keywords" content="épilation cire, manucure, beauté pieds, vernis semi-permanent, rehaussement cils, teinture cils, maquillage mariée, Port-d'Envaux" />
+                <meta property="og:title" content="Prestations Beauté | Un Instant Pour Soi - Port-d'Envaux" />
+                <meta property="og:description" content="Épilation, soins des ongles, rehaussement de cils, maquillage jour et mariage. Institut de beauté à Port-d'Envaux." />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://un-instantpoursoi.fr/PrestationsBeaute" />
             </Helmet>
             <header>
                 <HeaderAccueil imageSrc={PhotoPrestationBeaute} title="Les prestations" subtitle="Beauté" altTexte="Beauté" />

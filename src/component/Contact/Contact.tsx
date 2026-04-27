@@ -17,10 +17,13 @@ function Contact () {
     return(
         <>
             <Helmet>
-                <title>Contact - Institut de Beauté</title>
-                <meta name="description" content="Contactez l'Institut de Beauté à Port d'Envaux pour prendre rendez-vous ou obtenir des informations." />
-                <meta name="keywords" content="contact, institut, beauté, soins, rendez-vous, Port d'Envaux" />
-                <meta name="author" content="Elisa - Esthéticienne" />
+                <title>Contact & Horaires | Un Instant Pour Soi - Port-d'Envaux</title>
+                <meta name="description" content="Contactez Un Instant Pour Soi à Port-d'Envaux au 09 51 91 19 20. Ouvert du mardi au samedi. Situé au 2F rue de la Corderie, en face de la pizzeria des Halles." />
+                <meta name="keywords" content="contact, rendez-vous, horaires, adresse, Port-d'Envaux, institut de beauté, 09 51 91 19 20" />
+                <meta property="og:title" content="Contact | Un Instant Pour Soi - Port-d'Envaux" />
+                <meta property="og:description" content="Prenez rendez-vous au 09 51 91 19 20. Ouvert du mardi au samedi. 2F rue de la Corderie, 17350 Port-d'Envaux." />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://un-instantpoursoi.fr/Contact" />
             </Helmet>
             <header>
                 <HeaderAccueil imageSrc={contactPicture} title="Contact" subtitle="" altTexte='contact'/>

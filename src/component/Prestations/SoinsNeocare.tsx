@@ -15,32 +15,14 @@ function SoinsNeocare() {
   return (
     <>
       <Helmet>
-        <title>
-          Soins Neocare - Minceur & Anti-Âge | Institut Un Instant Pour Soi à
-          Port-d'Envaux
-        </title>
-        <meta
-          name="description"
-          content="Découvrez les soins Neocare de Bloomea dans notre institut de beauté à Port-d'Envaux. Atténuez rides, cellulite et graisses localisées pour une peau plus lisse et tonifiée."
-        />
-        <meta
-          name="keywords"
-          content="Neocare, soin visage, soin corps, minceur, anti-âge, Bloomea"
-        />
-        {/* Open Graph Meta Tags */}
-        <meta
-          property="og:title"
-          content="Soins Neocare - Minceur & Anti-âge"
-        />
-        <meta
-          property="og:description"
-          content="Découvrez les soins Neocare de Bloomea pour le visage et le corps. Réduction des signes de vieillissement, cellulite et graisses localisées."
-        />
+        <title>Soins Neocare Bloomea - Minceur & Anti-Âge à Port-d'Envaux | Un Instant Pour Soi</title>
+        <meta name="description" content="Technologie Neocare de Bloomea : luttez contre les rides, la cellulite et les graisses localisées. Résultats visibles dès la 1ère séance. Institut à Port-d'Envaux." />
+        <meta name="keywords" content="Neocare, Bloomea, soin anti-âge, minceur, cellulite, graisses localisées, soin visage, soin corps, Port-d'Envaux, Charente-Maritime" />
+        <meta property="og:title" content="Soins Neocare Bloomea - Minceur & Anti-Âge | Un Instant Pour Soi" />
+        <meta property="og:description" content="Technologie Neocare de Bloomea pour lutter contre rides, cellulite et graisses localisées. Résultats visibles dès la 1ère séance. À Port-d'Envaux." />
         <meta property="og:image" content={soinsNeocare} />
-        {/* <meta property="og:url" content="URL_DE_LA_PAGE" />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary_large_image" /> */}
-        {/* <meta name="twitter:creator" content="@VotreNom" /> */}
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://un-instantpoursoi.fr/SoinsNeocare" />
       </Helmet>
       <header>
         <HeaderAccueil
