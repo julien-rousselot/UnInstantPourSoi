@@ -134,8 +134,8 @@ function SoinsSurMesure() {
         <section className="nostarifs" aria-label="Nos tarifs">
           <h2 className="tarifsh2">Nos tarifs</h2>
           <p className="tarifsp">
-            15 minutes: 16€ - 30 minutes: 33€ - 45 minutes: 48€ - 1h: 63€ -
-            1h30: 93€
+            15 minutes: 20€ - 30 minutes: 35€ - 45 minutes: 50€ - 1h: 65€ -
+            1h30: 95€
           </p>
         </section>
         <section
