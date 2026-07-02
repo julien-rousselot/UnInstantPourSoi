@@ -9,6 +9,7 @@ import carteCadeau from "../../assets/images/carteCadeau.png";
 import HeaderAccueil from "./HeaderAccueil";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 function SoinsSurMesure() {
   useEffect(() => {
@@ -182,6 +183,9 @@ function SoinsSurMesure() {
               Pour une durée elle aura le choix de faire ce qu’elle désire,
               jusqu’au jour de sa venue.
             </p>
+            <Link className="cta-carte-cadeau" to="/CarteCadeau">
+              Acheter une carte cadeau en ligne
+            </Link>
           </div>
         </section>
       </main>

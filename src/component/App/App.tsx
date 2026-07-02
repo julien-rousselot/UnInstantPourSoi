@@ -11,6 +11,10 @@ import Contact from '../Contact/Contact';
 import './App.scss';
 import SoinsSurMesure from '../Prestations/SoinsSurMesure';
 import PrestationsBeaute from '../Prestations/PrestationsBeaute';
+import CarteCadeau from '../CarteCadeau/CarteCadeau';
+import CarteCadeauSucces from '../CarteCadeau/CarteCadeauSucces';
+import CarteCadeauAnnule from '../CarteCadeau/CarteCadeauAnnule';
+import AdminCartesCadeaux from '../Admin/AdminCartesCadeaux';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +33,10 @@ function App() {
           <Route path="/SoinsNeocare" element={<SoinsNeocare />} />
           <Route path="/SoinsSurMesure" element={<SoinsSurMesure />} />
           <Route path="/PrestationsBeaute" element={<PrestationsBeaute />} />
+          <Route path="/CarteCadeau" element={<CarteCadeau />} />
+          <Route path="/CarteCadeau/Succes" element={<CarteCadeauSucces />} />
+          <Route path="/CarteCadeau/Annule" element={<CarteCadeauAnnule />} />
+          <Route path="/Admin/CartesCadeaux" element={<AdminCartesCadeaux />} />
         </Routes>
         <Footer />
       </div>

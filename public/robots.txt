@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /Admin/
 
 Sitemap: https://un-instantpoursoi.fr/sitemap.xml

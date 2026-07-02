@@ -1,0 +1,84 @@
+.carte-cadeau-form-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 4rem;
+}
+
+.carte-cadeau-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #905631;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+    }
+
+    input,
+    textarea {
+        padding: 0.6rem 0.8rem;
+        border: 1px solid #d8c3ac;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+    }
+
+    .custom-amount-label {
+        font-weight: 400;
+    }
+}
+
+.amount-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.amount-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #905631;
+    border-radius: 10px;
+    background: transparent;
+    color: #905631;
+    font-weight: 700;
+    cursor: pointer;
+
+    &.selected {
+        background-color: #905631;
+        color: #FCF3E4;
+    }
+}
+
+.submit-btn {
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #905631;
+    color: #FCF3E4;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.carte-cadeau-error {
+    color: #b3261e;
+    font-weight: 600;
+}

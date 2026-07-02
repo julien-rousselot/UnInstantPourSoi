@@ -1,7 +1,7 @@
 import './Header.scss';
 import logo from '../../assets/images/logo.jpg';
 import { NavLink, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface HeaderProps {
     isVisible: boolean;
@@ -13,6 +13,16 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
 
     const handleMouseEnter = () => setDropdownOpen(true);
     const handleMouseLeave = () => setDropdownOpen(false);
+
+    useEffect(() => {
+        const val = isVisible ? 'hidden' : '';
+        document.body.style.overflow = val;
+        document.documentElement.style.overflow = val;
+        return () => {
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        };
+    }, [isVisible]);
 
     return (
         <header>
@@ -30,6 +40,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                     <li><NavLink className={'nav-link'} to="/SoinsNeocare" onClick={toggleVisibility}>SOINS NEOCARE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/SoinsSurMesure" onClick={toggleVisibility}>SOINS SUR MESURE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/PrestationsBeaute" onClick={toggleVisibility}>PRESTATIONS BEAUTE</NavLink></li>
+                    <li><NavLink className={'nav-link'} to="/CarteCadeau" onClick={toggleVisibility}>CARTE CADEAU</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>CONTACT</NavLink></li>
                 </ul>
             </nav>
@@ -58,6 +69,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                             )}
                         </li>
 
+                        <li><NavLink className={`nav-link`} to="/CarteCadeau">CARTE CADEAU</NavLink></li>
                         <li><NavLink className={`nav-link`} to="/Contact">CONTACT</NavLink></li>
                     </ul>
                 </div>

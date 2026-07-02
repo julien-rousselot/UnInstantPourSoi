@@ -153,3 +153,20 @@
 //         // height: 50%;
 //     }
 // }
+
+.cta-carte-cadeau {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.75rem;
+    background-color: #905631;
+    color: #FCF3E4;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.85;
+        color: #FCF3E4;
+    }
+}
