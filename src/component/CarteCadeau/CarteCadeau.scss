@@ -1,3 +1,4 @@
+// Shared with CarteCadeauSucces.tsx / CarteCadeauAnnule.tsx / AdminCartesCadeaux.tsx
 .carte-cadeau-form-section {
     display: flex;
     justify-content: center;
@@ -33,32 +34,6 @@
         font-family: inherit;
         font-size: 1rem;
     }
-
-    .custom-amount-label {
-        font-weight: 400;
-    }
-}
-
-.amount-buttons {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.amount-btn {
-    flex: 1;
-    padding: 0.75rem;
-    border: 2px solid #905631;
-    border-radius: 10px;
-    background: transparent;
-    color: #905631;
-    font-weight: 700;
-    cursor: pointer;
-
-    &.selected {
-        background-color: #905631;
-        color: #FCF3E4;
-    }
 }
 
 .submit-btn {
@@ -81,4 +56,634 @@
 .carte-cadeau-error {
     color: #b3261e;
     font-weight: 600;
+}
+
+// ── Carte Cadeau page (hero + form) ────────────────────────────
+.carte-cadeau-page {
+    font-family: 'Jost', sans-serif;
+    background: #FAF6F0;
+    color: #2A1A0E;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea {
+        font-family: 'Jost', sans-serif;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #C2A898;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #8A7E6A !important;
+    }
+}
+
+@keyframes carteCadeauFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes carteCadeauFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// ── Hero ────────────────────────────────────────────────────────
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 400px;
+
+    @media (min-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.hero-left {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    background: linear-gradient(145deg, #BF9870 0%, #D9BF9C 45%, #C8A878 100%);
+
+    svg.atmosphere {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card-peek-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-18%, -52%) rotate(6deg);
+    width: 272px;
+    height: 168px;
+    background: #EDD9BF;
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(50, 20, 5, 0.16);
+}
+
+.card-peek-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-82%, -44%) rotate(-3deg);
+    width: 272px;
+    height: 168px;
+    background: #E4CEB0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(50, 20, 5, 0.12);
+    opacity: 0.75;
+}
+
+.gift-card-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -54%) rotate(-7deg);
+    width: 272px;
+    height: 168px;
+    background: #FAF3E8;
+    border-radius: 10px;
+    box-shadow: 0 18px 52px rgba(50, 20, 5, 0.28), 0 4px 14px rgba(50, 20, 5, 0.12);
+    padding: 22px 24px;
+    overflow: hidden;
+
+    .card-backdraw {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: right bottom;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    // position: relative promotes these above .card-backdraw in the stacking
+    // order (positioned descendants paint over non-positioned ones), and
+    // DOM order then keeps them above it since they come after it in markup.
+    .card-title {
+        position: relative;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 17px;
+        color: #8A7E6A;
+        line-height: 1.25;
+        margin-bottom: 3px;
+    }
+
+    .card-subtitle {
+        position: relative;
+        font-family: 'Jost', sans-serif;
+        font-size: 7px;
+        letter-spacing: 2.5px;
+        color: #A08060;
+        text-transform: uppercase;
+    }
+
+    .card-desc {
+        position: relative;
+        font-family: 'Jost', sans-serif;
+        font-size: 8.5px;
+        color: #8A7E6A;
+        line-height: 1.75;
+        letter-spacing: 0.2px;
+    }
+}
+
+.card-divider {
+    width: 32px;
+    height: 0.75px;
+    background: #D4B89A;
+    margin: 10px 0;
+}
+
+.card-amount {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+
+    .amount-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 27px;
+        font-weight: 500;
+        color: #8A7E6A;
+        line-height: 1;
+    }
+
+    .amount-label {
+        font-family: 'Jost', sans-serif;
+        font-size: 7px;
+        letter-spacing: 2px;
+        color: #C2A898;
+        text-transform: uppercase;
+        margin-top: 2px;
+    }
+}
+
+.card-ring {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #E0CAB8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-ring-inner {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4B89A 0%, #BF9870 100%);
+    opacity: 0.7;
+}
+
+.hero-right {
+    background: #F2E8DC;
+    display: flex;
+    align-items: center;
+    padding: 52px 32px;
+
+    @media (min-width: 900px) {
+        padding: 52px 60px;
+    }
+
+    position: relative;
+    overflow: hidden;
+
+    svg.feather {
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        opacity: 0.14;
+    }
+}
+
+.hero-text {
+    animation: carteCadeauFadeUp 0.9s ease both;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 3.5px;
+    color: #A08060;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #8A7E6A;
+    line-height: 0.95;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+
+    @media (min-width: 900px) {
+        font-size: 68px;
+    }
+}
+
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: #9A6A46;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+// ── Form section ────────────────────────────────────────────────
+.form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 28px 96px;
+    animation: carteCadeauFadeIn 1s ease 0.2s both;
+}
+
+.section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #6B4C35;
+    margin-bottom: 14px;
+}
+
+.amount-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.amount-btn {
+    flex: 1;
+    padding: 15px 10px;
+    border: 1.5px solid;
+    border: 1.5px solid #D4B89A;
+    background: transparent;
+    color: #8A7E6A;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.active {
+        background: #905631;
+        border-color: #905631;
+        color: #FAF6F0;
+    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+
+    @media (max-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.duration-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1.55;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #FFFDF9;
+    border: 1.5px solid #D4B89A;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    overflow: hidden;
+    padding-bottom: 20px;
+    
+    &.selected {
+        background: #F2E8DC;
+    }
+
+    &:hover:not(.selected) {
+        border-color: #A08060;
+    }
+
+    .card-backdraw {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: right bottom;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .card-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        opacity: 0.55;
+        transition: opacity 0.2s;
+    }
+
+    &.selected .card-icon {
+        opacity: 1;
+    }
+
+    .card-label {
+        font-family: 'Jost', sans-serif;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        color: #C2A898;
+    }
+
+    &.selected .card-label {
+        color: #8A7E6A;
+    }
+
+    .card-duration {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #8A7E6A;
+    }
+
+    .card-price {
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: #8A7E6A;
+        margin-top: 2px;
+    }
+
+    &.selected .card-price {
+        color: #8A7E6A;
+    }
+}
+
+// Overrides the base .duration-card top/bottom layout with a centered,
+// vertically-stacked one (icon, duration, description, price, CTA) — used
+// only by the tier-selection grid. .duration-card--large (the free-amount
+// preview card) keeps the original layout untouched.
+.duration-card--tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: auto;
+    text-align: center;
+    padding: 22px 16px 18px;
+    gap: 0;
+
+    .tier-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #F2E8DC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        transition: background 0.2s;
+
+        svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &.selected .tier-icon {
+        background: #E4CEB0;
+    }
+
+    .tier-duration {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        font-size: 26px;
+        color: #8A7E6A;
+        margin-bottom: 8px;
+    }
+
+    .tier-desc {
+        font-family: 'Jost', sans-serif;
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: #8A7E6A;
+        margin: 0;
+    }
+
+    .tier-divider {
+        width: 32px;
+        height: 1px;
+        background: #D4B89A;
+        margin: 14px 0;
+    }
+
+    .tier-price {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        font-size: 32px;
+        color: #905631;
+        margin-bottom: 16px;
+    }
+
+    .tier-cta {
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 8px;
+        background: transparent;
+        border: 1.5px solid #D4B89A;
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        font-size: 13.5px;
+        letter-spacing: 0.3px;
+        color: #8A7E6A;
+        transition: all 0.2s;
+    }
+
+    &.selected .tier-cta {
+        background: #905631;
+        border-color: #905631;
+        color: #FAF6F0;
+    }
+}
+
+.custom-amount-card-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 16px;
+}
+
+.duration-card--large {
+    width: min(360px, 100%);
+    aspect-ratio: 1.55;
+    padding: 26px 30px;
+    cursor: default;
+
+    .card-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .card-label {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .card-duration {
+        font-size: 34px;
+    }
+
+    .card-price {
+        font-size: 18px;
+    }
+}
+
+.mode-note {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #6B4C35;
+    margin: -6px 0 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #E0C9B5;
+    border-radius: 4px;
+    background: #FFFDF9;
+    color: #2A1A0E;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+textarea.form-input {
+    resize: vertical;
+    line-height: 1.65;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+
+    .divider-line {
+        flex: 1;
+        height: 1px;
+        background: #E4CEB8;
+    }
+
+    .divider-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 16px;
+        color: #A08060;
+        white-space: nowrap;
+    }
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 40px;
+
+    .field label {
+        display: block;
+        font-family: 'Jost', sans-serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #6B4C35;
+        margin-bottom: 9px;
+
+        span {
+            color: #C2A898;
+            font-size: 9.5px;
+            letter-spacing: 1.5px;
+            margin-left: 6px;
+            text-transform: none;
+        }
+    }
+}
+
+.cta-btn {
+    width: 100%;
+    padding: 19px 24px;
+    background: #8A7E6A;
+    color: #FAF6F0;
+    font-family: 'Jost', sans-serif;
+    font-size: 12.5px;
+    letter-spacing: 2.8px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.25s;
+
+    &:hover:not(:disabled) {
+        background: #776d5c;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.trust-line {
+    text-align: center;
+    margin-top: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #B09878;
+    letter-spacing: 0.3px;
 }

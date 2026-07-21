@@ -1,5 +1,5 @@
 import './Footer.scss';
-import logo from '../../assets/images/logo.jpg';
+import logo from '../../assets/images/logothick.png';
 import facebookLogo from '../../assets/images/facebookLogo.svg';
 import instagramLogo from '../../assets/images/instagramLogo.svg';
 // import carteInstitut from '../../assets/images/Plan.jpg';

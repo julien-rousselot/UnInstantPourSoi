@@ -8,3 +8,74 @@
         margin: 0.3rem 0;
     }
 }
+
+.gift-card-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+        border: 1px solid #d8c3ac;
+    }
+
+    strong {
+        font-size: 1.4rem;
+        color: #905631;
+    }
+
+    span {
+        font-size: 0.8rem;
+        color: #6b4a30;
+        text-align: center;
+    }
+}
+
+.gift-card-stats-section {
+    margin-bottom: 1.5rem;
+
+    h3 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #905631;
+        margin: 0 0 0.5rem;
+    }
+}
+
+.gift-card-stats--secondary {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    margin-bottom: 0;
+
+    strong {
+        font-size: 1.1rem;
+    }
+}
+
+.gift-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+
+    .submit-btn {
+        margin-top: 0;
+    }
+}
+
+.danger-btn {
+    background-color: #ffffff;
+    color: #b3261e;
+    border: 1.5px solid #b3261e;
+
+    &:hover:not(:disabled) {
+        background-color: #b3261e;
+        color: #ffffff;
+    }
+}

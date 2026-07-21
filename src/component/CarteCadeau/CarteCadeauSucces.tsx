@@ -21,7 +21,8 @@ function CarteCadeauSucces() {
             <p>
               Votre paiement a bien été validé. Vous allez recevoir votre carte
               cadeau par email dans quelques instants, avec le code à présenter
-              à l'institut.
+              à l'institut. Pensez à vérifier vos courriers indésirables si
+              vous ne le voyez pas arriver.
             </p>
             <Link className="cta-carte-cadeau" to="/">
               Retour à l'accueil

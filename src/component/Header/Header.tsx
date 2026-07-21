@@ -1,7 +1,7 @@
 import './Header.scss';
-import logo from '../../assets/images/logo.jpg';
+import logo from '../../assets/images/logothick.png';
 import { NavLink, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface HeaderProps {
     isVisible: boolean;
@@ -10,9 +10,29 @@ interface HeaderProps {
 
 function Header({ isVisible, toggleVisibility }: HeaderProps) {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    // Closing on a short delay (instead of immediately) survives the gap the
+    // pointer crosses between the trigger and the floating panel below it —
+    // without it, mouseleave fires mid-transit and the panel vanishes before
+    // the pointer arrives.
+    const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const handleMouseEnter = () => setDropdownOpen(true);
-    const handleMouseLeave = () => setDropdownOpen(false);
+    const clearCloseTimer = () => {
+        if (closeTimer.current) {
+            clearTimeout(closeTimer.current);
+            closeTimer.current = null;
+        }
+    };
+
+    const handleMouseEnter = () => {
+        clearCloseTimer();
+        setDropdownOpen(true);
+    };
+    const handleMouseLeave = () => {
+        clearCloseTimer();
+        closeTimer.current = setTimeout(() => setDropdownOpen(false), 200);
+    };
+
+    useEffect(() => clearCloseTimer, []);
 
     useEffect(() => {
         const val = isVisible ? 'hidden' : '';
@@ -40,7 +60,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                     <li><NavLink className={'nav-link'} to="/SoinsNeocare" onClick={toggleVisibility}>SOINS NEOCARE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/SoinsSurMesure" onClick={toggleVisibility}>SOINS SUR MESURE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/PrestationsBeaute" onClick={toggleVisibility}>PRESTATIONS BEAUTE</NavLink></li>
-                    <li><NavLink className={'nav-link'} to="/CarteCadeau" onClick={toggleVisibility}>CARTE CADEAU</NavLink></li>
+                    {/* Carte cadeau: page not linked yet, not ready for production */}
                     <li><NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>CONTACT</NavLink></li>
                 </ul>
             </nav>
@@ -58,18 +78,25 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                         {/* <li><NavLink className={`nav-link`} to="/Apropos">A PROPOS</NavLink></li> */}
 
                         {/* Dropdown for Prestations */}
-                        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`nav-link dropdown`}>
-                            PRESTATIONS
-                            {isDropdownOpen && (
-                                <ul className="dropdown-content">
-                                    <li><NavLink className="linkPrestaDetails" to="/SoinsNeocare" aria-label="Redirige vers page Soins neocare">Soins neocare</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/SoinsSurMesure" aria-label="Redirige vers page Soins sur mesure">Soins sur mesure</NavLink></li>
-                                    <li><NavLink className="linkPrestaDetails" to="/PrestationsBeaute" aria-label="Redirige vers page Prestations beauté">Prestations beauté</NavLink></li>
-                                </ul>
-                            )}
+                        <li
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            className={`nav-link dropdown${isDropdownOpen ? ' open' : ''}`}
+                        >
+                            <span className="dropdown-trigger">
+                                PRESTATIONS
+                                <svg className="dropdown-chevron" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                                    <path d="M1 1l4.5 4.5L10 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                            <ul className="dropdown-content">
+                                <li><NavLink className="linkPrestaDetails" to="/SoinsNeocare" aria-label="Redirige vers page Soins neocare">Soins neocare</NavLink></li>
+                                <li><NavLink className="linkPrestaDetails" to="/SoinsSurMesure" aria-label="Redirige vers page Soins sur mesure">Soins sur mesure</NavLink></li>
+                                <li><NavLink className="linkPrestaDetails" to="/PrestationsBeaute" aria-label="Redirige vers page Prestations beauté">Prestations beauté</NavLink></li>
+                            </ul>
                         </li>
 
-                        <li><NavLink className={`nav-link`} to="/CarteCadeau">CARTE CADEAU</NavLink></li>
+                        {/* Carte cadeau: page not linked yet, not ready for production */}
                         <li><NavLink className={`nav-link`} to="/Contact">CONTACT</NavLink></li>
                     </ul>
                 </div>

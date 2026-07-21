@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-      <div>
+      <div className="app-shell">
         <Header isVisible={isVisible} toggleVisibility={toggleVisibility} />
         <Routes>
           <Route path="/" element={<Accueil />} />

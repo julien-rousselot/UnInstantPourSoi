@@ -5,6 +5,19 @@
 //   // text-align: center;
 // }
 
+// Keeps the footer pinned to the bottom of the viewport on short pages
+// (e.g. the gift-card success/cancel screens) instead of floating right
+// under a small amount of content.
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1 0 auto;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
