@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /Admin/
+Disallow: /CarteCadeau/Succes
+Disallow: /CarteCadeau/Annule
 
 Sitemap: https://un-instantpoursoi.fr/sitemap.xml

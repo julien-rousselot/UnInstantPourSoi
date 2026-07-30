@@ -60,7 +60,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                     <li><NavLink className={'nav-link'} to="/SoinsNeocare" onClick={toggleVisibility}>SOINS NEOCARE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/SoinsSurMesure" onClick={toggleVisibility}>SOINS SUR MESURE</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/PrestationsBeaute" onClick={toggleVisibility}>PRESTATIONS BEAUTE</NavLink></li>
-                    {/* Carte cadeau: page not linked yet, not ready for production */}
+                    <li><NavLink className={'nav-link'} to="/CarteCadeau" onClick={toggleVisibility}>CARTE CADEAU</NavLink></li>
                     <li><NavLink className={'nav-link'} to="/Contact" onClick={toggleVisibility}>CONTACT</NavLink></li>
                 </ul>
             </nav>
@@ -96,7 +96,7 @@ function Header({ isVisible, toggleVisibility }: HeaderProps) {
                             </ul>
                         </li>
 
-                        {/* Carte cadeau: page not linked yet, not ready for production */}
+                        <li><NavLink className={`nav-link`} to="/CarteCadeau">CARTE CADEAU</NavLink></li>
                         <li><NavLink className={`nav-link`} to="/Contact">CONTACT</NavLink></li>
                     </ul>
                 </div>

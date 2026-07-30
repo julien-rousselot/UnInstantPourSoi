@@ -10,11 +10,13 @@ import HeaderAccueil from "./HeaderAccueil";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { usePrices } from "../../hooks/usePrices";
 
 function SoinsSurMesure() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { formatPrice } = usePrices();
   return (
     <>
       <Helmet>
@@ -135,8 +137,8 @@ function SoinsSurMesure() {
         <section className="nostarifs" aria-label="Nos tarifs">
           <h2 className="tarifsh2">Nos tarifs</h2>
           <p className="tarifsp">
-            15 minutes: 20€ - 30 minutes: 35€ - 45 minutes: 50€ - 1h: 65€ -
-            1h30: 95€
+            15 minutes: {formatPrice("sur-mesure-15min", "20€")} - 30 minutes: {formatPrice("sur-mesure-30min", "35€")} - 45 minutes: {formatPrice("sur-mesure-45min", "50€")} - 1h: {formatPrice("sur-mesure-1h", "65€")} -
+            1h30: {formatPrice("sur-mesure-1h30", "95€")} - 2h: {formatPrice("sur-mesure-2h", "125€")}
           </p>
         </section>
         <section
@@ -156,7 +158,7 @@ function SoinsSurMesure() {
               de stimuler la circulation sanguine et de lisser votre peau. Votre
               épiderme sera totalement doux, soyeux et lisse. <br />
               <br />
-              Tarif: 37€
+              Tarif: {formatPrice("sur-mesure-gommage-corps", "37€")}
             </p>
           </div>
         </section>
@@ -172,16 +174,11 @@ function SoinsSurMesure() {
             <h2>Carte cadeau</h2>
             <p>
               Offrez un instant de bien-être et de détente à vos proches. <br />
-              Les cartes cadeau permettent d’offrir soit une somme de votre
-              choix, <br /> une prestation de bien-être ou de beauté ou une
-              durée pour un soin du visage et ou massage corporel. <br />
-              Les durées de soin sont de 30 minutes, 45 minutes, 1h ou 1h30.{" "}
-              <br />
-              Lorsque la personne recevra votre carte cadeau, elle pourra
-              désormais appeler ou écrire un message via les réseaux sociaux
-              pour prendre son rendez-vous. <br />
-              Pour une durée elle aura le choix de faire ce qu’elle désire,
-              jusqu’au jour de sa venue.
+              Les cartes cadeau permettent d’offrir soit un montant libre pour
+              des prestations beauté, <br /> soit une durée pour un soin du
+              visage et/ou massage corporel sur mesure. <br />
+              Les durées disponibles sont 30 minutes, 45 minutes, 1h, 1h30 ou
+              2h.
             </p>
             <Link className="cta-carte-cadeau" to="/CarteCadeau">
               Acheter une carte cadeau en ligne

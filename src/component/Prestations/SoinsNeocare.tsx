@@ -7,11 +7,13 @@ import metre from "../../assets/images/couture.jpg";
 import HeaderAccueil from "./HeaderAccueil";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { usePrices } from "../../hooks/usePrices";
 
 function SoinsNeocare() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { formatPrice } = usePrices();
   return (
     <>
       <Helmet>
@@ -79,9 +81,9 @@ function SoinsNeocare() {
             <p id="tarifs-visage" className="p-soinNeocare">
               Neocare pour votre visage à la séance :<br />
               <br />
-              Petite zone du visage : 40 €<br />
-              Visage sans masque : 80 €<br />
-              Visage avec masque : 90 €<br />
+              Petite zone du visage : {formatPrice("neocare-visage-petite-zone", "40 €")}<br />
+              Visage sans masque : {formatPrice("neocare-visage-sans-masque", "80 €")}<br />
+              Visage avec masque : {formatPrice("neocare-visage-avec-masque", "90 €")}<br />
               <br />
               <br />
               <div className="p-italique">
@@ -103,8 +105,8 @@ function SoinsNeocare() {
             <p className="p-soinNeocare">
               Neocare pour votre corps à la séance : <br />
               <br />
-              Petite zone du corps : 55 € <br />
-              Séance corps : 80 €<br />
+              Petite zone du corps : {formatPrice("neocare-corps-petite-zone", "55 €")} <br />
+              Séance corps : {formatPrice("neocare-corps-seance", "80 €")}<br />
               <br />
               <br />
               <div className="p-italique">

@@ -155,12 +155,18 @@
 // }
 
 .cta-carte-cadeau {
+    // A flex child of .text-massage (column layout) stretches to the full
+    // column width by default (align-items: stretch) — align-self keeps it
+    // sized to its own content instead, like a normal button.
+    align-self: flex-start;
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.75rem;
+    margin: 1.5rem 2rem 0;
+    padding: 0.85rem 2rem;
     background-color: #905631;
     color: #FCF3E4;
     border-radius: 50px;
+    font-family: 'Opensans';
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     transition: opacity 0.2s ease;

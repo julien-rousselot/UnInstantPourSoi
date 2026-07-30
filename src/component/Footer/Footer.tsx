@@ -19,15 +19,21 @@ function Footer () {
                     <div className='right-footer'>
                         <div className='page-network'>
                             <h3><Link className='link-text' to="/" aria-label="Redirige vers la page ACCUEIL">ACCUEIL</Link></h3>
+                            <h3><Link className='link-text' to="/CarteCadeau" aria-label="Redirige vers la page CARTE CADEAU">CARTE CADEAU</Link></h3>
                             <h3><Link className='link-text' to="/CONTACT" aria-label="Redirige vers la page CONTACT">CONTACT</Link></h3>
                         </div>
-                        <div className='page-network'>    
+                        <div className='page-network'>
+                            <h3><Link className='link-text' to="/SoinsNeocare" aria-label="Redirige vers la page Soins neocare">SOINS NEOCARE</Link></h3>
+                            <h3><Link className='link-text' to="/SoinsSurMesure" aria-label="Redirige vers la page Soins sur mesure">SOINS SUR MESURE</Link></h3>
+                            <h3><Link className='link-text' to="/PrestationsBeaute" aria-label="Redirige vers la page Prestations beauté">PRESTATIONS BEAUTE</Link></h3>
+                        </div>
+                        <div className='page-network'>
                             <h3><Link className='link-text' to="https://www.instagram.com/_uninstantpoursoi/?hl=fr-ca" aria-label="Redirige vers la page INSTAGRAM">INSTAGRAM </Link><img className='reseaux' src={instagramLogo} alt="Instagram" /></h3>
                             <h3><Link className='link-text' to="https://www.facebook.com/profile.php?id=100083218066222" aria-label="Redirige vers la page FACEBOOK">FACEBOOK  </Link><img className='reseaux' src={facebookLogo} alt="Facebook" /></h3>
-                            <h3><Link className='link-text' to="/MENTIONS LEGALES" aria-label="Redirige vers la page MENTIONS LEGALES">MENTIONS LEGALES</Link></h3> 
+                            <h3><Link className='link-text' to="/MENTIONS LEGALES" aria-label="Redirige vers la page MENTIONS LEGALES">MENTIONS LEGALES</Link></h3>
+                            <h3><Link className='link-text' to="/CGV" aria-label="Redirige vers la page CGV">CGV</Link></h3>
                         </div>
-                        <p className='madeBy'>Site réalisé par Julien Rousselot</p>
-                    </div>    
+                    </div>
                 </div>   
             </div>
         </section>

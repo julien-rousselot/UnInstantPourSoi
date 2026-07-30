@@ -26,9 +26,27 @@
   </url>
 
   <url>
+    <loc>https://un-instantpoursoi.fr/CarteCadeau</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://un-instantpoursoi.fr/Contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://un-instantpoursoi.fr/MENTIONS%20LEGALES</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://un-instantpoursoi.fr/CGV</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

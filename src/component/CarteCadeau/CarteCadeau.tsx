@@ -66,6 +66,11 @@ function CarteCadeau() {
   const selectedTier = DURATION_TIERS.find((t) => t.minutes === durationMinutes) ?? null;
 
   const handleCustomAmountChange = (value: string) => {
+    const parsed = Number(value);
+    if (value !== "" && Number.isFinite(parsed) && parsed > MAX_AMOUNT) {
+      setCustomAmount(String(MAX_AMOUNT));
+      return;
+    }
     setCustomAmount(value);
   };
 
@@ -211,7 +216,7 @@ function CarteCadeau() {
         </section>
 
         <section className="form-section" aria-label="Achat d'une carte cadeau">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} noValidate>
             <div className="section-label">Je choisis</div>
             <div className="amount-buttons">
               <button
@@ -219,22 +224,24 @@ function CarteCadeau() {
                 className={mode === "duration" ? "amount-btn active" : "amount-btn"}
                 onClick={() => handleSwitchMode("duration")}
               >
-                Durée (soins &amp; massages)
+                Durée <span className="btn-detail">(soins &amp; massages)</span>
               </button>
               <button
                 type="button"
                 className={mode === "free_amount" ? "amount-btn active" : "amount-btn"}
                 onClick={() => handleSwitchMode("free_amount")}
               >
-                Montant libre
+                Montant libre <span className="btn-detail">(prestations beauté)</span>
               </button>
             </div>
 
             {mode === "duration" ? (
               <>
                 <div className="section-label">Choisissez une durée</div>
-                <p className="mode-note">
-                  Les cartes cadeaux sont réservées aux soins du visage et aux massages sur mesure.
+                <p className="intro-note">
+                  Un Instant Pour Soi propose des soins sur-mesure, adaptés à vos besoins : soins du visage
+                  personnalisés et massages du corps (relaxants, tonifiants, drainage lymphatique...). Les
+                  cartes cadeaux durée donnent accès à l'ensemble de ces soins.
                 </p>
                 <div className="card-grid">
                   {DURATION_TIERS.map((tier) => (
@@ -311,7 +318,6 @@ function CarteCadeau() {
                   type="text"
                   value={buyerName}
                   onChange={(e) => setBuyerName(e.target.value)}
-                  required
                 />
               </div>
               <div className="field">
@@ -321,7 +327,6 @@ function CarteCadeau() {
                   type="email"
                   value={buyerEmail}
                   onChange={(e) => setBuyerEmail(e.target.value)}
-                  required
                 />
               </div>
               <div className="field">
@@ -348,10 +353,19 @@ function CarteCadeau() {
               </div>
             </div>
 
-            {error && <p className="carte-cadeau-error">{error}</p>}
+            {error && (
+              <div className="carte-cadeau-error" role="alert">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 8v5" strokeLinecap="round" />
+                  <circle cx="12" cy="15.5" r="0.9" fill="currentColor" stroke="none" />
+                </svg>
+                <span>{error}</span>
+              </div>
+            )}
 
             <button type="submit" className="cta-btn" disabled={loading}>
-              {loading ? "Redirection vers le paiement..." : "Payer et recevoir ma carte cadeau"}
+              {loading ? "Redirection vers le paiement..." : "Recevoir ma carte cadeau"}
             </button>
 
             <p className="trust-line">Paiement sécurisé · Envoi immédiat par email</p>

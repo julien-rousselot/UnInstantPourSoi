@@ -14,17 +14,22 @@ function CarteCadeauSucces() {
         <title>Paiement confirmé | Un Instant Pour Soi</title>
         <meta name="robots" content="noindex" />
       </Helmet>
-      <main>
-        <section className="carte-cadeau-form-section" aria-label="Confirmation de paiement">
-          <div className="carte-cadeau-form">
-            <h2>Merci pour votre achat !</h2>
-            <p>
+      <main className="carte-cadeau-page">
+        <section className="result-section" aria-label="Confirmation de paiement">
+          <div className="result-card">
+            <div className="result-icon result-icon--success">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FAF6F0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 13l4 4 10-10" />
+              </svg>
+            </div>
+            <h1 className="result-title">Merci pour votre achat !</h1>
+            <p className="result-text">
               Votre paiement a bien été validé. Vous allez recevoir votre carte
               cadeau par email dans quelques instants, avec le code à présenter
               à l'institut. Pensez à vérifier vos courriers indésirables si
               vous ne le voyez pas arriver.
             </p>
-            <Link className="cta-carte-cadeau" to="/">
+            <Link className="cta-btn" to="/">
               Retour à l'accueil
             </Link>
           </div>

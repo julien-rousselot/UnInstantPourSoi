@@ -7,11 +7,13 @@ import PhotoMaquillage from '../../assets/images/PhotoMaquillage.jpg';
 import HeaderAccueil from './HeaderAccueil';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { usePrices } from '../../hooks/usePrices';
 
 function PrestationsBeaute () {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const { formatPrice } = usePrices();
     return(
         <>
             <Helmet>
@@ -32,23 +34,23 @@ function PrestationsBeaute () {
                     <div className='text-massage' id="epilation">
                         <h2>Les epilations a la cire</h2>
                         <p>Une épilation durable, une peau lisse et douce, les épilations se réalisent avec une cire chaude traditionnelle. <br /><br />
-                        Sourcils : 7€ <br />
-                        Lèvres : 7€ <br />
-                        Menton : 7€ <br />
-                        Aisselles : 12€ <br />
-                        1/2 bras : 12€ <br />
-                        Bras : 16€ <br />
-                        Maillot simple : 12€ <br />
-                        Maillot brésilien : 16€ <br />
-                        Maillot intégral : 22€ <br />
-                        1/2 jambes : 16€ <br />
-                        Cuisses : 16€ <br />
-                        Jambes entières : 26€ <br />
-                        Épaules et cou : 10€ <br />
-                        1/2 torse : 15€ <br />
-                        Torse : 25€ <br />
-                        1/2 dos : 15€ <br />
-                        Dos : 25€ <br />
+                        Sourcils : {formatPrice('epilation-sourcils', '7€')} <br />
+                        Lèvres : {formatPrice('epilation-levres', '7€')} <br />
+                        Menton : {formatPrice('epilation-menton', '7€')} <br />
+                        Aisselles : {formatPrice('epilation-aisselles', '12€')} <br />
+                        1/2 bras : {formatPrice('epilation-demi-bras', '12€')} <br />
+                        Bras : {formatPrice('epilation-bras', '16€')} <br />
+                        Maillot simple : {formatPrice('epilation-maillot-simple', '12€')} <br />
+                        Maillot brésilien : {formatPrice('epilation-maillot-bresilien', '16€')} <br />
+                        Maillot intégral : {formatPrice('epilation-maillot-integral', '22€')} <br />
+                        1/2 jambes : {formatPrice('epilation-demi-jambes', '16€')} <br />
+                        Cuisses : {formatPrice('epilation-cuisses', '16€')} <br />
+                        Jambes entières : {formatPrice('epilation-jambes-entieres', '26€')} <br />
+                        Épaules et cou : {formatPrice('epilation-epaules-cou', '10€')} <br />
+                        1/2 torse : {formatPrice('epilation-demi-torse', '15€')} <br />
+                        Torse : {formatPrice('epilation-torse', '25€')} <br />
+                        1/2 dos : {formatPrice('epilation-demi-dos', '15€')} <br />
+                        Dos : {formatPrice('epilation-dos', '25€')} <br />
                         </p>
                     </div>
                 </section>
@@ -58,14 +60,14 @@ function PrestationsBeaute () {
                         <h2>Les ongles</h2>
                         <p>Prendre soin de ses mains et de ses pieds, créer une forme d'ongle, repousser les cuticules, grâce à la manucure et/ou la beauté des pieds express. <br />
                         Exfolier en douceur et recevoir un massage grâce à la manucure et/ou la beauté des pieds complète. <br /> Colorer ses ongles par du vernis semi permanent ou classique. <br /> <br />
-                        Manucure express : 20€<br />
-                        Manucure complète : 40€<br />
-                        Beauté des pieds express : 20€<br />
-                        Beauté des pieds complète : 40€<br />
-                        Pose de vernis classique : 10€<br />
-                        Pose de vernis semi permanent : 35€<br />
-                        Pose de vernis semi permanent french : 40€<br />
-                        Dépose et remise en forme des ongles : 15€<br />
+                        Manucure express : {formatPrice('ongles-manucure-express', '20€')}<br />
+                        Manucure complète : {formatPrice('ongles-manucure-complete', '40€')}<br />
+                        Beauté des pieds express : {formatPrice('ongles-pieds-express', '20€')}<br />
+                        Beauté des pieds complète : {formatPrice('ongles-pieds-complete', '40€')}<br />
+                        Pose de vernis classique : {formatPrice('ongles-vernis-classique', '10€')}<br />
+                        Pose de vernis semi permanent : {formatPrice('ongles-vernis-semi-permanent', '35€')}<br />
+                        Pose de vernis semi permanent french : {formatPrice('ongles-vernis-semi-permanent-french', '40€')}<br />
+                        Dépose et remise en forme des ongles : {formatPrice('ongles-depose', '15€')}<br />
                         </p>
                     </div>
                 </section>
@@ -76,9 +78,9 @@ function PrestationsBeaute () {
                         <p>Teindre ses sourcils et/ou ses cils pour mieux les distinguer. <br /> Recourber ses cils naturellement pour une durée entre 6 à 12 semaines, grâce au rehaussement de cils qui est une technique permettant de donner une courbure élégante sans ajout de bouquet comme les extensions de cils. <br />
                         Cette prestation respecte vos cils sans les abîmer<br />
                         Produit made in France, sans paraben ni formaldéhyde. <br /> <br />
-                        Teinture des sourcils : 15€ <br />
-                        Teinture des cils : 15€ <br />
-                        Rehaussement de cils : 70€ <br />
+                        Teinture des sourcils : {formatPrice('regard-teinture-sourcils', '15€')} <br />
+                        Teinture des cils : {formatPrice('regard-teinture-cils', '15€')} <br />
+                        Rehaussement de cils : {formatPrice('regard-rehaussement-cils', '70€')} <br />
                         </p>
                     </div>
                 </section>
@@ -96,10 +98,10 @@ function PrestationsBeaute () {
                             selon votre désir, vos habitudes et vos inspirations. <br /> Pour
                             votre jour J, je vous propose mon déplacement à votre domicile, ou
                             sur le lieu de réception (domaine, château). <br /> <br />
-                            Maquillage jour : 40€ <br />
-                            Maquillage invité mariage : 50€ <br />
-                            Maquillage mariée à l’institut avec essai: 100€ <br />
-                            Maquillage mariée sur le lieu de réception avec essai : à partir de 100€ + frais de déplacement
+                            Maquillage jour : {formatPrice('maquillage-jour', '40€')} <br />
+                            Maquillage invité mariage : {formatPrice('maquillage-invite-mariage', '50€')} <br />
+                            Maquillage mariée à l’institut avec essai: {formatPrice('maquillage-mariee-institut', '100€')} <br />
+                            Maquillage mariée sur le lieu de réception avec essai : {formatPrice('maquillage-mariee-lieu', 'à partir de 100€ + frais de déplacement')}
                         </p>
                     </div>
                 </section>
