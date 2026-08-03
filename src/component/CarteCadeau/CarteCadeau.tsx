@@ -41,7 +41,7 @@ const DURATION_TIERS = [
   },
 ];
 
-const MIN_AMOUNT = 8;
+const MIN_AMOUNT = 1;
 const MAX_AMOUNT = 500;
 
 function CarteCadeau() {
