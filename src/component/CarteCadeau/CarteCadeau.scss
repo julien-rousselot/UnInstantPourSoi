@@ -738,6 +738,28 @@ textarea.form-input {
             text-transform: none;
         }
     }
+
+    .field-counter {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        margin-top: 6px;
+        font-family: 'Jost', sans-serif;
+        font-size: 10.5px;
+        letter-spacing: 0.5px;
+        color: #C2A898;
+
+        // On its own (no hint) the count sits at the right edge of the input.
+        &.field-counter--alone {
+            justify-content: flex-end;
+        }
+
+        .counter-hint {
+            font-style: italic;
+            letter-spacing: 0.3px;
+        }
+    }
 }
 
 .cta-btn {

@@ -44,6 +44,12 @@ const DURATION_TIERS = [
 const MIN_AMOUNT = 8;
 const MAX_AMOUNT = 500;
 
+// Mirrors instantpoursoi-back/src/giftCards/limits.js. Both strings are
+// printed on the A4 gift card PDF, which has a fixed amount of room for them —
+// the server rejects anything longer, so keep the two in sync.
+const RECIPIENT_NAME_MAX = 60;
+const MESSAGE_MAX = 400;
+
 function CarteCadeau() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -98,6 +104,14 @@ function CarteCadeau() {
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(buyerEmail)) {
       setError("Merci de renseigner une adresse email valide.");
+      return;
+    }
+    if (recipientName.trim().length > RECIPIENT_NAME_MAX) {
+      setError(`Le nom du destinataire ne doit pas dépasser ${RECIPIENT_NAME_MAX} caractères.`);
+      return;
+    }
+    if (message.trim().length > MESSAGE_MAX) {
+      setError(`Le message ne doit pas dépasser ${MESSAGE_MAX} caractères.`);
       return;
     }
 
@@ -178,12 +192,19 @@ function CarteCadeau() {
                 Offrez un moment précieux
                 <br />à ceux que vous aimez
               </div>
+              {/* Duration cards show the time they're worth, not the price —
+                  the card is offered to someone else, and what they redeem is
+                  the length of the soin. */}
               <div className="card-amount">
                 <div className="amount-value">
-                  {mode === "duration" ? (selectedTier ? `${selectedTier.price}€` : "—") : `${displayAmount}€`}
+                  {mode === "duration" ? (selectedTier ? selectedTier.label : "—") : `${displayAmount}€`}
                 </div>
                 <div className="amount-label">
-                  {mode === "duration" ? (selectedTier ? selectedTier.label : "Choisissez une durée") : "Valeur"}
+                  {mode === "duration"
+                    ? selectedTier
+                      ? "Soin sur mesure"
+                      : "Choisissez une durée"
+                    : "Valeur"}
                 </div>
               </div>
               <div className="card-ring">
@@ -336,9 +357,13 @@ function CarteCadeau() {
                 <input
                   className="form-input"
                   type="text"
+                  maxLength={RECIPIENT_NAME_MAX}
                   value={recipientName}
                   onChange={(e) => setRecipientName(e.target.value)}
                 />
+                <div className="field-counter field-counter--alone">
+                  {recipientName.length}/{RECIPIENT_NAME_MAX}
+                </div>
               </div>
               <div className="field">
                 <label>
@@ -347,9 +372,16 @@ function CarteCadeau() {
                 <textarea
                   className="form-input"
                   rows={4}
+                  maxLength={MESSAGE_MAX}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
+                <div className="field-counter">
+                  <span className="counter-hint">Ce message sera imprimé sur la carte cadeau.</span>
+                  <span>
+                    {message.length}/{MESSAGE_MAX}
+                  </span>
+                </div>
               </div>
             </div>
 
