@@ -676,6 +676,19 @@
     color: #6B4C35;
     margin: 0 0 28px;
     max-width: 60ch;
+
+    p {
+        margin: 0 0 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__highlight {
+        color: #7C4A2A;
+        font-weight: 500;
+    }
 }
 
 .form-input {

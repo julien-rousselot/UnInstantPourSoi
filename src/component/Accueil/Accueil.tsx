@@ -6,6 +6,7 @@ import soinNeocare from '../../assets/images/soinsNeocare.jpg';
 import soinSurMesure from '../../assets/images/soinSurMesure.png';
 import prestationBeaute from '../../assets/images/prestationsBeauté.jpg';
 import ligne from '../../assets/images/ligne.svg';
+import backDraw from '../../assets/images/backDraw.png';
 import Carousel from '../Message/Message';
 import flower from '../../assets/images/Fleur.jpg';
 import { NavLink } from 'react-router-dom';
@@ -79,6 +80,36 @@ function Accueil () {
                         </div>
                     </div>
                 </section>
+            {/* Placée après les prestations : la visiteuse a vu ce que
+                l'institut propose avant qu'on lui suggère de l'offrir. */}
+            <section className='carte-cadeau-teaser'>
+                <div className='teaser-inner'>
+                    <div className='teaser-visual' aria-hidden='true'>
+                        <div className='teaser-card-back'></div>
+                        <div className='teaser-card'>
+                            <img className='teaser-card-backdraw' src={backDraw} alt='' />
+                            <div className='teaser-card-title'>Un instant<br />pour soi</div>
+                            <div className='teaser-card-subtitle'>Institut de beauté</div>
+                            <div className='teaser-card-divider'></div>
+                            <div className='teaser-card-desc'>Offrez un moment précieux<br />à ceux que vous aimez</div>
+                        </div>
+                    </div>
+
+                    <div className='teaser-text'>
+                        <p className='teaser-eyebrow'>Une idée cadeau</p>
+                        <h2>La carte cadeau</h2>
+                        <h3>offrez une parenthèse de bien-être</h3>
+                        <p className='teaser-body'>
+                            Pour un anniversaire, une naissance, un merci ou simplement pour faire plaisir :
+                            choisissez la durée d'un soin ou le montant de votre choix. La carte est envoyée
+                            par email, prête à imprimer et à offrir.
+                        </p>
+                        <button>
+                            <NavLink className='buttonDecouvrir' to='/CarteCadeau' aria-label='Redirige vers la page carte cadeau'>OFFRIR UNE CARTE</NavLink>
+                        </button>
+                    </div>
+                </div>
+            </section>
             <section>
                 <Carousel />
             </section>

@@ -14,11 +14,12 @@
 }
 .left-footer{
     background-color: #FEFEFE;
-    width: 30vw;
+    width: 100%;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 .footer-noimage{
     width: 100%;
@@ -26,7 +27,12 @@
 .right-footer{
     line-height: 25px;
     display: flex;
-    flex-direction: row;
+    // Empilé sur mobile : les trois groupes de liens côte à côte sortaient de
+    // l'écran (343px de large pour 375px de viewport, moins le logo à gauche).
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
     position: relative;
 }
 .footerLogo {
@@ -39,7 +45,7 @@
 }
 
 .page-network{
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
 
 }
 
@@ -51,7 +57,7 @@
 }
 .footer-noimage{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 img{
     width: 100%;
@@ -64,10 +70,17 @@ img{
 }
 
 @media (min-width: 640px) {
+    // Retour à la disposition d'origine : logo à gauche, liens en trois
+    // colonnes à droite. Les `flex-direction` annulent les valeurs mobiles.
+    .footer-noimage{
+        flex-direction: row;
+    }
     .right-footer{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-align: left;
         width: 50%;
         font-size: 15px;
 
@@ -75,6 +88,9 @@ img{
     .left-footer{
         width:50%;
         padding: 2rem 0;
+    }
+    .page-network{
+        padding: 1rem 1.5rem;
     }
 
 }

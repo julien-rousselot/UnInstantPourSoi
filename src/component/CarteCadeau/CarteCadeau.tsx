@@ -13,31 +13,31 @@ const DURATION_TIERS = [
     minutes: 30,
     price: 35,
     label: "30 min",
-    desc: "Un moment de détente idéal pour relâcher les tensions et se recentrer.",
+    desc: "Un moment de détente idéal pour une petite pause et une découverte des soins.",
   },
   {
     minutes: 45,
     price: 50,
     label: "45 min",
-    desc: "Un temps parfait pour relâcher le corps et apaiser l'esprit.",
+    desc: "Un temps parfait pour s'échapper quelques instants de son quotidien et relâcher son corps et / ou son visage.",
   },
   {
     minutes: 60,
     price: 65,
     label: "1h",
-    desc: "Une parenthèse de bien-être complète pour une détente profonde.",
+    desc: "Une parenthèse de bien-être plus complète pour détendre les tensions du corps lors d'un massage et / ou prendre soin de sa peau avec un soin du visage.",
   },
   {
     minutes: 90,
     price: 95,
     label: "1h30",
-    desc: "Un soin prolongé pour se relaxer en profondeur, corps et esprit.",
+    desc: "Un véritable instant pour soi, une détente globale pour lâcher prise, s'évader et se ressourcer.",
   },
   {
     minutes: 120,
     price: 125,
     label: "2h",
-    desc: "L'expérience ultime : un véritable moment d'évasion et de bien-être total.",
+    desc: "Une bulle d'évasion totale, un soin complet offrant toutes les possibilités de recevoir plusieurs soins pour accueillir une relaxation profonde.",
   },
 ];
 
@@ -258,12 +258,24 @@ function CarteCadeau() {
 
             {mode === "duration" ? (
               <>
+                <div className="intro-note">
+                  <p>
+                    Offrez un moment de détente et de bien-être à vos proches.
+                    Commandez une carte cadeau de la durée de votre choix pour réaliser
+                    un soin du visage et&nbsp;/&nbsp;ou un massage sur mesure.
+                  </p>
+                  <p>
+                    Un massage relaxant, tonifiant ou amincissant, un drainage lymphatique,
+                    un massage prénatal pour les futures mamans, un soin du visage hydratant
+                    ou délassant&nbsp;: la carte cadeau est idéale pour que la personne
+                    choisisse son soin.
+                  </p>
+                  <p className="intro-note__highlight">
+                    Vous recevez la carte cadeau immédiatement par email après votre commande,
+                    prête à imprimer et à offrir.
+                  </p>
+                </div>
                 <div className="section-label">Choisissez une durée</div>
-                <p className="intro-note">
-                  Un Instant Pour Soi propose des soins sur-mesure, adaptés à vos besoins : soins du visage
-                  personnalisés et massages du corps (relaxants, tonifiants, drainage lymphatique...). Les
-                  cartes cadeaux durée donnent accès à l'ensemble de ces soins.
-                </p>
                 <div className="card-grid">
                   {DURATION_TIERS.map((tier) => (
                     <button
