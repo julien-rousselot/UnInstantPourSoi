@@ -308,9 +308,16 @@ function CarteCadeau() {
             ) : (
               <>
                 <div className="section-label">Montant pour vos prestations beauté</div>
-                <p className="mode-note">
-                  Le montant libre est réservé aux prestations beauté uniquement.
-                </p>
+                <div className="mode-note">
+                  <p>
+                    Le montant libre est réservé aux prestations beauté uniquement,
+                    comme le rehaussement de cils, le soin des ongles, le maquillage, etc.
+                  </p>
+                  <p className="mode-note__highlight">
+                    Vous recevez la carte cadeau immédiatement par email après votre commande,
+                    prête à imprimer et à offrir à vos proches.
+                  </p>
+                </div>
                 <input
                   className="form-input"
                   type="number"

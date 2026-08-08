@@ -664,6 +664,20 @@
     line-height: 1.6;
     color: #6B4C35;
     margin: -6px 0 16px;
+    max-width: 60ch;
+
+    p {
+        margin: 0 0 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__highlight {
+        color: #7C4A2A;
+        font-weight: 500;
+    }
 }
 
 // Explains, for visitors unfamiliar with the institute, that "sur mesure"
